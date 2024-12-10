@@ -5510,7 +5510,7 @@ Lorem ipsum dolor sit amet</text_box>
 				<units>K</units>
 			</stock>
 			<aux name="Initial Deep Ocean Temperature">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 </doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -5818,7 +5818,7 @@ Lorem ipsum dolor sit amet</text_box>
 				<units>K</units>
 			</aux>
 			<aux name="Initial Land &amp; Ocean\nSurface Temperature">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 </doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -6432,7 +6432,7 @@ Lorem ipsum dolor sit amet</text_box>
 				<units>K</units>
 			</aux>
 			<aux name="Initial Thermocline\nOcean Temperature">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 </doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -6753,7 +6753,7 @@ Lorem ipsum dolor sit amet</text_box>
 				<units>deg C</units>
 			</aux>
 			<aux name="Heat Capacity of Thermocline Ocean" access="output">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 C2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -7061,7 +7061,7 @@ C2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>W*year/metre^2/K</units>
 			</aux>
 			<aux name="Heat Capacity of Deep Ocean" access="output">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 C3 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -7369,7 +7369,7 @@ C3 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>W*year/metre^2/K</units>
 			</aux>
 			<aux name="Heat Capacity of\nLand &amp; Ocean Surface" access="output">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 C1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -7677,7 +7677,7 @@ C1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>W*year/metre^2/K</units>
 			</aux>
 			<aux name="Heat Transfer Coefficient\nbetween Land &amp; Ocean Surface and Space">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 kappa1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -7985,7 +7985,7 @@ kappa1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>W/metre^2/K</units>
 			</aux>
 			<aux name="Deep Ocean Heat Uptake Efficacy\nFactor">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 epsilon in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -8293,7 +8293,7 @@ epsilon in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>Dimensionless</units>
 			</aux>
 			<aux name="Heat Transfer Coefficient\nbetween Surface and Thermocline Ocean">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 kappa2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
@@ -8601,7 +8601,7 @@ kappa2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<units>W/metre^2/K</units>
 			</aux>
 			<aux name="Heat Transfer Coefficient\nbetween Thermocline Ocean\nand Deep Ocean">
-				<doc>${External Calibration Parameter}
+				<doc>${External Parameter}
 kappa3 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 				<dimensions>
 					<dim name="ClimateCase"/>
