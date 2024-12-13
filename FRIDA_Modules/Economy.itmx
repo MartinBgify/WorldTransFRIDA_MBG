@@ -257,8 +257,6 @@
 				<connect2 to='Demographics."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
-				<connect to='Finance."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
-				<connect2 to='Finance."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
@@ -338,14 +336,6 @@
 				<connect2 to="GDP.public_investment" from="Government.public_investment"/>
 				<connect to="Green_Innovation.public_investment" from="Government.public_investment"/>
 				<connect2 to="Green_Innovation.public_investment" from="Government.public_investment"/>
-				<connect to="Circular_Flow.safe_interest" from="Government.safe_interest"/>
-				<connect2 to="Circular_Flow.safe_interest" from="Government.safe_interest"/>
-				<connect to="Circular_Flow.safe_interest_2" from="Government.safe_interest"/>
-				<connect2 to="Circular_Flow.safe_interest_2" from="Government.safe_interest"/>
-				<connect to="Circular_Flow.safe_interest_3" from="Government.safe_interest"/>
-				<connect2 to="Circular_Flow.safe_interest_3" from="Government.safe_interest"/>
-				<connect to="Employment.safe_interest_1" from="Government.safe_interest"/>
-				<connect2 to="Employment.safe_interest_1" from="Government.safe_interest"/>
 				<connect to="Finance.safe_interest" from="Government.safe_interest"/>
 				<connect2 to="Finance.safe_interest" from="Government.safe_interest"/>
 				<connect to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
@@ -855,7 +845,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.Wage_Rate[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -1008,7 +998,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="128.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="95" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3198,7 +3188,7 @@ net_worker_income*fraction_of_income_to_consumption-annual_worker_savings_to_rea
 					<to>government_spending</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="315" x="1237.25" y="1294.35" name="average private debt interest"/>
-				<connector uid="249" angle="109.627">
+				<connector uid="254" angle="109.627">
 					<from>average_private_debt_interest</from>
 					<to>firms_paying_interest</to>
 				</connector>
@@ -3456,7 +3446,7 @@ net_worker_income*fraction_of_income_to_consumption-annual_worker_savings_to_rea
 				<non_negative/>
 				<units>Mp/year</units>
 			</flow>
-			<stock name="Wage Rate">
+			<stock name="Wage Rate" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 https://rshiny.ilo.org/dataexplorer17/?id=SDG_1041_NOC_RT_A&amp;ref_area=X01</doc>
 				<dimensions>
@@ -4635,9 +4625,6 @@ effect_of_climate_on_high_exposure_labour
 				<units>1/year</units>
 			</aux>
 			<aux name="green finance\nfraction of innovation 1" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -4690,7 +4677,7 @@ effect_of_climate_on_high_exposure_labour
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="979" isee:scroll_y="2091" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="100" isee:scroll_y="1326" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6021,7 +6008,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<to>indicated_productivity_growth</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="724" y="758" name="average private debt safe interest"/>
-				<connector uid="277" angle="330.945">
+				<connector uid="280" angle="330.945">
 					<from>average_private_debt_safe_interest</from>
 					<to>profit_firing_threshold</to>
 				</connector>
@@ -8889,7 +8876,7 @@ ELSE 0</eqn>
 				<eqn>public_expenditure_before_subsidies-government_interest_payments-(public_investment+public_innovation_investment)</eqn>
 				<units>b$/Years</units>
 			</aux>
-			<aux name="debt to\nGDP ratio">
+			<aux name="debt to\nGDP ratio" access="output">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -9920,7 +9907,7 @@ effect_of_STA_on_public_consumption</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="4" isee:scroll_x="114.286" isee:scroll_y="877.857" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="4" isee:scroll_y="82.1429" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10838,7 +10825,7 @@ effect_of_STA_on_public_consumption</eqn>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="869.286" y="1115" name="average private debt safe interest"/>
 				<aux x="707.857" y="1078.33" name="current government debt interest rate"/>
-				<connector uid="269" angle="164.122">
+				<connector uid="281" angle="164.122">
 					<from>current_government_debt_interest_rate</from>
 					<to>average_government_debt_interest_rate</to>
 				</connector>
@@ -11211,7 +11198,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="20" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="380" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -11308,7 +11295,7 @@ ELSE 0</eqn>
 					</pts>
 				</flow>
 				<aux label_side="right" x="1367.5" y="200.43" name="average\ndevelopment\ncompletion time"/>
-				<connector uid="9" angle="184.223">
+				<connector uid="9" angle="187.055">
 					<from>Sustainability</from>
 					<to>productivity_starting_development</to>
 				</connector>
@@ -11386,8 +11373,8 @@ ELSE 0</eqn>
 					</from>
 					<to>finance_sustainability_growth_component</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="896.5" y="456.75" name="indicated productivity growth from bank exploration 1"/>
-				<connector uid="29" angle="356.309">
+				<aux font_style="italic" font_weight="bold" label_side="left" x="941.611" y="458.92" name="indicated productivity growth from bank exploration 1"/>
+				<connector uid="29" angle="1.63789">
 					<from>indicated_productivity_growth_from_bank_exploration_1</from>
 					<to>finance_sustainability_growth_component</to>
 				</connector>
@@ -11401,7 +11388,7 @@ ELSE 0</eqn>
 					<from>government_innovation_policy</from>
 					<to>public_innovation_investment</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" label_side="right" x="293.25" y="365.75" name="public\ninvestment"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="301.25" y="365.75" name="public\ninvestment"/>
 				<connector uid="32" angle="180">
 					<from>public_investment</from>
 					<to>public_innovation_investment</to>
@@ -12097,7 +12084,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="225.833" isee:scroll_y="100" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="568.333" isee:scroll_y="356.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
