@@ -5,7 +5,7 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.7.3" isee:build_number="3465" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.7.2" isee:build_number="3414" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -3650,7 +3650,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="8" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="8" isee:scroll_x="2635" isee:scroll_y="500" zoom="20" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4587,7 +4587,7 @@
 					</graph>
 				</stacked_container>
 				<stacked_container uid="173" x="5744" y="161" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4596,7 +4596,7 @@
 				</stacked_container>
 				<text_box font_size="36pt" uid="174" x="5745" y="95" width="260" height="58">Main KPIs</text_box>
 				<stacked_container uid="177" x="5744" y="671" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Emissions.Total_CO2_Emissions[1]"/>
@@ -4604,7 +4604,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="178" x="6574" y="161" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4612,7 +4612,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="179" x="6574" y="671" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Employment.realised_productivity[1]"/>
@@ -4620,16 +4620,8 @@
 					</table>
 				</stacked_container>
 				<text_box font_size="36pt" uid="180" x="5745" y="1252.5" width="260" height="58">Auxiliary KPIs</text_box>
-				<stacked_container uid="182" x="5748" y="1320.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
-						<item type="time"/>
-						<item>
-							<entity name="Employment.unemployment_rate[1]"/>
-						</item>
-					</table>
-				</stacked_container>
 				<stacked_container uid="183" x="6593" y="1323.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4637,7 +4629,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="184" x="5743" y="1861.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Circular_Flow.income_inequality[1]"/>
@@ -4645,7 +4637,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="185" x="5743" y="2359.33" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4653,7 +4645,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="186" x="6598" y="1861.83" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Finance.private_debt_to_gdp_ratio[1]"/>
@@ -4661,23 +4653,15 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="187" x="6598" y="2359.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name='Circular_Flow."average_transfers_per_recipient_in_2021$"[1]'/>
 						</item>
 					</table>
 				</stacked_container>
-				<stacked_container uid="188" x="5738" y="2891.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
-						<item type="time"/>
-						<item>
-							<entity name='Circular_Flow."average_transfers_per_recipient_in_2021$"[1]'/>
-						</item>
-					</table>
-				</stacked_container>
-				<stacked_container uid="189" x="5738" y="3397.5" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+				<stacked_container uid="189" x="5743" y="2882.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Employment.Wage_Rate[1]"/>
@@ -4685,7 +4669,7 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="190" x="6609.25" y="2905" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Sea_Level.Total_global_SLR[1]"/>
@@ -4693,18 +4677,26 @@
 					</table>
 				</stacked_container>
 				<stacked_container uid="191" x="6609.25" y="3431.75" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Employment.climate_impact_on_productivity[1]"/>
 						</item>
 					</table>
 				</stacked_container>
-				<stacked_container uid="192" x="5738" y="3926" width="775" height="481">
-					<table orientation="vertical" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+				<stacked_container uid="192" x="5748" y="3393.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
 						<item type="time"/>
 						<item>
 							<entity name="Government.Central_Bank_Safe_Interest[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="182" x="5748" y="1320.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Employment.unemployment_rate[1]"/>
 						</item>
 					</table>
 				</stacked_container>
