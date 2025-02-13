@@ -958,49 +958,49 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="Economic Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="1.64444891324486e-7">
+			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="1.64445e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.Employed[1]" weight="0.000246027936134838">
+			<isee:payoff_element name="Employment.Employed[1]" weight="0.000246028">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.Unemployed[1]" weight="0.00834395822411902">
+			<isee:payoff_element name="Employment.Unemployed[1]" weight="0.00834396">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.unemployment_rate[1]" weight="44269.4305357112">
+			<isee:payoff_element name="Employment.unemployment_rate[1]" weight="44269.4">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Finance.total_investment[1]" weight="1.79614998179544e-7">
+			<isee:payoff_element name="Finance.total_investment[1]" weight="1.79615e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.Nominal_GDP[1]" weight="5.82353502687477e-8">
+			<isee:payoff_element name="GDP.Nominal_GDP[1]" weight="5.82354e-8">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Government.government_consumption[1]" weight="0.00000203289182476108">
+			<isee:payoff_element name="Government.government_consumption[1]" weight="0.00000203289">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Inflation.agriculture_percentage_of_GDP[1]" weight="1.44623311172227">
+			<isee:payoff_element name="Inflation.agriculture_percentage_of_GDP[1]" weight="1.44623">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name='GDP."Real_GDP_in_2021c$"[1]' weight="6.71122539881802e-8">
+			<isee:payoff_element name='GDP."Real_GDP_in_2021c$"[1]' weight="6.71123e-8">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Government.debt_to_GDP_ratio[1]" weight="833.208706563791">
+			<isee:payoff_element name="Government.debt_to_GDP_ratio[1]" weight="833.209">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Inflation.gdp_difference[1]" weight="6.01312675272747e-7">
+			<isee:payoff_element name="Inflation.gdp_difference[1]" weight="6.01313e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="97.9262466266104">
+			<isee:payoff_element name="GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="97.9262">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="1168.59237392488">
+			<isee:payoff_element name="GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="1168.59">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.annual_aggregate_wages[1]" weight="1.67425451050102e-7">
+			<isee:payoff_element name="Employment.annual_aggregate_wages[1]" weight="1.67425e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Circular_Flow.Labour_share_of_GDP[1]" weight="12872.9656312001">
+			<isee:payoff_element name="Circular_Flow.Labour_share_of_GDP[1]" weight="12873">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
@@ -3145,7 +3145,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="8" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="822" page_height="575" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="197.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
