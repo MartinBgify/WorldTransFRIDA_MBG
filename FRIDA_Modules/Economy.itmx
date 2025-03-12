@@ -997,7 +997,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="159" isee:scroll_y="67" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1021,7 +1021,7 @@
 						<isee:series_styles>
 							<isee:series_style color="blue" thickness="1"/>
 							<isee:series_style color="red" thickness="1"/>
-							<isee:series_style color="fuchsia" thickness="1"/>
+							<isee:series_style color="#00FDFF" thickness="1"/>
 							<isee:series_style color="#008F44" thickness="1"/>
 							<isee:series_style color="#FF7F00" thickness="1"/>
 							<isee:series_style color="#7F00FF" thickness="1"/>
@@ -2417,7 +2417,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1877" isee:scroll_y="944" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="669" isee:scroll_y="869" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5381,7 +5381,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1088.33" isee:scroll_y="1322.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="427.5" isee:scroll_y="972.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -7018,7 +7018,9 @@ furthermore. The structure that was previously decided on had the productivity g
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate</eqn>
+				<eqn>IF TIME &gt; Degrowth_policy_start_time
+THEN MIN(Inflation_Rate_1[1], indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate) 
+ELSE indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="effect of default rate\non lending standards">
@@ -7122,8 +7124,7 @@ furthermore. The structure that was previously decided on had the productivity g
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(reference_bank_investment_growth_rate+(max_change_in_bank_investment_growth_target*effect_of_gdp_growth_on_bank_investment))
-*effect_of_bank_negative_profit_growth_on_indicated_investment_growth_rate*weight_of_negative_growth_effect_on_bank_investment_growth_rate</eqn>
+				<eqn>reference_bank_investment_growth_rate+(max_change_in_bank_investment_growth_target*effect_of_gdp_growth_on_bank_investment)</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="max change in\nbank investment\ngrowth target">
@@ -7665,7 +7666,7 @@ ELSE
 				<element subscript="1">
 					<eqn>1.1</eqn>
 				</element>
-				<range min="0.5" max="1.5"/>
+				<range min="0.5" max="5"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="initial net bank asset\nfractional growth">
@@ -7817,7 +7818,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.08</eqn>
+				<eqn>1</eqn>
 				<range min="1.01" max="1.11"/>
 				<units>dmnl</units>
 			</aux>
@@ -8488,31 +8489,16 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="effect of bank negative profit growth on indicated investment growth rate">
+			<aux name="ratio of bank profit payment to total assets">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>relative_bank_negative_profit_growth</eqn>
-				<gf>
-					<xscale min="0" max="1"/>
-					<yscale min="1" max="2"/>
-					<ypts>1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2</ypts>
-				</gf>
-			</aux>
-			<aux name="reference annual bank negative\nprofit fractional growth">
-				<eqn>1</eqn>
+				<eqn>annual_bank_profit_payment/Bank_Assets</eqn>
 				<units>1/year</units>
 			</aux>
-			<aux name="relative bank negative\nprofit growth">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>annual_bank_negative_profit_fractional_growth/reference_annual_bank_negative_profit_fractional_growth</eqn>
-				<units>1/year</units>
-			</aux>
-			<aux name="weight of negative growth effect on bank investment growth rate">
-				<eqn>1</eqn>
-				<units>dmnl</units>
+			<aux name="Degrowth policy start time">
+				<eqn>2025</eqn>
+				<units>year</units>
 			</aux>
 		</variables>
 		<views>
@@ -8563,7 +8549,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_y="345" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="1823" isee:scroll_y="900" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -9093,7 +9079,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 					<from>normal_bank_profit_payment_fraction</from>
 					<to>effect_of_net_bank_assets_fractional_growth_on_bank_profit_payment</to>
 				</connector>
-				<aux label_side="bottom" x="381.479" y="398.917" name="annual bank profit\npayment"/>
+				<aux label_side="top" x="381.479" y="398.917" name="annual bank profit\npayment"/>
 				<connector uid="132" angle="329.072">
 					<from>
 						<alias uid="133"/>
@@ -9962,45 +9948,27 @@ SDG 10.5.1</text_box>
 					<from>government_interest_payments</from>
 					<to>Return_on_assets_to_short_term_liabilities</to>
 				</connector>
-				<aux label_side="left" label_angle="225" x="241.889" y="776" name="effect of bank negative profit growth on indicated investment growth rate"/>
-				<connector uid="469" angle="250.747">
-					<pts>
-						<pt x="473.196" y="331.914"/>
-						<pt x="433" y="447"/>
-						<pt x="387" y="533"/>
-						<pt x="336" y="586"/>
-						<pt x="278" y="617"/>
-						<pt x="241" y="640"/>
-						<pt x="216.981" y="664.942"/>
-					</pts>
-					<from>annual_bank_negative_profit_fractional_growth</from>
-					<to>relative_bank_negative_profit_growth</to>
+				<aux label_side="top" x="512" y="493" name="ratio of bank profit payment to total assets"/>
+				<connector uid="476" angle="272.894">
+					<from>annual_bank_profit_payment</from>
+					<to>ratio_of_bank_profit_payment_to_total_assets</to>
 				</connector>
-				<aux label_side="top" x="164.216" y="641.087" name="reference annual bank negative\nprofit fractional growth"/>
-				<aux label_side="left" label_angle="225" x="211" y="671.667" name="relative bank negative\nprofit growth"/>
-				<connector uid="470" angle="326.83">
-					<from>reference_annual_bank_negative_profit_fractional_growth</from>
-					<to>relative_bank_negative_profit_growth</to>
+				<connector uid="477" angle="203.429">
+					<from>
+						<alias uid="478"/>
+					</from>
+					<to>ratio_of_bank_profit_payment_to_total_assets</to>
 				</connector>
-				<connector uid="471" angle="223.209">
-					<from>relative_bank_negative_profit_growth</from>
-					<to>effect_of_bank_negative_profit_growth_on_indicated_investment_growth_rate</to>
+				<connector uid="480" angle="357.743">
+					<from>
+						<alias uid="479"/>
+					</from>
+					<to>bank_investment_growth_rate</to>
 				</connector>
-				<aux label_side="top" x="607.125" y="883.377" name="weight of negative growth effect on bank investment growth rate"/>
-				<connector uid="474" angle="258.509">
-					<from>weight_of_negative_growth_effect_on_bank_investment_growth_rate</from>
-					<to>indicated_bank_investment_growth_rate</to>
-				</connector>
-				<connector uid="475" angle="0">
-					<pts>
-						<pt x="250.889" y="776"/>
-						<pt x="351" y="795"/>
-						<pt x="475" y="842"/>
-						<pt x="539" y="915"/>
-						<pt x="579.099" y="992.477"/>
-					</pts>
-					<from>effect_of_bank_negative_profit_growth_on_indicated_investment_growth_rate</from>
-					<to>indicated_bank_investment_growth_rate</to>
+				<aux label_side="top" x="769" y="818.797" name="Degrowth policy start time"/>
+				<connector uid="481" angle="312.188">
+					<from>Degrowth_policy_start_time</from>
+					<to>bank_investment_growth_rate</to>
 				</connector>
 				<alias label_side="right" uid="27" x="1825.17" y="1005.55" width="18" height="18">
 					<of>loan_maturation_time</of>
@@ -10075,7 +10043,7 @@ SDG 10.5.1</text_box>
 				<alias font_style="italic" uid="423" x="2392.5" y="1015.55" width="18" height="18">
 					<of>&quot;UNIT_c$_per_Bc$&quot;</of>
 				</alias>
-				<alias font_style="italic" uid="427" x="740" y="847.207" width="18" height="18">
+				<alias font_style="italic" uid="427" x="642" y="791.797" width="18" height="18">
 					<of>total_investment</of>
 				</alias>
 				<alias font_style="italic" font_weight="bold" uid="440" x="1427" y="1119" width="18" height="18">
@@ -10095,6 +10063,12 @@ SDG 10.5.1</text_box>
 				</alias>
 				<alias font_style="italic" label_side="right" uid="460" x="3397.43" y="281.714" width="18" height="18">
 					<of>exploratory_loan_defaults_from_from_interest</of>
+				</alias>
+				<alias font_style="italic" uid="478" x="660" y="528" width="18" height="18">
+					<of>Bank_Assets</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" label_side="left" uid="479" x="646" y="855.707" width="45" height="35">
+					<of>Inflation_Rate_1</of>
 				</alias>
 			</view>
 		</views>
@@ -12150,7 +12124,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1158.33" isee:scroll_y="570" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1078.33" isee:scroll_y="920" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12926,7 +12900,7 @@ ELSE
 				</connector>
 				<aux x="1085.96" y="1397.16" name="banks threshold for perceiving gov debt as risky"/>
 				<aux x="1049.96" y="1474.77" name="sensitivity of banks\ngov debt risk perception"/>
-				<aux x="1338.1" y="1468.1" name="government risk premium"/>
+				<aux label_side="right" label_angle="45" x="1338.1" y="1468.1" name="government risk premium"/>
 				<connector uid="278" angle="69.9384">
 					<from>government_risk_premium</from>
 					<to>current_government_debt_interest_rate</to>
@@ -14086,7 +14060,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_y="20.8333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_y="426.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14463,7 +14437,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<aux font_style="italic" font_weight="bold" x="910.43" y="1344.5" name="irrigation water used\nper unit of crop production"/>
 				<aux x="928.43" y="1237" name="growth rate in irrigation water used per unit of crop production"/>
 				<aux x="957.75" y="1126.5" name="irrigation water used per unit of crop production inflation contribution"/>
-				<aux background="#E5FF31" x="778.75" y="1206.5" name="weight of irrigation water used per unit of crop production inflation contribution"/>
+				<aux background="#E5FF31" label_side="left" label_angle="225" x="778.75" y="1206.5" name="weight of irrigation water used per unit of crop production inflation contribution"/>
 				<connector uid="87" angle="24.0812">
 					<from>weight_of_irrigation_water_used_per_unit_of_crop_production_inflation_contribution</from>
 					<to>irrigation_water_used_per_unit_of_crop_production_inflation_contribution</to>
