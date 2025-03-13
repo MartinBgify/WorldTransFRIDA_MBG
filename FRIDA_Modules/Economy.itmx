@@ -376,6 +376,8 @@
 				<connect2 to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect2 to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
+				<connect to="Government.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
+				<connect2 to="Government.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
 				<connect to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
@@ -590,6 +592,10 @@
 				<connect2 to="Employment.average_private_debt_safe_interest" from="Finance.average_private_debt_safe_interest"/>
 				<connect to="Coastal_Assets.Bank_Assets_1" from="Finance.Bank_Assets"/>
 				<connect2 to="Coastal_Assets.Bank_Assets_1" from="Finance.Bank_Assets"/>
+				<connect to="Employment.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
+				<connect2 to="Employment.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
+				<connect to="Government.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
+				<connect2 to="Government.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
 				<connect to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect2 to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
@@ -689,6 +695,8 @@
 				<format scale_by="auto"/>
 				<connect to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect2 to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
+				<connect to="Inflation.Converter_1" from="Employment.Converter_1"/>
+				<connect2 to="Inflation.Converter_1" from="Employment.Converter_1"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
 				<connect to="Inflation.Employed" from="Employment.Employed"/>
@@ -737,6 +745,8 @@
 				<connect2 to="Employment.deaths_40_to_60_years" from="Demographics.deaths_40_to_60_years"/>
 				<connect to="Employment.deaths_60_to_65_years" from="Demographics.deaths_60_to_65_years"/>
 				<connect2 to="Employment.deaths_60_to_65_years" from="Demographics.deaths_60_to_65_years"/>
+				<connect to="Employment.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
+				<connect2 to="Employment.Degrowth_policy_start_time" from="Finance.Degrowth_policy_start_time"/>
 				<connect to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
 				<connect2 to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
 				<connect to="Employment.exploratory_loan_failure" from="Finance.exploratory_loan_failure"/>
@@ -816,6 +826,8 @@
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
 				<connect2 to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect to="Inflation.Converter_1" from="Employment.Converter_1"/>
+				<connect2 to="Inflation.Converter_1" from="Employment.Converter_1"/>
 				<connect to="Inflation.crop_demand" from="Food_Demand.crop_demand"/>
 				<connect2 to="Inflation.crop_demand" from="Food_Demand.crop_demand"/>
 				<connect to="Inflation.crop_production" from="Crop.crop_production"/>
@@ -997,7 +1009,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="74" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2417,7 +2429,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="669" isee:scroll_y="869" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="402" isee:scroll_y="876" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2550,10 +2562,10 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<from>Worker_Savings</from>
 					<to>worker_savings_goal_shortfall</to>
 				</connector>
-				<flow label_side="top" x="1218.5" y="1439.39" name="firms paying\ninterest">
+				<flow label_side="top" x="1220.5" y="1439.39" name="firms paying\ninterest">
 					<pts>
-						<pt x="1218.5" y="1320.03"/>
-						<pt x="1218.5" y="1567.75"/>
+						<pt x="1220.5" y="1320.03"/>
+						<pt x="1220.5" y="1567.75"/>
 					</pts>
 				</flow>
 				<flow label_side="top" x="1613.63" y="1242" name="worker savings\ninterest">
@@ -2727,16 +2739,16 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="1183.75" y="1554.35" name="safe bank assets"/>
 				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="1183.75" y="1596.58" name="risky bank assets"/>
-				<connector uid="59" angle="73.1808">
+				<connector uid="59" angle="72.2721">
 					<from>safe_bank_assets</from>
 					<to>firms_paying_interest</to>
 				</connector>
-				<connector uid="60" angle="77.534">
+				<connector uid="60" angle="76.841">
 					<from>risky_bank_assets</from>
 					<to>firms_paying_interest</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="315" x="1252.17" y="1596.58" name="risky\ninterest 1"/>
-				<connector uid="61" angle="102.09">
+				<connector uid="61" angle="101.391">
 					<from>risky_interest_1</from>
 					<to>firms_paying_interest</to>
 				</connector>
@@ -2857,12 +2869,12 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<to>ratio_of_profits_to_wages</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="left" x="1183.75" y="1514.25" name="exploratory\nbank assets"/>
-				<connector uid="95" angle="65.0988">
+				<connector uid="95" angle="63.8528">
 					<from>exploratory_bank_assets</from>
 					<to>firms_paying_interest</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="right" x="1256.5" y="1514.25" name="exploratory\ninterest"/>
-				<connector uid="96" angle="116.913">
+				<connector uid="96" angle="115.683">
 					<from>exploratory_interest</from>
 					<to>firms_paying_interest</to>
 				</connector>
@@ -3469,7 +3481,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<to>worker_share_of_net_income</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="315" x="1259.75" y="1554.35" name="average private debt interest"/>
-				<connector uid="249" angle="109.739">
+				<connector uid="249" angle="108.851">
 					<from>average_private_debt_interest</from>
 					<to>firms_paying_interest</to>
 				</connector>
@@ -4309,7 +4321,7 @@ https://rshiny.ilo.org/dataexplorer20/?id=EAP_2WAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.453576692359076</eqn>
+					<eqn>0.453576692359076*(1+working_hours_reduction)</eqn>
 				</element>
 				<range min="0.1" max="0.75"/>
 				<units>dmnl</units>
@@ -5332,6 +5344,35 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<eqn>0.01</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="Degrowth policy start time" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="working hours reduction">
+				<eqn>RAMP(slope, Degrowth_policy_start_time, Degrowth_policy_start_time+time_to_implement)</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="time to adjust working hours">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="goal working hours reduction">
+				<eqn>0.25</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="slope">
+				<eqn>0.025</eqn>
+			</aux>
+			<aux name="time to implement">
+				<eqn>10</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="Converter 1" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Employed*(1-working_hours_reduction)</eqn>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -5381,7 +5422,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="427.5" isee:scroll_y="972.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1073.33" isee:scroll_y="854.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5615,7 +5656,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 					</from>
 					<to>unemployed_deaths</to>
 				</connector>
-				<connector uid="32" angle="21.0343">
+				<connector uid="32" angle="25.8358">
 					<from>
 						<alias uid="33"/>
 					</from>
@@ -6535,7 +6576,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<from>firing_from_missed_profits</from>
 					<to>firing</to>
 				</connector>
-				<connector uid="243" angle="0.859372">
+				<connector uid="243" angle="0.860483">
 					<from>firing</from>
 					<to>employment_decline</to>
 				</connector>
@@ -6722,6 +6763,37 @@ furthermore. The structure that was previously decided on had the productivity g
 				<connector uid="290" angle="259.38">
 					<from>UNIT_percent</from>
 					<to>effect_of_climate_on_high_exposure_labour</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1549.92" y="1069.84" name="Degrowth policy start time"/>
+				<aux label_side="top" x="1659.54" y="1069.84" name="working hours reduction"/>
+				<aux label_side="right" x="1843.37" y="1099" name="time to adjust working hours"/>
+				<aux label_side="right" x="1843.37" y="1131.26" name="goal working hours reduction"/>
+				<connector uid="291" angle="0">
+					<from>Degrowth_policy_start_time</from>
+					<to>working_hours_reduction</to>
+				</connector>
+				<aux label_side="top" x="1748.41" y="1069.84" name="slope"/>
+				<connector uid="296" angle="180">
+					<from>slope</from>
+					<to>working_hours_reduction</to>
+				</connector>
+				<aux x="1748.41" y="1101" name="time to implement"/>
+				<connector uid="297" angle="166.06">
+					<from>time_to_implement</from>
+					<to>working_hours_reduction</to>
+				</connector>
+				<aux label_side="left" x="1273.5" y="1287.46" name="Converter 1"/>
+				<connector uid="298" angle="93.6873">
+					<from>Employed</from>
+					<to>Converter_1</to>
+				</connector>
+				<connector uid="299" angle="227.024">
+					<from>working_hours_reduction</from>
+					<to>Converter_1</to>
+				</connector>
+				<connector uid="300" angle="305.107">
+					<from>working_hours_reduction</from>
+					<to>hiring_to_investment_ratio</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -8496,7 +8568,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<eqn>annual_bank_profit_payment/Bank_Assets</eqn>
 				<units>1/year</units>
 			</aux>
-			<aux name="Degrowth policy start time">
+			<aux name="Degrowth policy start time" access="output" isee:autocreated="true">
 				<eqn>2025</eqn>
 				<units>year</units>
 			</aux>
@@ -8549,7 +8621,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="1823" isee:scroll_y="900" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="2109" isee:scroll_y="260" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10938,7 +11010,9 @@ inflation_goal_policy</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(central_bank_interest_rate_reactivity*interest_rate_policy_discrepancy-Central_Bank_Safe_Interest+baseline_interest)/central_bank_adjustment_time</eqn>
+				<eqn>IF TIME &lt; Degrowth_policy_start_time 
+THEN (central_bank_interest_rate_reactivity*interest_rate_policy_discrepancy-Central_Bank_Safe_Interest+baseline_interest)/central_bank_adjustment_time
+ELSE (goal_degrowth_DB_rate-Central_Bank_Safe_Interest)/time_to_implement_degrowth_CB_rate_policy</eqn>
 				<units>1/year/Year</units>
 			</flow>
 			<aux name="central bank\ninterest rate\nreactivity">
@@ -11766,7 +11840,9 @@ effect_of_STA_on_public_consumption</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium</eqn>
+				<eqn>IF TIME &lt; Degrowth_policy_start_time 
+THEN maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium 
+ELSE  maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium * Degrowth_government_risk_premium_policy</eqn>
 				<units>1/year</units>
 			</aux>
 			<aux name="start year" access="input">
@@ -12075,6 +12151,22 @@ ELSE
 				<range min="0.5" max="1"/>
 				<units>dmnl</units>
 			</aux>
+			<aux name="Degrowth policy start time" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="Degrowth government risk premium policy">
+				<eqn>0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="time to implement\ndegrowth CB rate policy">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="goal degrowth DB rate">
+				<eqn>0</eqn>
+				<units>1/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -12124,7 +12216,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1078.33" isee:scroll_y="920" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1393.33" isee:scroll_y="778.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12658,8 +12750,8 @@ ELSE
 					<to>sum_of_energy_subsidies_in_nominal_terms</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1393.05" y="688.858" name="Total nominal SLR\nprotection cost"/>
-				<stacked_container uid="200" x="2100.21" y="1448.5">
-					<graph width="350" height="250" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="200" x="1925.21" y="1323.5" width="350" height="386.86">
+					<graph width="350" height="386.86" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
 							<entity name="debt_to_GDP_ratio[1]"/>
 						</plot>
@@ -12906,7 +12998,7 @@ ELSE
 					<to>current_government_debt_interest_rate</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1865.83" y="1124.17" name="start year"/>
-				<connector uid="281" angle="181.146">
+				<connector uid="281" angle="178.412">
 					<from>start_year</from>
 					<to>minimum_effect_of_debt_to_GDP_ratio_on_government_spending</to>
 				</connector>
@@ -13218,6 +13310,32 @@ ELSE
 					<from>historical_minimum_effect_of_deb_to_GDP_ratio_on_government_spending</from>
 					<to>minimum_effect_of_debt_to_GDP_ratio_on_government_spending</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" x="1299.29" y="1356.67" name="Degrowth policy start time"/>
+				<aux x="1231.22" y="1397.16" name="Degrowth government risk premium policy"/>
+				<connector uid="398" angle="326.426">
+					<from>Degrowth_government_risk_premium_policy</from>
+					<to>government_risk_premium</to>
+				</connector>
+				<connector uid="399" angle="289.204">
+					<from>Degrowth_policy_start_time</from>
+					<to>government_risk_premium</to>
+				</connector>
+				<aux label_side="right" x="1620.71" y="1888.83" name="time to implement\ndegrowth CB rate policy"/>
+				<aux label_side="right" label_angle="315" x="1585.93" y="1912.17" name="goal degrowth DB rate"/>
+				<connector uid="401" angle="103.718">
+					<from>
+						<alias uid="400"/>
+					</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<connector uid="402" angle="117.235">
+					<from>goal_degrowth_DB_rate</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<connector uid="403" angle="135.172">
+					<from>time_to_implement_degrowth_CB_rate_policy</from>
+					<to>change_in_safe_interest</to>
+				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
 					<of>baseline_interest</of>
 				</alias>
@@ -13266,6 +13384,9 @@ ELSE
 				<alias color="blue" background="white" font_style="italic" uid="341" x="1435.62" y="613.834" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>climate_driven_government_consumption</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" label_side="right" label_angle="315" uid="400" x="1553.73" y="1937.17" width="18" height="18">
+					<of>Degrowth_policy_start_time</of>
 				</alias>
 			</view>
 		</views>
@@ -13583,7 +13704,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>INFLATION_IMPACT_GROWTH_RATE(Employed, 1, initial_employed_growth)</eqn>
+				<eqn>INFLATION_IMPACT_GROWTH_RATE(Converter_1, 1, initial_employed_growth)</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="initial employed growth">
@@ -14011,6 +14132,12 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<eqn>energy_demand_growth_rate[Run]-energy_supply_growth_rate[Run]</eqn>
 				<units>dmnl/year</units>
 			</aux>
+			<aux name="Converter 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -14060,7 +14187,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_y="426.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="115" isee:scroll_y="412.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14268,14 +14395,6 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<stock font_style="italic" font_weight="bold" x="381.75" y="658.5" name="Employed"/>
 				<aux label_side="bottom" x="535.75" y="690.5" name="employment\ngrowth"/>
 				<aux label_side="top" x="572.848" y="647.5" name="initial employed growth"/>
-				<connector uid="39" angle="229.214">
-					<from>initial_employed_growth</from>
-					<to>employment_growth</to>
-				</connector>
-				<connector uid="40" angle="337.38">
-					<from>Employed</from>
-					<to>employment_growth</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="left" x="378.75" y="757.5" name="realised productivity"/>
 				<aux label_side="right" x="680.773" y="767.5" name="employment and\nproductivity growth"/>
 				<connector uid="41" angle="4.08562">
@@ -14563,6 +14682,15 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<connector uid="116" angle="220.351">
 					<from>energy_market_balance</from>
 					<to>marginal_energy_cost_inflation_contribution</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="489.167" y="751.667" name="Converter 1"/>
+				<connector uid="117" angle="62.9044">
+					<from>Converter_1</from>
+					<to>employment_growth</to>
+				</connector>
+				<connector uid="39" angle="229.214">
+					<from>initial_employed_growth</from>
+					<to>employment_growth</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="79" x="809.75" y="1305.5" width="18" height="18">
 					<shape type="circle" radius="18"/>
