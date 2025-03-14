@@ -1009,7 +1009,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="42" isee:scroll_y="34" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="76" isee:scroll_y="176" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1288,7 +1288,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>11.959643088224</eqn>
+					<eqn>11.9127831013027</eqn>
 				</element>
 				<range min="2" max="20"/>
 				<units>Years</units>
@@ -1317,7 +1317,7 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.9876</eqn>
+					<eqn>1.83929260488811</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>Years</units>
@@ -1329,7 +1329,7 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>4.76244896094109</eqn>
+					<eqn>4.74003323659317</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>year</units>
@@ -1410,7 +1410,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.3214</eqn>
+					<eqn>1.28369750514221</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>Years</units>
@@ -1461,7 +1461,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.218514085704368</eqn>
+					<eqn>0.227709950135604</eqn>
 				</element>
 				<range min="0.1" max="0.3"/>
 				<units>dmnl</units>
@@ -1536,7 +1536,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.41900072499316</eqn>
+					<eqn>2.43226525067428</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>year</units>
@@ -1907,7 +1907,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.327443333564517</eqn>
+					<eqn>0.315488782438794</eqn>
 				</element>
 				<range min="0" max="0.4"/>
 				<units>dmnl</units>
@@ -2219,7 +2219,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0849718904847411</eqn>
+				<eqn>0.0801245773868997</eqn>
 				<range min="0.05" max="0.15"/>
 				<units>dmnl</units>
 			</aux>
@@ -2236,7 +2236,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.43622627780114</eqn>
+				<eqn>1.01346969161355</eqn>
 				<range min="1" max="20"/>
 				<units>years</units>
 			</aux>
@@ -2253,7 +2253,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.23884800522675</eqn>
+				<eqn>1.1876672151168</eqn>
 				<range min="1.1" max="2"/>
 				<units>dmnl</units>
 			</aux>
@@ -2263,7 +2263,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.834451918900067</eqn>
+				<eqn>0.875839535668278</eqn>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
@@ -2273,7 +2273,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.794511084262979</eqn>
+				<eqn>0.8481541646851</eqn>
 				<range min="0.5" max="1.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2283,7 +2283,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>16</eqn>
+				<eqn>8.42634129360573</eqn>
 				<range min="1" max="16"/>
 				<units>dmnl</units>
 			</aux>
@@ -2293,7 +2293,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0294068356885038</eqn>
+				<eqn>0.0338384030205519</eqn>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
@@ -2303,7 +2303,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.87069949475955</eqn>
+				<eqn>1.86367822595587</eqn>
 				<range min="1" max="2"/>
 				<units>dmnl</units>
 			</aux>
@@ -3858,7 +3858,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.06534654</eqn>
+					<eqn>0.0567756626189822</eqn>
 				</element>
 				<range min="0.03" max="0.1"/>
 				<units>dmnl</units>
@@ -3877,7 +3877,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5569.25785906402</eqn>
+					<eqn>5119.51368852502</eqn>
 				</element>
 				<range min="2000" max="10000"/>
 				<units>$/p</units>
@@ -4272,7 +4272,7 @@ https://rshiny.ilo.org/dataexplorer32/?id=UNE_2EAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.41696813703378</eqn>
+					<eqn>1.41679621142627</eqn>
 				</element>
 				<range min="1" max="3"/>
 				<units>year</units>
@@ -4284,7 +4284,7 @@ https://rshiny.ilo.org/dataexplorer32/?id=UNE_2EAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0651860521548508</eqn>
+					<eqn>0.0664561066223892</eqn>
 				</element>
 				<range min="0" max="0.9"/>
 				<units>1/year</units>
@@ -4296,7 +4296,7 @@ https://rshiny.ilo.org/dataexplorer20/?id=EAP_2WAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>63.9533581236645</eqn>
+					<eqn>63.9549959399612</eqn>
 				</element>
 				<range min="61.8" max="66"/>
 				<units>dmnl</units>
@@ -4315,7 +4315,7 @@ https://rshiny.ilo.org/dataexplorer20/?id=EAP_2WAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.453576692359076</eqn>
+					<eqn>0.453884454736148</eqn>
 				</element>
 				<range min="0.1" max="0.75"/>
 				<units>dmnl</units>
@@ -4991,7 +4991,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0268379400227628</eqn>
+				<eqn>0.024328618658837</eqn>
 				<range min="0.01" max="0.03"/>
 				<units>dmnl/Year</units>
 			</aux>
@@ -5047,7 +5047,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.124716634418707</eqn>
+					<eqn>0.12133262728225</eqn>
 				</element>
 				<range min="0.04" max="0.15"/>
 				<units>dmnl</units>
@@ -5066,7 +5066,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.54823562878133</eqn>
+					<eqn>1.44567952419885</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -5395,7 +5395,7 @@ This is here for extreme conditions only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="635.833" isee:scroll_y="781.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1182.5" isee:scroll_y="1236.67" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6972,7 +6972,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>10.1537647212335</eqn>
+					<eqn>9.07647572153988</eqn>
 				</element>
 				<range min="3" max="30"/>
 				<units>Years</units>
@@ -7014,7 +7014,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.120092950728545</eqn>
+					<eqn>0.124441679585892</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -7033,7 +7033,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.06771247495424</eqn>
+					<eqn>1.20116825915224</eqn>
 				</element>
 				<range min="0.5" max="1.5"/>
 				<units>year</units>
@@ -7072,7 +7072,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.557438886480119</eqn>
+					<eqn>0.484842911031856</eqn>
 				</element>
 				<range min="0.125" max="1.5"/>
 				<units>year</units>
@@ -7106,7 +7106,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0309082194488826</eqn>
+					<eqn>0.027567701897042</eqn>
 				</element>
 				<range min="0.01" max="0.05"/>
 				<units>dmnl</units>
@@ -7137,7 +7137,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.03807159642058</eqn>
+					<eqn>3.91446966204</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>dmnl</units>
@@ -7190,9 +7190,9 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0590331365006087</eqn>
+					<eqn>0.0252098844317607</eqn>
 				</element>
-				<range min="0.02" max="0.1"/>
+				<range min="0.02" max="0.3"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="bank expectation\nformation time">
@@ -7202,7 +7202,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.55210712772329</eqn>
+					<eqn>1.90939610373196</eqn>
 				</element>
 				<range min="1" max="20"/>
 				<units>years</units>
@@ -7228,7 +7228,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.8515154846553</eqn>
+					<eqn>3.00168232346215</eqn>
 				</element>
 				<range min="2.5" max="5"/>
 				<units>dmnl</units>
@@ -7240,7 +7240,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0185327119002396</eqn>
+					<eqn>0.0148561177656739</eqn>
 				</element>
 				<range min="0.01" max="0.05"/>
 				<units>1/year</units>
@@ -7359,7 +7359,7 @@ furthermore. The structure that was previously decided on had the productivity g
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>TREND(Bank_Investment, 1, initial_investment_growth_rate)</eqn>
+				<eqn>TREND(Bank_Investment, 1)</eqn>
 				<units>1/year</units>
 			</aux>
 			<aux name="investment and\nGDP growth difference">
@@ -7383,20 +7383,10 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.172196014982087</eqn>
+					<eqn>0.191227089996674</eqn>
 				</element>
 				<range min="0.1" max="0.25"/>
 				<units>dmnl</units>
-			</aux>
-			<aux name="initial investment\ngrowth rate">
-				<doc>${Internal Calibration Parameter}
-</doc>
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>0.045367825</eqn>
-				<range min="0.01" max="0.1"/>
-				<units>1/year</units>
 			</aux>
 			<stock name="Government\nDebt" access="input">
 				<dimensions>
@@ -7429,7 +7419,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.572786478649781</eqn>
+					<eqn>0.57669070665617</eqn>
 				</element>
 				<range min="0.1" max="1.1"/>
 				<units>1/deg C</units>
@@ -7476,7 +7466,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.999999976470528</eqn>
+					<eqn>1.12723640813427</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -7635,7 +7625,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>11.1311074042744</eqn>
+					<eqn>10.599860308813</eqn>
 				</element>
 				<range min="3" max="30"/>
 				<units>years</units>
@@ -7955,7 +7945,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0585080329653651</eqn>
+					<eqn>0.0550907160780678</eqn>
 				</element>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
@@ -8221,7 +8211,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.232135598795891</eqn>
+					<eqn>-0.159833829806641</eqn>
 				</element>
 				<range min="-1" max="-0.11"/>
 				<units>dmnl</units>
@@ -8381,7 +8371,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2.24654614389</eqn>
+				<eqn>2.79357957471065</eqn>
 				<range min="1" max="3"/>
 				<units>dmnl</units>
 			</aux>
@@ -8524,7 +8514,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-0.00435518687928198</eqn>
+				<eqn>0.0292313770498235</eqn>
 				<range min="-0.5" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -8534,7 +8524,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-3.74327685624463</eqn>
+				<eqn>-3.73221807349546</eqn>
 				<range min="-4.75" max="-2.75"/>
 				<units>dmnl</units>
 			</aux>
@@ -8551,7 +8541,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.99570253993458</eqn>
+				<eqn>1.96441958119364</eqn>
 				<range min="1.5" max="2.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -8561,7 +8551,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3.74678153822114</eqn>
+				<eqn>3.82732576959763</eqn>
 				<range min="2.75" max="4.75"/>
 				<units>dmnl</units>
 			</aux>
@@ -8590,7 +8580,7 @@ To control extreme policy only</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0500204637623096</eqn>
+				<eqn>0.0503929481616128</eqn>
 				<range min="0.025" max="0.075"/>
 				<units>dmnl</units>
 			</aux>
@@ -8649,7 +8639,7 @@ To control extreme policy only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="1699" isee:scroll_y="1027" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_y="483" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -8673,16 +8663,15 @@ To control extreme policy only</doc>
 						<isee:series_styles>
 							<isee:series_style color="blue" thickness="1"/>
 							<isee:series_style color="red" thickness="1"/>
-							<isee:series_style color="#73FDFF" thickness="1"/>
 							<isee:series_style color="#008F44" thickness="1"/>
 							<isee:series_style color="#FF7F00" thickness="1"/>
-							<isee:series_style color="#7F00FF" thickness="1"/>
-							<isee:series_style color="#0CA0FF" thickness="1"/>
-							<isee:series_style color="lime" thickness="1"/>
+							<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
 							<isee:series_style color="#FF007F" thickness="1"/>
-							<isee:series_style color="aqua" thickness="1"/>
-							<isee:series_style color="#F586FF" thickness="1"/>
-							<isee:series_style color="black" thickness="1"/>
+							<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="black" thickness="1" pen_style="dashed"/>
 							<isee:series_style color="#C8C8C8" thickness="1"/>
 						</isee:series_styles>
 					</graph>
@@ -8978,11 +8967,6 @@ To control extreme policy only</doc>
 				<connector uid="74" angle="270">
 					<from>sensitivity_of_failure_rate_to_investment_to_gdp_ratio</from>
 					<to>effect_of_investment_to_gdp_ratio_on_failure_rate</to>
-				</connector>
-				<aux label_side="bottom" x="953.997" y="822.964" name="initial investment\ngrowth rate"/>
-				<connector uid="75" angle="23.4905">
-					<from>initial_investment_growth_rate</from>
-					<to>Investment_growth_rate</to>
 				</connector>
 				<connector uid="77" angle="357.751">
 					<from>effect_of_investment_to_gdp_ratio_on_failure_rate</from>
@@ -10092,7 +10076,7 @@ SDG 10.5.1</text_box>
 					</from>
 					<to>effect_of_equity_ratio_gap_on_investment_growth_when_above_target</to>
 				</connector>
-				<stacked_container uid="496" x="244.86" y="1671.3">
+				<stacked_container uid="496" x="260.86" y="1176.3">
 					<graph width="350" height="250" type="scatter" x_axis_auto_scale="true" connect_dots="false" single_point="false" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="equity_ratio_gap[1]"/>
@@ -10148,6 +10132,13 @@ SDG 10.5.1</text_box>
 					<from>equity_gap_zero_effect_y</from>
 					<to>effect_of_equity_ratio_gap_on_investment_growth_when_below_target</to>
 				</connector>
+				<stacked_container uid="508" x="906.207" y="1537" width="529" height="405">
+					<graph width="529" height="405" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="false" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="GDP.real_GDP_growth_rate[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
 				<alias label_side="right" uid="27" x="1825.17" y="1005.55" width="18" height="18">
 					<of>loan_maturation_time</of>
 				</alias>
@@ -10247,6 +10238,9 @@ SDG 10.5.1</text_box>
 				</alias>
 				<alias font_style="italic" uid="471" x="2393.5" y="1023.55" width="45" height="35">
 					<of>Safe_Loans</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="507" x="1422" y="1058" width="18" height="18">
+					<of>real_GDP_growth_rate</of>
 				</alias>
 			</view>
 		</views>
@@ -10458,7 +10452,7 @@ SDG 10.5.1</text_box>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0378863989105273</eqn>
+					<eqn>0.0346791305903476</eqn>
 				</element>
 				<range min="0" max="0.05"/>
 				<units>dmnl/year</units>
@@ -11013,7 +11007,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.17316066037567</eqn>
+					<eqn>2.12845731826545</eqn>
 				</element>
 				<range min="1" max="3"/>
 				<units>Years</units>
@@ -11074,7 +11068,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.28099394601465</eqn>
+					<eqn>2.2812606641045</eqn>
 				</element>
 				<range min="1" max="3"/>
 				<units>year</units>
@@ -11665,7 +11659,7 @@ expenditure_on_subsidies_for_investments_in_gas_energy_conversion + expenditure_
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.23920781827243</eqn>
+					<eqn>1.2394137289925</eqn>
 				</element>
 				<range min="1.2" max="1.5"/>
 				<units>dmnl</units>
@@ -11808,7 +11802,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0654000951715641</eqn>
+					<eqn>0.0556096221523734</eqn>
 				</element>
 				<range min="0" max="0.2"/>
 				<units>1/deg C</units>
@@ -11958,7 +11952,7 @@ effect_of_STA_on_public_consumption</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0330464757458191</eqn>
+					<eqn>0.0325493786857872</eqn>
 				</element>
 				<range min="0" max="0.2"/>
 				<units>1/year</units>
@@ -12302,7 +12296,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="740.833" isee:scroll_y="317.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1393.33" isee:scroll_y="390" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13557,7 +13551,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.632571426842737</eqn>
+					<eqn>1.160409180515</eqn>
 				</element>
 				<range min="0.25" max="2.5"/>
 				<units>year</units>
@@ -13706,7 +13700,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>3.62013559340907</eqn>
+					<eqn>3.60919377730336</eqn>
 				</element>
 				<range min="0" max="100"/>
 				<units>dmnl</units>
@@ -13718,7 +13712,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-2.28521098871544</eqn>
+					<eqn>-2.30595838142447</eqn>
 				</element>
 				<range min="-10" max="1"/>
 				<units>Million*Person*Years/b$</units>
@@ -13730,7 +13724,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>19.853545173348</eqn>
+					<eqn>19.8801755961907</eqn>
 				</element>
 				<range min="0" max="20"/>
 				<units>dmnl</units>
@@ -13831,7 +13825,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>3.0234</eqn>
+					<eqn>2.50514577945702</eqn>
 				</element>
 				<range min="2.5" max="5"/>
 				<units>years</units>
@@ -13867,7 +13861,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.467157679917</eqn>
+					<eqn>0.610839976663536</eqn>
 				</element>
 				<range min="0.01" max="2"/>
 				<units>dmnl</units>
@@ -14031,7 +14025,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.402726883908476</eqn>
+					<eqn>0.394672320677932</eqn>
 				</element>
 				<range min="0.35" max="0.55"/>
 				<units>dmnl</units>
@@ -14043,7 +14037,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0529539890799932</eqn>
+					<eqn>0.0523825277016084</eqn>
 				</element>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
@@ -14241,7 +14235,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="360.833" isee:scroll_y="385.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="520.833" isee:scroll_y="485" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14782,7 +14776,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>10.0558855693026</eqn>
+					<eqn>10.0602714748332</eqn>
 				</element>
 				<range min="5" max="20"/>
 				<units>years</units>
@@ -14873,7 +14867,7 @@ ELSE MAX(0, Firms_Innovation_Orientation//time_to_decrease_innovation_orientatio
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.01478793929433</eqn>
+					<eqn>1.01710833309086</eqn>
 				</element>
 				<range min="0" max="20"/>
 				<units>dmnl</units>
@@ -14921,7 +14915,7 @@ ELSE MAX(0, Firms_Innovation_Orientation//time_to_decrease_innovation_orientatio
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>9.98672531592705</eqn>
+					<eqn>9.98656562360524</eqn>
 				</element>
 				<range min="0" max="20"/>
 				<units>dmnl</units>
