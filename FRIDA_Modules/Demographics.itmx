@@ -481,7 +481,7 @@ Cohort lengths for Conveyors</doc>
 			<aux name="1 to 20 normal death\nrate">
 				<doc>${Assumption}
 This has no range and isn&apos;t in the calibration because its covered by its associated alpha parameter</doc>
-				<eqn>0.00603509069436379</eqn>
+				<eqn>0.00575294071618003</eqn>
 				<units>Per Year</units>
 			</aux>
 			<aux name="20 to 40 normal death\nrate">
@@ -925,7 +925,7 @@ Cohort lengths for Conveyors</doc>
 			<aux name="0 normal death\nrate">
 				<doc>${Assumption}
 This has no range and isn&apos;t in the calibration because its covered by its associated alpha parameter</doc>
-				<eqn>0.0852871555499175</eqn>
+				<eqn>0.0813885067921848</eqn>
 				<units>Per Year</units>
 			</aux>
 			<aux name="total deaths">
@@ -1058,7 +1058,7 @@ Calibration Parameter: deaths 20-40 years</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.718942993661345</eqn>
+					<eqn>-0.778056934726232</eqn>
 				</element>
 				<range min="-3" max="0"/>
 				<units>dmnl</units>
@@ -1093,7 +1093,7 @@ Calibration Parameter: deaths 40-60 years</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.63152254750013</eqn>
+					<eqn>-0.66963855799931</eqn>
 				</element>
 				<range min="-3" max="0"/>
 				<units>dmnl</units>
@@ -1128,7 +1128,7 @@ Calibration Parameter: deaths 60-80 years</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.654989239944643</eqn>
+					<eqn>-0.679343178844862</eqn>
 				</element>
 				<range min="-3" max="0"/>
 				<units>dmnl</units>
@@ -1581,7 +1581,7 @@ Calibration Parameter: deaths 60-80 years</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.644522938598286</eqn>
+					<eqn>-0.706771721262322</eqn>
 				</element>
 				<range min="-3" max="0"/>
 				<units>dmnl</units>
@@ -1755,7 +1755,7 @@ Miladinov, G. 2020. Socioeconomic development and life expectancy relationship: 
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="5" isee:scroll_y="370" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="5" isee:scroll_x="1137.5" isee:scroll_y="1500" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1956,7 +1956,7 @@ Miladinov, G. 2020. Socioeconomic development and life expectancy relationship: 
 					<from>&quot;0_normal_death_rate&quot;</from>
 					<to>&quot;0_death_rate&quot;</to>
 				</connector>
-				<connector uid="20" angle="68.4836">
+				<connector uid="20" angle="68.4835">
 					<from>&quot;0_death_rate&quot;</from>
 					<to>deaths_0_years</to>
 				</connector>
@@ -2108,7 +2108,7 @@ Miladinov, G. 2020. Socioeconomic development and life expectancy relationship: 
 					</from>
 					<to>birth_rate</to>
 				</connector>
-				<connector uid="65" angle="78.9311">
+				<connector uid="65" angle="78.9312">
 					<from>fertility</from>
 					<to>Births</to>
 				</connector>
