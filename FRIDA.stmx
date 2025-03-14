@@ -7,7 +7,7 @@
 		<vendor>isee systems, inc.</vendor>
 		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
-	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
+	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
 		<stop>Simulation_End</stop>
 		<dt reciprocal="true">8</dt>
@@ -357,7 +357,6 @@
 			<isee:parameter name="Inflation.agriculture_share_of_GDP_starting_point_determinant[1]" scaling="10"/>
 			<isee:parameter name="Inflation.agriculture_share_of_GDP_slope[1]" scaling="10"/>
 			<isee:parameter name="Employment.sensitivity_of_hiring_to_unemployment_rate[1]"/>
-			<isee:parameter name="Employment.max_firing_percentage[1]" scaling="100"/>
 			<isee:parameter name="Inflation.deflation_adjustment_time[1]"/>
 			<isee:parameter name="Finance.initial_bank_investment_growth_rate[1]" scaling="100"/>
 			<isee:parameter name="Government.averaging_time_to_adjust_tax_based_on_income[1]" scaling="100"/>
@@ -381,6 +380,8 @@
 			<isee:parameter name="Finance.equity_gap_effect_max_x_magnitude[1]" scaling="1000"/>
 			<isee:parameter name="Finance.equity_ratio_gap_effect_above_exponent[1]" scaling="10"/>
 			<isee:parameter name="Finance.equity_gap_above_min_effect[1]" scaling="10"/>
+			<isee:parameter name="Finance.sensitivity_of_effect_of_stranded_energy_capital_on_other_assets[1]" scaling="100"/>
+			<isee:parameter name="Inflation.weight_of_marginal_energy_cost_inflation[1]" scaling="10"/>
 			<isee:payoff name="Economic Payoff" action="min"/>
 		</isee:optimizer_specs>
 		<isee:optimizer_specs name="Employment Sector Shares" method="Powell" use_additional_starts_file="false" additional_starts="0" report_interval="1" confidence_range="0">
@@ -505,7 +506,6 @@
 			<isee:parameter name="Inflation.agriculture_share_of_GDP_starting_point_determinant[1]" scaling="10"/>
 			<isee:parameter name="Inflation.agriculture_share_of_GDP_slope[1]" scaling="10"/>
 			<isee:parameter name="Employment.sensitivity_of_hiring_to_unemployment_rate[1]"/>
-			<isee:parameter name="Employment.max_firing_percentage[1]" scaling="100"/>
 			<isee:parameter name="Inflation.deflation_adjustment_time[1]"/>
 			<isee:parameter name="Finance.initial_bank_investment_growth_rate[1]" scaling="100"/>
 			<isee:parameter name="Government.averaging_time_to_adjust_tax_based_on_income[1]" scaling="100"/>
@@ -529,6 +529,8 @@
 			<isee:parameter name="Finance.equity_gap_effect_max_x_magnitude[1]" scaling="1000"/>
 			<isee:parameter name="Finance.equity_ratio_gap_effect_above_exponent[1]" scaling="10"/>
 			<isee:parameter name="Finance.equity_gap_above_min_effect[1]" scaling="10"/>
+			<isee:parameter name="Finance.sensitivity_of_effect_of_stranded_energy_capital_on_other_assets[1]" scaling="100"/>
+			<isee:parameter name="Inflation.weight_of_marginal_energy_cost_inflation[1]" scaling="10"/>
 			<isee:parameter name="bio_fuel_energy.stepping_on_toes_parameter[1]" scaling="100"/>
 			<isee:parameter name="bio_fuel_energy.Learning_Rate[1]" scaling="100"/>
 			<isee:parameter name="bio_fuel_energy.Floor_Costs[1]" scaling="1e-7"/>
@@ -848,52 +850,46 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="Economic Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="2.06705e-7">
+			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="1.92675809638227e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.Employed[1]" weight="0.000272707">
+			<isee:payoff_element name="Employment.Employed[1]" weight="0.000271628040957126">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.Unemployed[1]" weight="0.0139098">
+			<isee:payoff_element name="Employment.Unemployed[1]" weight="0.00856814615904767">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.unemployment_rate[1]" weight="82802.4">
+			<isee:payoff_element name="Employment.unemployment_rate[1]" weight="65176.434696289">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Finance.total_investment[1]" weight="3.38421e-7">
+			<isee:payoff_element name="Finance.total_investment[1]" weight="1.11137803976492e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.Nominal_GDP[1]" weight="6.72506e-8">
+			<isee:payoff_element name="GDP.Nominal_GDP[1]" weight="4.41281764821606e-8">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Government.government_consumption[1]" weight="0.00000186155">
+			<isee:payoff_element name="Government.government_consumption[1]" weight="0.00000307594761800946">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Inflation.agriculture_percentage_of_GDP[1]" weight="1.52479">
+			<isee:payoff_element name="Inflation.agriculture_percentage_of_GDP[1]" weight="1.56166413574813">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name='GDP."Real_GDP_in_2021c$"[1]' weight="1.70831e-7">
+			<isee:payoff_element name='GDP."Real_GDP_in_2021c$"[1]' weight="2.27518711514423e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Government.debt_to_GDP_ratio[1]" weight="211.964">
+			<isee:payoff_element name="Government.debt_to_GDP_ratio[1]" weight="403.26374961794">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Inflation.gdp_difference[1]" weight="0.000103857">
+			<isee:payoff_element name="Inflation.gdp_difference[1]" weight="3.33769846265419e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="106.623">
+			<isee:payoff_element name="Employment.annual_aggregate_wages[1]" weight="1.73451345177464e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="1048.22">
+			<isee:payoff_element name="Circular_Flow.Labour_share_of_GDP[1]" weight="11945.4505032028">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Employment.annual_aggregate_wages[1]" weight="2.2667e-7">
-				<isee:time_range type="terminal_value"/>
-			</isee:payoff_element>
-			<isee:payoff_element name="Circular_Flow.Labour_share_of_GDP[1]" weight="15643.8">
-				<isee:time_range type="terminal_value"/>
-			</isee:payoff_element>
-			<isee:payoff_element name="Circular_Flow.bottom_40_share_of_real_income[1]" weight="485136">
+			<isee:payoff_element name="Circular_Flow.bottom_40_share_of_real_income[1]" weight="317125.163978139">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
@@ -1099,12 +1095,6 @@
 			<isee:payoff_element name="Inflation.gdp_difference[1]" weight="0.00000294295">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="82.2383">
-				<isee:time_range type="terminal_value"/>
-			</isee:payoff_element>
-			<isee:payoff_element name="GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1]" weight="516.921">
-				<isee:time_range type="terminal_value"/>
-			</isee:payoff_element>
 			<isee:payoff_element name="Employment.annual_aggregate_wages[1]" weight="2.02847e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1263,7 +1253,7 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="SDG 10.1.1" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Circular_Flow.bottom_40_share_of_real_income[1]" weight="271155">
+			<isee:payoff_element name="Circular_Flow.bottom_40_share_of_real_income[1]" weight="351241.776158705">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
@@ -4209,6 +4199,12 @@ Lorem ipsum dolor sit amet</text_box>
 			<isee:stories/>
 		</views>
 	</model>
+	<isee:user_controlled>
+		<ent name="Simulation End" preserve="true"/>
+		<ent name="Government Regulations.tax on CO2e emissions" preserve="true"/>
+		<ent name="Government Regulations.tax rate on newly installed solar energy capacity" preserve="true"/>
+		<ent name="Government Regulations.tax rate on newly installed wind energy capacity" preserve="true"/>
+	</isee:user_controlled>
 	<macro name="INFLATION_IMPACT_GROWTH_RATE">
 		<eqn>trend in input</eqn>
 		<parm>input</parm>

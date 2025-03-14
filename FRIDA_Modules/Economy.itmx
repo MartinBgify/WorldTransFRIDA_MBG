@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.7.3" isee:build_number="3465" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -481,6 +481,8 @@
 				<connect2 to="Innovation.firms_cash_net_flow" from="Circular_Flow.firms_cash_net_flow"/>
 				<connect to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
 				<connect2 to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
+				<connect to="Employment.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect2 to="Employment.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
 				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
@@ -753,6 +755,8 @@
 				<connect2 to="Employment.exploratory_loan_defaults_from_from_interest" from="Finance.exploratory_loan_defaults_from_from_interest"/>
 				<connect to="Employment.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Employment.GDP" from="GDP.Nominal_GDP"/>
+				<connect to="Employment.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect2 to="Employment.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
 				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect to="Employment.non_exploratory_interest_rate_change_caused_defaults" from="Finance.non_exploratory_interest_rate_change_and_stranded_assets_caused_defaults"/>
@@ -877,7 +881,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/clones/martin/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -1005,7 +1009,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="25" isee:scroll_y="168" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="42" isee:scroll_y="34" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1313,7 +1317,7 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.68505580860359</eqn>
+					<eqn>1.9876</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>Years</units>
@@ -1406,7 +1410,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.73520197811103</eqn>
+					<eqn>1.3214</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>Years</units>
@@ -2166,7 +2170,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="Labour share of GDP">
+			<aux name="Labour share of GDP" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -2215,7 +2219,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0923050742873395</eqn>
+				<eqn>0.0849718904847411</eqn>
 				<range min="0.05" max="0.15"/>
 				<units>dmnl</units>
 			</aux>
@@ -2232,7 +2236,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1</eqn>
+				<eqn>1.43622627780114</eqn>
 				<range min="1" max="20"/>
 				<units>years</units>
 			</aux>
@@ -2249,7 +2253,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.12585728947943</eqn>
+				<eqn>1.23884800522675</eqn>
 				<range min="1.1" max="2"/>
 				<units>dmnl</units>
 			</aux>
@@ -2259,7 +2263,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.746761455637759</eqn>
+				<eqn>0.834451918900067</eqn>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
@@ -2269,7 +2273,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.790452364340433</eqn>
+				<eqn>0.794511084262979</eqn>
 				<range min="0.5" max="1.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2279,7 +2283,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>12.4707646770937</eqn>
+				<eqn>16</eqn>
 				<range min="1" max="16"/>
 				<units>dmnl</units>
 			</aux>
@@ -2289,7 +2293,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.160967867189097</eqn>
+				<eqn>0.0294068356885038</eqn>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
@@ -2299,7 +2303,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.90087404199634</eqn>
+				<eqn>1.87069949475955</eqn>
 				<range min="1" max="2"/>
 				<units>dmnl</units>
 			</aux>
@@ -2443,7 +2447,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="517.5" isee:scroll_y="961.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2244.17" isee:scroll_y="896.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3854,7 +3858,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0517521320695013</eqn>
+					<eqn>0.06534654</eqn>
 				</element>
 				<range min="0.03" max="0.1"/>
 				<units>dmnl</units>
@@ -5171,10 +5175,12 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<units>Mp/year</units>
 			</aux>
 			<aux name="firing">
+				<doc>${No Sensi}
+This is here for extreme conditions only</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MIN(max_firing_percentage*Employed, firing_from_defaults+firing_from_missed_profits+firing_from_productivity_gains)</eqn>
+				<eqn>MIN(Employed*max_firing_percentage, firing_from_defaults+firing_from_missed_profits+firing_from_productivity_gains)</eqn>
 				<units>Mp/year</units>
 			</aux>
 			<aux name="time to fire from missed profits">
@@ -5224,16 +5230,6 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				</dimensions>
 				<eqn>exploratory_loan_failure+exploratory_loan_defaults_from_from_interest+actual_safe_investment_failure+non_exploratory_interest_rate_change_caused_defaults</eqn>
 				<units>b$/year</units>
-			</aux>
-			<aux name="max firing\npercentage">
-				<doc>${Internal Calibration Parameter}
-</doc>
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>0.4</eqn>
-				<range min="0.2" max="0.5"/>
-				<units>1/year</units>
 			</aux>
 			<aux name="today" access="input">
 				<eqn>2025</eqn>
@@ -5339,6 +5335,17 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<eqn>(employment_decline/Employed)*100</eqn>
 				<units>1/year</units>
 			</aux>
+			<aux name="Labour share of GDP" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="max firing percentage">
+				<eqn>0.5</eqn>
+				<units>1/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -5388,7 +5395,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="167.5" isee:scroll_y="918.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="635.833" isee:scroll_y="781.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6530,10 +6537,6 @@ furthermore. The structure that was previously decided on had the productivity g
 					<to>hiring</to>
 				</connector>
 				<aux x="1013" y="1172.75" name="firing"/>
-				<connector uid="239" angle="159.919">
-					<from>Employed</from>
-					<to>firing</to>
-				</connector>
 				<connector uid="240" angle="4.61065">
 					<from>firing_from_defaults</from>
 					<to>firing</to>
@@ -6605,11 +6608,6 @@ furthermore. The structure that was previously decided on had the productivity g
 						<alias uid="260"/>
 					</from>
 					<to>firing_from_defaults</to>
-				</connector>
-				<aux label_side="top" x="1013" y="1110.41" name="max firing\npercentage"/>
-				<connector uid="238" angle="270">
-					<from>max_firing_percentage</from>
-					<to>firing</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1143" y="2317" name="today"/>
 				<connector uid="262" angle="329.356">
@@ -6738,6 +6736,16 @@ furthermore. The structure that was previously decided on had the productivity g
 				<connector uid="293" angle="152.34">
 					<from>Employed</from>
 					<to>share_of_employed_fired</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="2761.67" y="693.5" name="Labour share of GDP"/>
+				<connector uid="294" angle="119.517">
+					<from>Employed</from>
+					<to>firing</to>
+				</connector>
+				<aux x="1013" y="1073.33" name="max firing percentage"/>
+				<connector uid="295" angle="266.086">
+					<from>max_firing_percentage</from>
+					<to>firing</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -7098,7 +7106,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0150033473442084</eqn>
+					<eqn>0.0309082194488826</eqn>
 				</element>
 				<range min="0.01" max="0.05"/>
 				<units>dmnl</units>
@@ -7196,7 +7204,7 @@ furthermore. The structure that was previously decided on had the productivity g
 				<element subscript="1">
 					<eqn>2.55210712772329</eqn>
 				</element>
-				<range min="2" max="20"/>
+				<range min="1" max="20"/>
 				<units>years</units>
 			</aux>
 			<aux name="indicated\nrisk premium">
@@ -7251,7 +7259,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>3851.97629060219</eqn>
-				<range min="3000" max="5000"/>
+				<range min="1000" max="5000"/>
 				<units>b$/year</units>
 			</aux>
 			<aux name="initial good loans">
@@ -7375,7 +7383,7 @@ furthermore. The structure that was previously decided on had the productivity g
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0609146432112289 {calib value from main 0.0609146432112289}</eqn>
+					<eqn>0.172196014982087</eqn>
 				</element>
 				<range min="0.1" max="0.25"/>
 				<units>dmnl</units>
@@ -7470,7 +7478,7 @@ ELSE
 				<element subscript="1">
 					<eqn>0.999999976470528</eqn>
 				</element>
-				<range min="0.1" max="1"/>
+				<range min="0.1" max="2"/>
 				<units>dmnl</units>
 			</aux>
 			<flow name="safe loans\naffected innovation" access="output" isee:autocreated="true">
@@ -7947,7 +7955,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0439330111702498</eqn>
+					<eqn>0.0585080329653651</eqn>
 				</element>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
@@ -8373,7 +8381,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2</eqn>
+				<eqn>2.24654614389</eqn>
 				<range min="1" max="3"/>
 				<units>dmnl</units>
 			</aux>
@@ -8641,7 +8649,7 @@ To control extreme policy only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="1298" isee:scroll_y="566" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="7" isee:scroll_x="1699" isee:scroll_y="1027" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10566,7 +10574,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="3" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="203" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13823,9 +13831,9 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>3.53212686942959</eqn>
+					<eqn>3.0234</eqn>
 				</element>
-				<range min="3" max="10"/>
+				<range min="2.5" max="5"/>
 				<units>years</units>
 			</aux>
 			<aux name="productivity\ngrowth 1" access="input">
@@ -13859,7 +13867,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.7</eqn>
+					<eqn>0.467157679917</eqn>
 				</element>
 				<range min="0.01" max="2"/>
 				<units>dmnl</units>
@@ -14023,7 +14031,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.392124170676222</eqn>
+					<eqn>0.402726883908476</eqn>
 				</element>
 				<range min="0.35" max="0.55"/>
 				<units>dmnl</units>
@@ -14233,7 +14241,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="190" isee:scroll_y="423.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="360.833" isee:scroll_y="385.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
