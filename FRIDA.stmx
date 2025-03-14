@@ -86,7 +86,7 @@
 			<isee:variable starting_value="1" ending_value="100" type="incremental" min="1" max="100" seed="12345" name="Climate_Units.selected_climate_case[1]" num_samples="100"/>
 		</isee:sensi_specs>
 	</isee:sensi_specs_list>
-	<isee:optimizer_specs_list active_index="8">
+	<isee:optimizer_specs_list active_index="3">
 		<isee:optimizer_specs name="Demographics Calibration" method="Powell" use_additional_starts_file="false" additional_starts="0" report_interval="1" confidence_range="0" maxiter="0">
 			<isee:parameter name="Demographics.infant_mortality_alpha[1]" scaling="100000"/>
 			<isee:parameter name="Demographics.infant_mortality_gamma[1]" scaling="100000"/>
@@ -771,25 +771,25 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="Behavioral Change Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Animal_Products.animal_products_production[1]" weight="0.00479882">
+			<isee:payoff_element name="Animal_Products.animal_products_production[1]" weight="0.00107688119751115">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Animal_Products_Demand.average_daily_demand_per_capita[1]" weight="0.0313542">
+			<isee:payoff_element name="Animal_Products_Demand.average_daily_demand_per_capita[1]" weight="0.007645468982166">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Crop.crop_production[1]" weight="0.00000805032">
+			<isee:payoff_element name="Crop.crop_production[1]" weight="0.00000835677885215526">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.vegetal_product_demand_per_person_per_day[1]" weight="0.00144598">
+			<isee:payoff_element name="Food_Demand.vegetal_product_demand_per_person_per_day[1]" weight="0.00165639529460703">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.direct_food_demand_per_person_per_day[1]" weight="0.00154826">
+			<isee:payoff_element name="Food_Demand.direct_food_demand_per_person_per_day[1]" weight="0.00140317277697345">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.crop_demand_for_food[1]" weight="0.000216425">
+			<isee:payoff_element name="Food_Demand.crop_demand_for_food[1]" weight="0.000270387388912483">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.animal_products_demand[1]" weight="0.0070056">
+			<isee:payoff_element name="Food_Demand.animal_products_demand[1]" weight="0.00103642569649776">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
@@ -3353,13 +3353,13 @@ This is what determines when the model stops calculating</doc>
 				</style>
 				<module label_side="center" x="570.25" y="377" width="67" height="52.5" name="Energy"/>
 				<stacked_container uid="58" x="67.5833" y="543.833" width="751" height="735">
-					<graph font_size="14pt" axis_title_font_size="14pt" axis_label_font_size="12pt" width="751" height="735" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="6" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+					<graph font_size="14pt" axis_title_font_size="14pt" axis_label_font_size="12pt" width="751" height="735" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="6" num_y_labels="3" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Calibrated_Variables"/>
 						</plot>
 					</graph>
 				</stacked_container>
-				<isee:placeholder x="904.75" y="652.833" name="Calibrated Variables"/>
+				<isee:placeholder x="899.75" y="652.833" name="Calibrated Variables"/>
 				<isee:selector x="837.5" y="560" width="328" height="30" select_placeholder="true" placeholder="Calibrated_Variables"/>
 				<stacked_container uid="80" x="28.5" y="1680.5" width="568" height="300">
 					<graph font_size="24pt" legend_position="none" isee:hide_border="true" axis_title_font_size="18pt" axis_label_font_size="14pt" width="568" height="300" comparative="true" type="box" show_grid="true" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="9" num_y_grid_lines="6" num_x_labels="5" num_y_labels="6" title="a) Surface Temperature Anomaly (°C)" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">

@@ -345,7 +345,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="2" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -456,7 +456,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>4.3197942959022</eqn>
+					<eqn>4.32525238298109</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>years</units>
@@ -468,7 +468,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>377.763038651953</eqn>
+					<eqn>377.740804829494</eqn>
 				</element>
 				<range min="350" max="400"/>
 				<units>kcal/person/day</units>
@@ -509,7 +509,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.85872025323181</eqn>
+					<eqn>2.85726799092412</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>year</units>
@@ -536,7 +536,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.71580941364724</eqn>
+					<eqn>5.71075864339182</eqn>
 				</element>
 				<range min="1" max="20"/>
 				<units>year</units>
@@ -563,7 +563,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>55.5016287320391</eqn>
+					<eqn>55.5067245526379</eqn>
 				</element>
 				<range min="20" max="100"/>
 				<units>year</units>
@@ -643,7 +643,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.998463390740021</eqn>
+					<eqn>1.00739834878637</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -683,7 +683,7 @@ Planetary health diet from EAT Lancet https://www.thelancet.com/journals/lancet/
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>25.0084399606373</eqn>
+					<eqn>25.0084212472165</eqn>
 				</element>
 				<range min="10" max="30"/>
 				<units>years</units>
@@ -695,7 +695,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.731307305449605</eqn>
+					<eqn>-0.729119125847179</eqn>
 				</element>
 				<range min="-2" max="-0.1"/>
 				<units>dmnl</units>
@@ -780,7 +780,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.00203760193562</eqn>
+					<eqn>5.00205627930474</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>years</units>
@@ -798,7 +798,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.513105792960793</eqn>
+					<eqn>0.514167931960761</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -868,7 +868,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.17785654811108</eqn>
+					<eqn>0.180903342101928</eqn>
 				</element>
 				<range min="0.15" max="0.3"/>
 				<units>dmnl</units>
@@ -949,7 +949,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.398392964876698</eqn>
+					<eqn>0.41182521172646</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -1013,7 +1013,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-5.97659679187918</eqn>
+				<eqn>-5.96892590013253</eqn>
 				<range min="-7.5" max="-2.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1049,7 +1049,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.29363878627903</eqn>
+					<eqn>1.29917565358766</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -1071,7 +1071,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.539168518858367</eqn>
+					<eqn>-0.520285184897902</eqn>
 				</element>
 				<range min="-2" max="-0.01"/>
 				<units>dmnl</units>
@@ -1152,7 +1152,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="3" isee:scroll_y="407.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="3" isee:scroll_x="430.833" isee:scroll_y="841.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1785,7 +1785,7 @@ SMTH3(Surface_Temperature_Anomaly, time_to_report_and_perceive_climate_informati
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>6.13805899892639</eqn>
+					<eqn>6.1615468373883</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>years</units>
@@ -1855,7 +1855,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>51.0952027298084</eqn>
+					<eqn>51.0599137261419</eqn>
 				</element>
 				<range min="10" max="100"/>
 				<units>year</units>
@@ -1867,7 +1867,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>3.92167072438823</eqn>
+					<eqn>3.94033454803602</eqn>
 				</element>
 				<format precision="0.01"/>
 				<range min="1" max="10"/>
@@ -1924,7 +1924,7 @@ normal_sensitivity_to_climate_information</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.534713154373705</eqn>
+					<eqn>0.523203492213069</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -2020,7 +2020,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>48.0481328069786</eqn>
+				<eqn>48.0453884844108</eqn>
 				<range min="10" max="100"/>
 				<units>year</units>
 			</aux>
@@ -2031,7 +2031,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>3.03895267564342</eqn>
+					<eqn>3.0523090189494</eqn>
 				</element>
 				<format precision="0.01"/>
 				<range min="1" max="10"/>
@@ -2102,7 +2102,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>10.0528228428386</eqn>
+					<eqn>10.0920668028936</eqn>
 				</element>
 				<range min="10" max="100"/>
 				<units>year</units>
@@ -2137,7 +2137,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.504395896216198</eqn>
+					<eqn>0.504093755547016</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -2635,7 +2635,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.86155580615495</eqn>
+					<eqn>1.57296157750629</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>years</units>
@@ -2676,7 +2676,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.44455741760626</eqn>
+					<eqn>2.48613706240815</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>year</units>
@@ -2703,7 +2703,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.41325544430903</eqn>
+					<eqn>2.39511713482694</eqn>
 				</element>
 				<range min="1" max="20"/>
 				<units>year</units>
@@ -2730,7 +2730,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>55.4133138338667</eqn>
+					<eqn>55.4223321720306</eqn>
 				</element>
 				<range min="20" max="100"/>
 				<units>year</units>
@@ -2772,7 +2772,7 @@ Magalhães SdS, Miranda DK, Miranda DMd, Malloy-Diniz LF, Romano-Silva MA (2018)
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.60194947837275</eqn>
+					<eqn>1.4813650546284</eqn>
 				</element>
 				<range min="1" max="5"/>
 				<units>years</units>
@@ -2800,7 +2800,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.115833955801314</eqn>
+					<eqn>-0.135650818140677</eqn>
 				</element>
 				<range min="-2" max="-0.01"/>
 				<units>dmnl</units>
@@ -2812,7 +2812,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.911394423965517</eqn>
+					<eqn>0.899523821011236</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -2852,7 +2852,7 @@ Planetary health diet from EAT Lancet https://www.thelancet.com/journals/lancet/
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>6.64990856127302</eqn>
+					<eqn>6.70376745055992</eqn>
 				</element>
 				<range min="5" max="30"/>
 				<units>years</units>
@@ -2864,7 +2864,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>-0.762537775574747</eqn>
+					<eqn>-0.756111260702822</eqn>
 				</element>
 				<range min="-2" max="-0.1"/>
 				<units>dmnl</units>
@@ -2942,7 +2942,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.02861988432261</eqn>
+					<eqn>4.97288040161885</eqn>
 				</element>
 				<range min="1" max="10"/>
 				<units>years</units>
@@ -2960,7 +2960,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.509262893265083</eqn>
+					<eqn>0.50993016339715</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -3083,7 +3083,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2439.14460954741</eqn>
+				<eqn>2439.70217217596</eqn>
 				<range min="2300" max="2500"/>
 				<units>kCal/Person/Day</units>
 			</aux>
@@ -3108,7 +3108,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.28442726895672</eqn>
+					<eqn>0.322883840657621</eqn>
 				</element>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -3165,7 +3165,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-4.96945045477866</eqn>
+				<eqn>-4.96895281295147</eqn>
 				<range min="-7.5" max="-2.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -3183,7 +3183,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>1.12988701375632</eqn>
+					<eqn>1.12972862060074</eqn>
 				</element>
 				<range min="0.1" max="2"/>
 				<units>dmnl</units>
@@ -3276,7 +3276,7 @@ Calibration Parameter: fertilizer use &amp; crop production</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="107.143" isee:scroll_y="736.429" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="553.571" isee:scroll_y="736.429" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
