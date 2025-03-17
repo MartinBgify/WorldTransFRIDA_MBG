@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.7.3" isee:build_number="3465" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -483,10 +483,10 @@
 				<connect2 to="Innovation.firms_cash_net_flow" from="Circular_Flow.firms_cash_net_flow"/>
 				<connect to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
 				<connect2 to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
-				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
-				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
-				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
-				<connect2 to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
+				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_dividend"/>
+				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_dividend"/>
+				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_dividend"/>
+				<connect2 to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_dividend"/>
 				<connect to="Finance.owner_savings_1" from="Circular_Flow.owner_savings"/>
 				<connect2 to="Finance.owner_savings_1" from="Circular_Flow.owner_savings"/>
 				<connect to="GDP.owner_consumption" from="Circular_Flow.owner_consumption"/>
@@ -755,8 +755,8 @@
 				<connect2 to="Employment.exploratory_loan_defaults_from_from_interest" from="Finance.exploratory_loan_defaults_from_from_interest"/>
 				<connect to="Employment.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Employment.GDP" from="GDP.Nominal_GDP"/>
-				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
-				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
+				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_dividend"/>
+				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_dividend"/>
 				<connect to="Employment.Passing_66" from="Demographics.Passing_65"/>
 				<connect2 to="Employment.Passing_66" from="Demographics.Passing_65"/>
 				<connect to="Employment.Population_1" from="Emissions.Population"/>
@@ -846,8 +846,8 @@
 				<connect2 to="Inflation.irrigation_water_used_per_unit_of_crop_production" from="Crop.irrigation_water_used_per_unit_of_crop_production"/>
 				<connect to="Inflation.Nominal_GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Inflation.Nominal_GDP" from="GDP.Nominal_GDP"/>
-				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
-				<connect2 to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
+				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_dividend"/>
+				<connect2 to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_dividend"/>
 				<connect to="Inflation.productivity_growth_1" from="Employment.realised_productivity_growth"/>
 				<connect2 to="Inflation.productivity_growth_1" from="Employment.realised_productivity_growth"/>
 				<connect to="Inflation.public_expenditure" from="Government.public_expenditure"/>
@@ -1009,7 +1009,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="74" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="63" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1239,7 +1239,7 @@
 				<inflow>worker_consumption</inflow>
 				<inflow>government_spending</inflow>
 				<inflow>private_investment</inflow>
-				<outflow>non_bank_profits</outflow>
+				<outflow>non_bank_dividend</outflow>
 				<outflow>wages</outflow>
 				<outflow>firms_paying_interest</outflow>
 				<outflow>rent</outflow>
@@ -1259,11 +1259,11 @@
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
-			<flow name="non bank profits" access="output">
+			<flow name="non bank dividend" access="output">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Firms_Checking_Accounts/time_to_pay_out_profits</eqn>
+				<eqn>(Firms_Checking_Accounts/time_to_pay_out_profits)/2</eqn>
 				<units>b$/year</units>
 			</flow>
 			<stock name="owner\nsavings" access="output" isee:autocreated="true">
@@ -1271,10 +1271,10 @@
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>initial_owner_savings</eqn>
-				<inflow>non_bank_profits</inflow>
 				<inflow>owner_savings_interest</inflow>
 				<inflow>bank_profits</inflow>
 				<inflow>rent</inflow>
+				<inflow>owner_dividend</inflow>
 				<outflow>owner_consumption</outflow>
 				<outflow>profit_tax</outflow>
 				<outflow>rent_tax</outflow>
@@ -1361,6 +1361,7 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 				<inflow>wages</inflow>
 				<inflow>worker_savings_interest</inflow>
 				<inflow>transfers</inflow>
+				<inflow>Worker_Dividend</inflow>
 				<outflow>worker_consumption</outflow>
 				<outflow>wage_tax</outflow>
 				<units>b$</units>
@@ -1472,7 +1473,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(0, (non_bank_profits+bank_profits))*actual_profit_tax_rate</eqn>
+				<eqn>MAX(0, (non_bank_dividend+bank_profits))*actual_profit_tax_rate</eqn>
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
@@ -1731,7 +1732,7 @@ net_worker_income*fraction_of_income_to_consumption-annual_worker_savings_to_rea
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>non_bank_profits/wages</eqn>
+				<eqn>non_bank_dividend/wages</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="exploratory\nbank assets" access="input">
@@ -1790,7 +1791,7 @@ net_worker_income*fraction_of_income_to_consumption-annual_worker_savings_to_rea
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>non_bank_profits + wages + firms_paying_interest + rent</eqn>
+				<eqn>non_bank_dividend + wages + firms_paying_interest + rent</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="Firms cash inflow">
@@ -1941,14 +1942,14 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>wages+worker_savings_interest+transfers</eqn>
+				<eqn>wages+worker_savings_interest+transfers+Worker_Dividend</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="gross owner income">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>non_bank_profits
+				<eqn>owner_dividend
 +rent
 +owner_savings_interest
 +bank_profits</eqn>
@@ -1966,7 +1967,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>non_bank_profits/gross_income</eqn>
+				<eqn>non_bank_dividend/gross_income</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="share of gross income from rent">
@@ -2022,7 +2023,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>non_bank_profits/&quot;inflation_adjustment_b$_per_bc$_1&quot;</eqn>
+				<eqn>non_bank_dividend/&quot;inflation_adjustment_b$_per_bc$_1&quot;</eqn>
 				<units>bc$/year</units>
 			</aux>
 			<aux name="rent in in 2021c$">
@@ -2380,6 +2381,30 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>dmnl</units>
 			</aux>
+			<flow name="Worker Dividend">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>non_bank_dividend*(1-ratio_of_owner_to_worker_dividend)</eqn>
+				<units>b$/year</units>
+			</flow>
+			<flow name="owner dividend">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>non_bank_dividend*ratio_of_owner_to_worker_dividend</eqn>
+				<units>b$/year</units>
+			</flow>
+			<aux name="ratio of owner to worker dividend">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="new labour share of GDP">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>(Worker_Dividend+wages)/Nominal_GDP</eqn>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -2429,7 +2454,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="402" isee:scroll_y="876" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="478" isee:scroll_y="684" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2468,7 +2493,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					</graph>
 					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				</style>
-				<stock label_side="right" x="1197.67" y="1242.53" width="115" height="77.5" name="Firms\nChecking\nAccounts"/>
+				<stock label_side="left" x="1197.67" y="1242.53" width="115" height="77.5" name="Firms\nChecking\nAccounts"/>
 				<flow label_side="right" label_angle="45" x="1003.18" y="1456.5" name="owner consumption">
 					<pts>
 						<pt x="802.416" y="1374.92"/>
@@ -2477,17 +2502,17 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 						<pt x="1203.95" y="1320.03"/>
 					</pts>
 				</flow>
-				<flow label_side="bottom" x="1001.93" y="1135.14" name="non bank profits">
+				<flow label_side="bottom" x="1055.72" y="1135.14" name="non bank dividend">
 					<pts>
 						<pt x="1206.45" y="1242.53"/>
 						<pt x="1206.45" y="1135.14"/>
-						<pt x="797.416" y="1135.14"/>
-						<pt x="797.416" y="1191.42"/>
+						<pt x="905" y="1135.14"/>
+						<pt x="905" y="1151"/>
 					</pts>
 				</flow>
-				<connector uid="1" angle="126.034">
+				<connector uid="1" angle="119.791">
 					<from>Firms_Checking_Accounts</from>
-					<to>non_bank_profits</to>
+					<to>non_bank_dividend</to>
 				</connector>
 				<stock label_side="bottom" x="746.167" y="1191.42" width="102.5" height="183.5" name="owner\nsavings"/>
 				<aux label_side="top" x="672.417" y="930.04" name="desired savings\nas multiple of\nprofits"/>
@@ -2630,9 +2655,9 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				</flow>
 				<aux x="425.583" y="868.246" name="private consumption"/>
 				<aux label_side="top" x="1041.06" y="1100.79" name="time to pay out profits"/>
-				<connector uid="20" angle="221.282">
+				<connector uid="20" angle="293.119">
 					<from>time_to_pay_out_profits</from>
-					<to>non_bank_profits</to>
+					<to>non_bank_dividend</to>
 				</connector>
 				<flow label_side="top" x="1029.17" y="1289.41" name="rent">
 					<pts>
@@ -2674,10 +2699,6 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<to>desired_worker_savings</to>
 				</connector>
 				<aux label_side="bottom" x="878.417" y="969.74" name="net owner income"/>
-				<connector uid="33" angle="112.783">
-					<from>non_bank_profits</from>
-					<to>gross_owner_income</to>
-				</connector>
 				<connector uid="40" angle="168.248">
 					<from>net_owner_income</from>
 					<to>desired_owner_savings</to>
@@ -2859,12 +2880,12 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					</from>
 					<to>actual_percentage_of_worker_income_to_consumption</to>
 				</connector>
-				<aux label_side="left" label_angle="225" x="828.75" y="1078.75" name="ratio of profits\nto wages"/>
-				<connector uid="93" angle="161.964">
-					<from>non_bank_profits</from>
+				<aux label_side="left" label_angle="225" x="857.667" y="1051.75" name="ratio of profits\nto wages"/>
+				<connector uid="93" angle="157.167">
+					<from>non_bank_dividend</from>
 					<to>ratio_of_profits_to_wages</to>
 				</connector>
-				<connector uid="94" angle="175.255">
+				<connector uid="94" angle="172.695">
 					<from>wages</from>
 					<to>ratio_of_profits_to_wages</to>
 				</connector>
@@ -3666,6 +3687,60 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<text_box text_align="center" vertical_text_align="center" uid="399" x="2704.04" y="1057.32" width="75.7143" height="18">SDG 10.4.1</text_box>
 				<text_box text_align="center" vertical_text_align="center" uid="400" x="2709.64" y="1148.75" width="75.7143" height="18">SDG 10.1.1</text_box>
 				<aux font_style="italic" font_weight="bold" x="1939.75" y="1205" name="assets/\nliabilities"/>
+				<flow x="1519.88" y="1279" name="Worker Dividend">
+					<pts>
+						<pt x="1361" y="1279"/>
+						<pt x="1666.75" y="1279"/>
+					</pts>
+				</flow>
+				<flow label_side="left" x="817" y="1150.21" name="owner dividend">
+					<pts>
+						<pt x="817" y="1100"/>
+						<pt x="817" y="1191.42"/>
+					</pts>
+				</flow>
+				<connector uid="403" angle="191.53">
+					<from>non_bank_dividend</from>
+					<to>owner_dividend</to>
+				</connector>
+				<aux label_side="right" x="1255.17" y="1179.21" name="ratio of owner to worker dividend"/>
+				<connector uid="404" angle="176.213">
+					<from>ratio_of_owner_to_worker_dividend</from>
+					<to>owner_dividend</to>
+				</connector>
+				<connector uid="405" angle="342.78">
+					<from>non_bank_dividend</from>
+					<to>Worker_Dividend</to>
+				</connector>
+				<connector uid="406" angle="339.344">
+					<from>ratio_of_owner_to_worker_dividend</from>
+					<to>Worker_Dividend</to>
+				</connector>
+				<connector uid="407" angle="31.9569">
+					<from>owner_dividend</from>
+					<to>gross_owner_income</to>
+				</connector>
+				<connector uid="408" angle="70.3729">
+					<from>Worker_Dividend</from>
+					<to>gross_worker_income</to>
+				</connector>
+				<aux label_side="right" x="2472" y="906" name="new labour share of GDP"/>
+				<connector uid="410" angle="73.0771">
+					<from>
+						<alias uid="409"/>
+					</from>
+					<to>new_labour_share_of_GDP</to>
+				</connector>
+				<connector uid="411" angle="173.078">
+					<from>Nominal_GDP</from>
+					<to>new_labour_share_of_GDP</to>
+				</connector>
+				<connector uid="412" angle="164.979">
+					<from>
+						<alias uid="256"/>
+					</from>
+					<to>new_labour_share_of_GDP</to>
+				</connector>
 				<alias label_side="top" uid="8" x="2047.5" y="1330.87" width="18" height="18">
 					<of>time_to_reach_savings_goal</of>
 				</alias>
@@ -3702,7 +3777,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<of>net_owner_income</of>
 				</alias>
 				<alias font_style="italic" label_side="left" uid="43" x="673.834" y="1161.5" width="18" height="18">
-					<of>non_bank_profits</of>
+					<of>non_bank_dividend</of>
 				</alias>
 				<alias font_style="italic" uid="45" x="675.959" y="1364.87" width="18" height="18">
 					<of>rent</of>
@@ -3751,7 +3826,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<of>government_spending</of>
 				</alias>
 				<alias font_style="italic" label_side="right" uid="114" x="1318.75" y="2060.25" width="18" height="18">
-					<of>non_bank_profits</of>
+					<of>non_bank_dividend</of>
 				</alias>
 				<alias font_style="italic" label_side="right" uid="116" x="1318.75" y="2094.25" width="18" height="18">
 					<of>wages</of>
@@ -3795,7 +3870,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<of>owner_savings_interest</of>
 				</alias>
 				<alias font_style="italic" uid="182" x="887.75" y="511.417" width="18" height="18">
-					<of>non_bank_profits</of>
+					<of>non_bank_dividend</of>
 				</alias>
 				<alias font_style="italic" uid="183" x="1390.75" y="523.917" width="18" height="18">
 					<of>wages</of>
@@ -3851,6 +3926,10 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				</alias>
 				<alias font_style="italic" label_side="top" uid="397" x="2968.14" y="986.027" width="18" height="18">
 					<of>transfers</of>
+				</alias>
+				<alias color="blue" background="white" font_style="italic" label_side="left" uid="409" x="2430" y="1005.46" width="18" height="18">
+					<shape type="circle" radius="18"/>
+					<of>Worker_Dividend</of>
 				</alias>
 			</view>
 		</views>
@@ -5422,7 +5501,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1073.33" isee:scroll_y="854.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="987.5" isee:scroll_y="920" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14187,7 +14266,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="115" isee:scroll_y="412.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="259.167" isee:scroll_y="402.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
