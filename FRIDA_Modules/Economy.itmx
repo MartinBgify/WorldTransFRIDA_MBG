@@ -751,6 +751,8 @@
 				<format scale_by="auto"/>
 				<connect to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect2 to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
+				<connect to="Inflation.degrowth_employed" from="Employment.degrowth_employed"/>
+				<connect2 to="Inflation.degrowth_employed" from="Employment.degrowth_employed"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
 				<connect to="Inflation.Employed" from="Employment.Employed"/>
@@ -890,6 +892,8 @@
 				<connect2 to="Inflation.crop_production" from="Crop.crop_production"/>
 				<connect to="Inflation.Cropland" from="Crop.Cropland"/>
 				<connect2 to="Inflation.Cropland" from="Crop.Cropland"/>
+				<connect to="Inflation.degrowth_employed" from="Employment.degrowth_employed"/>
+				<connect2 to="Inflation.degrowth_employed" from="Employment.degrowth_employed"/>
 				<connect to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
 				<connect2 to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
 				<connect to="Inflation.demand_for_energy" from="energy_demand.demand_for_energy"/>
@@ -1065,7 +1069,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="115" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="192" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4483,7 +4487,8 @@ https://rshiny.ilo.org/dataexplorer20/?id=EAP_2WAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.454718325853551*(1+working_hours_reduction_1)</eqn>
+					<eqn>0.454718325853551
+{0.454718325853551*(1+Government_Regulations.working_hours_reduction)</eqn>
 				</element>
 				<range min="0.1" max="0.75"/>
 				<units>dmnl</units>
@@ -5567,7 +5572,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1484" isee:scroll_y="864" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1159" isee:scroll_y="938" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6923,10 +6928,6 @@ furthermore. The structure that was previously decided on had the productivity g
 				<connector uid="302" angle="166.245">
 					<from>working_hours_reduction_1</from>
 					<to>degrowth_employed</to>
-				</connector>
-				<connector uid="303" angle="20.1585">
-					<from>working_hours_reduction_1</from>
-					<to>hiring_to_investment_ratio</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -8856,7 +8857,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="1672.5" isee:scroll_y="1517.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="760" isee:scroll_y="1501.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10916,7 +10917,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="185" isee:scroll_y="110.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="165" isee:scroll_y="81.6667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14222,7 +14223,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>INFLATION_IMPACT_GROWTH_RATE(Employed, 1, initial_employed_growth)</eqn>
+				<eqn>INFLATION_IMPACT_GROWTH_RATE(degrowth_employed, 1, initial_employed_growth)</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="initial employed growth">
@@ -14670,6 +14671,13 @@ ELSE
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
+			<aux name="degrowth employed" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mp</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -14719,7 +14727,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="803.333" isee:scroll_y="585.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="210" isee:scroll_y="573.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14929,10 +14937,6 @@ ELSE
 				<aux label_side="top" x="572.848" y="647.5" name="initial employed growth"/>
 				<connector uid="39" angle="229.214">
 					<from>initial_employed_growth</from>
-					<to>employment_growth</to>
-				</connector>
-				<connector uid="40" angle="337.38">
-					<from>Employed</from>
 					<to>employment_growth</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="left" x="378.75" y="757.5" name="realised productivity"/>
@@ -15234,6 +15238,11 @@ ELSE
 				<connector uid="119" angle="349.569">
 					<from>degrowth_worker_dividend</from>
 					<to>private_income</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="378.75" y="713.333" name="degrowth employed"/>
+				<connector uid="120" angle="342.688">
+					<from>degrowth_employed</from>
+					<to>employment_growth</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="79" x="809.75" y="1305.5" width="18" height="18">
 					<shape type="circle" radius="18"/>
