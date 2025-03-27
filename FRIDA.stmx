@@ -2734,6 +2734,26 @@
 				<connect2 to="Concrete.infrastructure_maintenance_policy" from="Government_Regulations.concrete_infrastructure_maintenance_policy"/>
 				<connect to="Concrete.RS_maintenance_policy" from="Government_Regulations.concrete_residential_and_service_maintenance_policy"/>
 				<connect2 to="Concrete.RS_maintenance_policy" from="Government_Regulations.concrete_residential_and_service_maintenance_policy"/>
+				<connect to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect2 to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
+				<connect2 to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
+				<connect to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect2 to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect2 to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
+				<connect2 to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
 				<connect to="Land_Use.forestation_policy_1" from="Government_Regulations.forestation_policy"/>
 				<connect2 to="Land_Use.forestation_policy_1" from="Government_Regulations.forestation_policy"/>
 				<connect to="Concrete.Infrastructure_and_Service_buildings_longevity_policy" from="Government_Regulations.Infrastructure_buildings_longevity_policy"/>
@@ -2824,6 +2844,20 @@
 				<connect2 to="wind_energy.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Animal_Products.switch_animal_product_efficiency_policy" from="Government_Regulations.switch_animal_product_efficiency_policy"/>
 				<connect2 to="Animal_Products.switch_animal_product_efficiency_policy" from="Government_Regulations.switch_animal_product_efficiency_policy"/>
+				<connect to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect2 to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect2 to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect2 to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
+				<connect2 to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
+				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
+				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect2 to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect to="Freshwater.switch_non_agricultural_water_use_policy" from="Government_Regulations.switch_non_agricultural_water_use_policy"/>
@@ -2876,6 +2910,8 @@
 				<connect2 to="Circular_Flow.time_to_implement_wage_tax_policy" from="Government_Regulations.time_to_implement_wage_tax_policy"/>
 				<connect to="Circular_Flow.time_to_implement_wealth_tax_policy" from="Government_Regulations.time_to_implement_wealth_tax_policy"/>
 				<connect2 to="Circular_Flow.time_to_implement_wealth_tax_policy" from="Government_Regulations.time_to_implement_wealth_tax_policy"/>
+				<connect to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
+				<connect2 to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
 				<connect to="Circular_Flow.wage_tax_policy" from="Government_Regulations.wage_tax_policy"/>
 				<connect2 to="Circular_Flow.wage_tax_policy" from="Government_Regulations.wage_tax_policy"/>
 				<connect to="Circular_Flow.start_year" from="Government_Regulations.wage_tax_policy_start_year"/>
@@ -2884,6 +2920,8 @@
 				<connect2 to="Circular_Flow.wealth_taxation_rate" from="Government_Regulations.wealth_tax_policy"/>
 				<connect to="Circular_Flow.wealth_tax_policy_start_year" from="Government_Regulations.wealth_tax_policy_start_year"/>
 				<connect2 to="Circular_Flow.wealth_tax_policy_start_year" from="Government_Regulations.wealth_tax_policy_start_year"/>
+				<connect to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
+				<connect2 to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
 			</module>
 			<module name="Behavioral\nChange" isee:label="" url="r../FRIDA_Modules/Behavioral Change.itmx">
 				<format scale_by="auto"/>
@@ -2989,6 +3027,12 @@
 			</module>
 			<module name="Economy" isee:label="" url="r../FRIDA_Modules/Economy.itmx">
 				<format scale_by="auto"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
+				<connect2 to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
 				<connect to="Circular_Flow.Population_1" from="Demographics.Population"/>
 				<connect2 to="Circular_Flow.Population_1" from="Demographics.Population"/>
 				<connect to="Circular_Flow.profit_tax_policy_start_year" from="Government_Regulations.profit_tax_policy_start_year"/>
@@ -2997,6 +3041,8 @@
 				<connect2 to="Circular_Flow.profit_tax_rate_policy" from="Government_Regulations.profit_tax_policy"/>
 				<connect to="Circular_Flow.start_year" from="Government_Regulations.wage_tax_policy_start_year"/>
 				<connect2 to="Circular_Flow.start_year" from="Government_Regulations.wage_tax_policy_start_year"/>
+				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
+				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect2 to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
@@ -3045,12 +3091,34 @@
 				<connect2 to="Employment.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
 				<connect2 to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
+				<connect to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
+				<connect2 to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
 				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments"/>
 				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments"/>
+				<connect to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect2 to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect2 to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect2 to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Finance.stranded_capital" from="fossil_energy.stranded_capital"/>
 				<connect2 to="Finance.stranded_capital" from="fossil_energy.stranded_capital"/>
 				<connect to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect2 to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect2 to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
+				<connect2 to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
 				<connect to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect2 to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect to="Finance.today" from="Climate.climate_impact_stoptime"/>
@@ -3117,6 +3185,8 @@
 				<connect2 to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect2 to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
+				<connect to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
+				<connect2 to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
 				<connect to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
 				<connect2 to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
 				<connect to="Government.energy_conversion_tax_rate_1" from="fossil_energy_oil.energy_conversion_effective_tax_rate"/>
@@ -3159,6 +3229,10 @@
 				<connect2 to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect2 to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
@@ -3171,6 +3245,8 @@
 				<connect2 to="Government.tax_rate_5" from="solar_energy.tax_rate"/>
 				<connect to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
 				<connect2 to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
+				<connect to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
+				<connect2 to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
 				<connect to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
@@ -3356,7 +3432,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="8" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="190" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4239,7 +4315,7 @@ Lorem ipsum dolor sit amet</text_box>
 					</style>
 					<isee:shape background="#F7F7F7" border_width="thin" border_style="none" transparent_background="false" x="0" y="0" width="1066" height="600" kind="rectangle"/>
 					<graphics_frame z_index="2" fill="none" x="12.4806" y="16.9825" width="166" height="34">
-						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/Users/bschoenberg/code/dev_mac/StellaQt/DerivedData/StellaQt/Build/Products/Release/Stella Architect.app/Contents/Resources/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
+						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/Applications/Stella Architect.app/Contents/Resources/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
 					</graphics_frame>
 				</view>
 			</isee:templates>

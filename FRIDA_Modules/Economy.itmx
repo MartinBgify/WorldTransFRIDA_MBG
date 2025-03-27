@@ -380,6 +380,10 @@
 				<connect2 to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect2 to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
+				<connect to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
+				<connect2 to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
+				<connect to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
+				<connect2 to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
 				<connect to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
@@ -442,6 +446,10 @@
 				<connect2 to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect2 to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
+				<connect to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
@@ -454,6 +462,8 @@
 				<connect2 to="Government.tax_rate_5" from="solar_energy.tax_rate"/>
 				<connect to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
 				<connect2 to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
+				<connect to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
+				<connect2 to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
 				<connect to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
@@ -472,11 +482,15 @@
 				<connect2 to="Government.wage_tax_1" from="Circular_Flow.wage_tax"/>
 				<connect to="Government.wealth_tax" from="Circular_Flow.wealth_tax"/>
 				<connect2 to="Government.wealth_tax" from="Circular_Flow.wealth_tax"/>
+				<connect to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
+				<connect2 to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
 			</module>
 			<module name="Circular Flow" isee:label="">
 				<format scale_by="auto"/>
 				<connect to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
 				<connect2 to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
+				<connect2 to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
 				<connect to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect2 to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect to="Innovation.Firms_Checking_Accounts_1" from="Circular_Flow.Firms_Checking_Accounts"/>
@@ -515,6 +529,8 @@
 				<connect2 to="Finance.Worker_Savings_1" from="Circular_Flow.Worker_Savings"/>
 				<connect to="GDP.worker_consumption" from="Circular_Flow.worker_consumption"/>
 				<connect2 to="GDP.worker_consumption" from="Circular_Flow.worker_consumption"/>
+				<connect to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
+				<connect2 to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
 				<connect to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect2 to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect to='Circular_Flow."assets/_liabilities"' from="Finance.assets_to_liability_ratio"/>
@@ -523,6 +539,12 @@
 				<connect2 to="Circular_Flow.average_private_debt_interest" from="Finance.average_private_debt_safe_interest"/>
 				<connect to="Circular_Flow.bank_profit_payment_1" from="Finance.annual_bank_profit_payment"/>
 				<connect2 to="Circular_Flow.bank_profit_payment_1" from="Finance.annual_bank_profit_payment"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
+				<connect2 to="Circular_Flow.degrowth_worker_dividend_share_of_profits" from="Government_Regulations.degrowth_worker_dividend_share_of_profits"/>
 				<connect to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect2 to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect to="Circular_Flow.exploratory_interest" from="Finance.exploratory_interest"/>
@@ -565,6 +587,8 @@
 				<connect2 to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
 				<connect to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
 				<connect2 to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
+				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
+				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect2 to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
@@ -602,6 +626,8 @@
 				<connect2 to="Employment.average_private_debt_safe_interest" from="Finance.average_private_debt_safe_interest"/>
 				<connect to="Coastal_Assets.Bank_Assets_1" from="Finance.Bank_Assets"/>
 				<connect2 to="Coastal_Assets.Bank_Assets_1" from="Finance.Bank_Assets"/>
+				<connect to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
+				<connect2 to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
 				<connect to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect2 to="Circular_Flow.exploratory_bank_assets" from="Finance.exploratory_bank_assets"/>
 				<connect to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
@@ -640,6 +666,18 @@
 				<connect2 to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments"/>
 				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments"/>
+				<connect to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect2 to="Finance.degrowth_bank_exploration_adjustment_time" from="Government_Regulations.degrowth_bank_exploration_adjustment_time"/>
+				<connect to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.Degrowth_bank_exploration_fraction" from="Government_Regulations.Degrowth_bank_exploration_fraction"/>
+				<connect to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect2 to="Finance.degrowth_duration_for_reducing_bank_profits_to_zero" from="Government_Regulations.degrowth_duration_for_reducing_bank_profits_to_zero"/>
+				<connect to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect2 to="Finance.degrowth_government_bailout_assets_to_liabilities_threshold" from="Government_Regulations.degrowth_government_bailout_assets_to_liabilities_threshold"/>
+				<connect to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Finance.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect2 to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect to="Finance.Firms_Innovation_Orientation_2" from="Innovation.Firms_Innovation_Orientation"/>
@@ -654,6 +692,8 @@
 				<connect2 to="Finance.government_interest_payments" from="Government.government_interest_payments"/>
 				<connect to='Finance."inflation_adjustment_b$_per_bc$_2"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
 				<connect2 to='Finance."inflation_adjustment_b$_per_bc$_2"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
+				<connect to="Finance.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Finance.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect to="Finance.initial_government_debt" from="Government.initial_government_debt"/>
@@ -686,6 +726,14 @@
 				<connect2 to="Finance.stranded_capital" from="fossil_energy.stranded_capital"/>
 				<connect to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect2 to="Finance.SWITCH_degrowth_bailout" from="Government_Regulations.SWITCH_degrowth_bailout"/>
+				<connect to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect2 to="Finance.SWITCH_degrowth_bank_exploration_fraction" from="Government_Regulations.SWITCH_degrowth_bank_exploration_fraction"/>
+				<connect to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect2 to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
+				<connect2 to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
 				<connect to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect2 to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect to="Finance.today" from="Climate.climate_impact_stoptime"/>
@@ -789,6 +837,8 @@
 				<connect2 to="Employment.UNIT_percent_1" from="Inflation.UNIT_Percent"/>
 				<connect to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
 				<connect2 to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
+				<connect to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
+				<connect2 to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
 			</module>
 			<module name="Inflation" isee:label="">
 				<format scale_by="auto"/>
@@ -816,6 +866,8 @@
 				<connect2 to="Employment.Cumulative_inflation" from="Inflation.Inflation_Index"/>
 				<connect to="Circular_Flow.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Circular_Flow.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect to="Finance.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Finance.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
@@ -838,6 +890,8 @@
 				<connect2 to="Inflation.crop_production" from="Crop.crop_production"/>
 				<connect to="Inflation.Cropland" from="Crop.Cropland"/>
 				<connect2 to="Inflation.Cropland" from="Crop.Cropland"/>
+				<connect to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
+				<connect2 to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
 				<connect to="Inflation.demand_for_energy" from="energy_demand.demand_for_energy"/>
 				<connect2 to="Inflation.demand_for_energy" from="energy_demand.demand_for_energy"/>
 				<connect to="Inflation.Employed" from="Employment.Employed"/>
@@ -883,7 +937,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -1011,7 +1065,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="141" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="115" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1246,6 +1300,7 @@
 				<outflow>firms_paying_interest</outflow>
 				<outflow>rent</outflow>
 				<outflow>firms_taxes</outflow>
+				<outflow>degrowth_worker_dividend</outflow>
 				<units>b$</units>
 			</stock>
 			<flow name="owner consumption" access="output" isee:autocreated="true">
@@ -1265,7 +1320,10 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Firms_Checking_Accounts/time_to_pay_out_profits</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_worker_dividend = 1
+THEN (Firms_Checking_Accounts/time_to_pay_out_profits)*(1-degrowth_worker_dividend_share_of_profits)
+ELSE Firms_Checking_Accounts/time_to_pay_out_profits</eqn>
 				<units>b$/year</units>
 			</flow>
 			<stock name="owner\nsavings" access="output" isee:autocreated="true">
@@ -1361,8 +1419,10 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 				<inflow>wages</inflow>
 				<inflow>worker_savings_interest</inflow>
 				<inflow>transfers</inflow>
+				<inflow>degrowth_worker_dividend</inflow>
 				<outflow>worker_consumption</outflow>
 				<outflow>wage_tax</outflow>
+				<outflow>worker_dividend_tax</outflow>
 				<units>b$</units>
 			</stock>
 			<flow name="wages" access="output">
@@ -1937,7 +1997,10 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>wages+worker_savings_interest+transfers</eqn>
+				<eqn>wages
++worker_savings_interest
++transfers
++degrowth_worker_dividend</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="gross owner income">
@@ -2400,6 +2463,39 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>2025</eqn>
 				<units>Year</units>
 			</aux>
+			<aux name="degrowth policy start time" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<flow name="degrowth worker dividend" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; degrowth_policy_start_time_1
+AND SWITCH_degrowth_worker_dividend = 1
+THEN (Firms_Checking_Accounts/time_to_pay_out_profits)*degrowth_worker_dividend_share_of_profits
+ELSE 0</eqn>
+				<units>b$/year</units>
+			</flow>
+			<aux name="SWITCH degrowth worker dividend" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="degrowth worker dividend\nshare of profits" access="input">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="degrowth policy start time 1" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<flow name="worker dividend tax" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>degrowth_worker_dividend*actual_profit_tax_rate</eqn>
+				<units>b$/year</units>
+			</flow>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -2449,7 +2545,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2166.67" isee:scroll_y="1095" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="725" isee:scroll_y="1043" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2650,7 +2746,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				</flow>
 				<aux x="425.583" y="868.246" name="private consumption"/>
 				<aux label_side="top" x="1041.06" y="1100.79" name="time to pay out profits"/>
-				<connector uid="20" angle="221.282">
+				<connector uid="20" angle="221.28">
 					<from>time_to_pay_out_profits</from>
 					<to>non_bank_profits</to>
 				</connector>
@@ -2694,7 +2790,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<to>desired_worker_savings</to>
 				</connector>
 				<aux label_side="bottom" x="878.417" y="969.74" name="net owner income"/>
-				<connector uid="33" angle="112.783">
+				<connector uid="33" angle="113.558">
 					<from>non_bank_profits</from>
 					<to>gross_owner_income</to>
 				</connector>
@@ -3472,7 +3568,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					</from>
 					<to>owner_savings_interest</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1414.38" y="1383.92" name="total defaults"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="1409.38" y="1478.92" name="total defaults"/>
 				<aux font_style="italic" font_weight="bold" x="1319.5" y="949" name="private investment 1"/>
 				<connector uid="254" angle="255.62">
 					<from>private_investment_1</from>
@@ -3671,6 +3767,70 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<from>wealth_tax_policy_start_year</from>
 					<to>actual_wealth_tax_rate</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="839.167" y="1157.5" name="degrowth policy start time"/>
+				<flow x="1489.71" y="1281.28" name="degrowth worker dividend">
+					<pts>
+						<pt x="1312.67" y="1281.28"/>
+						<pt x="1666.75" y="1281.28"/>
+					</pts>
+				</flow>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1321.75" y="1164.67" name="SWITCH degrowth worker dividend"/>
+				<connector uid="412" angle="325.229">
+					<from>SWITCH_degrowth_worker_dividend</from>
+					<to>degrowth_worker_dividend</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1437.96" y="1370.64" name="degrowth worker dividend\nshare of profits"/>
+				<connector uid="413" angle="61.8828">
+					<from>degrowth_worker_dividend_share_of_profits</from>
+					<to>degrowth_worker_dividend</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="45" x="1572.5" y="1160" name="degrowth policy start time 1"/>
+				<connector uid="414" angle="246.038">
+					<from>degrowth_policy_start_time_1</from>
+					<to>degrowth_worker_dividend</to>
+				</connector>
+				<connector uid="415" angle="25">
+					<from>Firms_Checking_Accounts</from>
+					<to>degrowth_worker_dividend</to>
+				</connector>
+				<connector uid="416" angle="3.08529">
+					<from>time_to_pay_out_profits</from>
+					<to>degrowth_worker_dividend</to>
+				</connector>
+				<connector uid="417" angle="32.8221">
+					<from>degrowth_policy_start_time</from>
+					<to>non_bank_profits</to>
+				</connector>
+				<connector uid="418" angle="199.725">
+					<from>SWITCH_degrowth_worker_dividend</from>
+					<to>non_bank_profits</to>
+				</connector>
+				<connector uid="419" angle="176.626">
+					<from>degrowth_worker_dividend_share_of_profits</from>
+					<to>non_bank_profits</to>
+				</connector>
+				<connector uid="421" angle="304.875">
+					<from>
+						<alias uid="420"/>
+					</from>
+					<to>gross_worker_income</to>
+				</connector>
+				<flow label_side="top" x="1831.13" y="1193.67" name="worker dividend tax">
+					<pts>
+						<pt x="1769.25" y="1193.67"/>
+						<pt x="1905" y="1193.67"/>
+					</pts>
+				</flow>
+				<connector uid="422" angle="280.008">
+					<from>
+						<alias uid="423"/>
+					</from>
+					<to>worker_dividend_tax</to>
+				</connector>
+				<connector uid="424" angle="43.5379">
+					<from>degrowth_worker_dividend</from>
+					<to>worker_dividend_tax</to>
+				</connector>
 				<alias label_side="top" uid="8" x="2047.5" y="1330.87" width="18" height="18">
 					<of>time_to_reach_savings_goal</of>
 				</alias>
@@ -3847,6 +4007,12 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				</alias>
 				<alias font_style="italic" label_side="top" uid="397" x="2968.14" y="986.027" width="18" height="18">
 					<of>transfers</of>
+				</alias>
+				<alias font_style="italic" label_side="top" uid="420" x="1432" y="827" width="18" height="18">
+					<of>degrowth_worker_dividend</of>
+				</alias>
+				<alias font_style="italic" uid="423" x="1785" y="1091" width="18" height="18">
+					<of>actual_profit_tax_rate</of>
 				</alias>
 			</view>
 		</views>
@@ -4317,7 +4483,7 @@ https://rshiny.ilo.org/dataexplorer20/?id=EAP_2WAP_SEX_AGE_RT_A&amp;ref_area=X01
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.454718325853551</eqn>
+					<eqn>0.454718325853551*(1+working_hours_reduction_1)</eqn>
 				</element>
 				<range min="0.1" max="0.75"/>
 				<units>dmnl</units>
@@ -5341,6 +5507,17 @@ Interface explosion stopper</doc>
 				<eqn>0.5</eqn>
 				<units>dmnl/year</units>
 			</aux>
+			<aux name="degrowth employed" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Employed*(1-working_hours_reduction_1)</eqn>
+				<units>Mp</units>
+			</aux>
+			<aux name="working hours reduction 1" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -5390,7 +5567,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="283.333" isee:scroll_y="776.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1484" isee:scroll_y="864" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6737,6 +6914,20 @@ furthermore. The structure that was previously decided on had the productivity g
 					<from>Employed</from>
 					<to>firing</to>
 				</connector>
+				<aux label_side="left" x="1273.5" y="1288.54" name="degrowth employed"/>
+				<connector uid="299" angle="90">
+					<from>Employed</from>
+					<to>degrowth_employed</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1443.38" y="1213" name="working hours reduction 1"/>
+				<connector uid="302" angle="166.245">
+					<from>working_hours_reduction_1</from>
+					<to>degrowth_employed</to>
+				</connector>
+				<connector uid="303" angle="20.1585">
+					<from>working_hours_reduction_1</from>
+					<to>hiring_to_investment_ratio</to>
+				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>wage_rate_in_billions_per_million_people</of>
@@ -7026,7 +7217,10 @@ furthermore. The structure that was previously decided on had the productivity g
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time_1
+AND SWITCH_degrowth_inflation_indexed_investment_growth=1 
+THEN MIN(Inflation_Rate, indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate)
+ELSE indicated_bank_investment_growth_rate*effect_of_lending_standards_on_bank_investment_growth_rate</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="perceived\ndefaults of risky assets">
@@ -7531,7 +7725,10 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(0, net_bank_assets*effect_of_net_bank_assets_fractional_growth_on_bank_profit_payment)</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_no_bank_profits=1
+THEN MAX(0, MAX(0, net_bank_assets*effect_of_net_bank_assets_fractional_growth_on_bank_profit_payment)-(MAX(0, net_bank_assets*effect_of_net_bank_assets_fractional_growth_on_bank_profit_payment)/degrowth_duration_for_reducing_bank_profits_to_zero)*(TIME-degrowth_policy_start_time)) 
+ELSE MAX(0, net_bank_assets*effect_of_net_bank_assets_fractional_growth_on_bank_profit_payment)</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="net bank assets\nwhen positive">
@@ -7582,7 +7779,10 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>effect_investment_and_GDP_difference_on_bank_exploration*(max_bank_exploration_orientation-Bank_Exploration_Orientation)/max_bank_exploration_orientation</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_bank_exploration_fraction=1
+THEN 0
+ELSE effect_investment_and_GDP_difference_on_bank_exploration*(max_bank_exploration_orientation-Bank_Exploration_Orientation)/max_bank_exploration_orientation</eqn>
 				<non_negative/>
 				<units>1/year</units>
 			</flow>
@@ -7590,9 +7790,12 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(effect_profit_decline_on_bank_exploration)*Bank_Exploration_Orientation</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_bank_exploration_fraction=1
+THEN 0
+ELSE (effect_profit_decline_on_bank_exploration)*Bank_Exploration_Orientation</eqn>
 				<non_negative/>
-				<units>1/year</units>
+				<units>dmnl/year</units>
 			</flow>
 			<aux name="annual bank negative\nprofit fractional growth">
 				<dimensions>
@@ -7637,6 +7840,7 @@ ELSE
 				</dimensions>
 				<eqn>0.5</eqn>
 				<inflow>increase_in_bank_exploration_orientation</inflow>
+				<inflow>degrowth_bank_exploration_adjustment</inflow>
 				<outflow>decline_in_bank_exploration_orientation</outflow>
 				<units>dmnl</units>
 			</stock>
@@ -8273,13 +8477,15 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="government bailout assets to liabilities threshold">
+			<aux name="government bailout assets\nto liabilities threshold">
 				<doc>${Assumption}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.04</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_bailout=1 
+THEN degrowth_government_bailout_assets_to_liabilities_threshold ELSE  1.04</eqn>
 				<range min="1.02" max="1.06"/>
 				<units>dmnl</units>
 			</aux>
@@ -8545,6 +8751,62 @@ To control extreme policy only</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>dmnl/year</units>
 			</aux>
+			<aux name="degrowth policy start time" access="output" throughput="true" isee:autocreated="true">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="degrowth government bailout assets\nto liabilities threshold" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<stock name="Inflation Rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</stock>
+			<aux name="SWITCH degrowth bailout" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="degrowth policy start time 1" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="SWITCH degrowth inflation indexed\ninvestment growth" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="SWITCH degrowth no bank profits" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="degrowth duration for reducing bank profits to zero" access="input">
+				<eqn>10</eqn>
+				<units>years</units>
+			</aux>
+			<flow name="degrowth bank\nexploration adjustment">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_bank_exploration_fraction=1
+THEN (Degrowth_bank_exploration_fraction-Bank_Exploration_Orientation)/degrowth_bank_exploration_adjustment_time
+ELSE 0</eqn>
+				<units>1/year</units>
+			</flow>
+			<aux name="SWITCH degrowth bank exploration fraction" access="input">
+				<eqn>1</eqn>
+			</aux>
+			<aux name="Degrowth bank exploration fraction" access="input">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="degrowth bank exploration adjustment time" access="input">
+				<eqn>10</eqn>
+				<units>years</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -8594,7 +8856,7 @@ To control extreme policy only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="264" isee:scroll_y="1804" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="1672.5" isee:scroll_y="1517.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -8819,10 +9081,10 @@ To control extreme policy only</doc>
 					</from>
 					<to>private_safe_bank_assets</to>
 				</connector>
-				<aux x="3408.58" y="1906" name="Bank\nAssets"/>
-				<aux label_side="bottom" x="3469.91" y="1906" name="Bank\nLiabilities"/>
-				<aux x="3464.91" y="1844.42" name="net bank\nassets"/>
-				<aux x="3407.83" y="1844.42" name="assets to\nliability ratio"/>
+				<aux x="3631.91" y="2182.67" name="Bank\nAssets"/>
+				<aux label_side="bottom" x="3693.24" y="2182.67" name="Bank\nLiabilities"/>
+				<aux x="3688.24" y="2121.09" name="net bank\nassets"/>
+				<aux x="3631.16" y="2121.09" name="assets to\nliability ratio"/>
 				<connector uid="61" angle="90.6978">
 					<from>Bank_Assets</from>
 					<to>assets_to_liability_ratio</to>
@@ -8857,8 +9119,8 @@ To control extreme policy only</doc>
 					<from>sensitivity_of_failure_rate_to_investment_to_gdp_ratio</from>
 					<to>effect_of_investment_to_gdp_ratio_on_failure_rate</to>
 				</connector>
-				<stock font_style="italic" font_weight="bold" x="3322.57" y="2078.67" name="Government\nDebt"/>
-				<aux font_style="italic" font_weight="bold" label_side="left" x="3322.57" y="2133.42" name="initial government debt"/>
+				<stock font_style="italic" font_weight="bold" x="3545.9" y="2355.34" name="Government\nDebt"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="3545.9" y="2410.09" name="initial government debt"/>
 				<aux label_side="bottom" x="2485.07" y="2012.66" name="effect of STA\non failure rate"/>
 				<aux label_side="right" x="2637.17" y="2034.71" name="sensitivity of effect\nof sta on failure rate"/>
 				<connector uid="78" angle="180">
@@ -8905,9 +9167,9 @@ To control extreme policy only</doc>
 					<from>private_investment_1</from>
 					<to>total_investment</to>
 				</connector>
-				<stock font_style="italic" font_weight="bold" x="3635.5" y="1905.67" name="Worker\nSavings 1"/>
-				<stock font_style="italic" font_weight="bold" label_side="right" x="3605.5" y="1989.67" name="owner\nsavings 1"/>
-				<stock font_style="italic" font_weight="bold" label_side="right" x="3517.66" y="2061.84" name="Firms\nChecking\nAccounts"/>
+				<stock font_style="italic" font_weight="bold" x="3858.83" y="2182.34" name="Worker\nSavings 1"/>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="3828.83" y="2266.34" name="owner\nsavings 1"/>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="3740.99" y="2338.51" name="Firms\nChecking\nAccounts"/>
 				<connector uid="92" angle="185.194">
 					<from>Worker_Savings_1</from>
 					<to>Bank_Liabilities</to>
@@ -9082,7 +9344,7 @@ To control extreme policy only</doc>
 						<pt x="1052.17" y="1187.08"/>
 					</pts>
 				</flow>
-				<flow label_side="right" x="1052.31" y="1267.08" name="decline in\nbank exploration\norientation">
+				<flow label_side="right" x="1052.31" y="1267.07" name="decline in\nbank exploration\norientation">
 					<pts>
 						<pt x="1052.31" y="1222.08"/>
 						<pt x="1052.31" y="1333.07"/>
@@ -9102,7 +9364,7 @@ To control extreme policy only</doc>
 				<aux x="2087.63" y="1711.86" name="initial fraction of safe loans that are exploratory"/>
 				<stock label_side="left" x="1052.17" y="1204.58" name="Bank\nExploration\nOrientation"/>
 				<aux label_side="right" x="1114.07" y="1078.07" name="max\nbank exploration\norientation"/>
-				<connector uid="148" angle="221.524">
+				<connector uid="148" angle="221.521">
 					<from>max_bank_exploration_orientation</from>
 					<to>increase_in_bank_exploration_orientation</to>
 				</connector>
@@ -9115,7 +9377,7 @@ To control extreme policy only</doc>
 					<to>decline_in_bank_exploration_orientation</to>
 				</connector>
 				<aux label_side="bottom" x="837.188" y="1132.88" name="effect investment\nand GDP difference\non bank exploration"/>
-				<connector uid="153" angle="0">
+				<connector uid="153" angle="0.00133257">
 					<from>effect_investment_and_GDP_difference_on_bank_exploration</from>
 					<to>increase_in_bank_exploration_orientation</to>
 				</connector>
@@ -9124,17 +9386,17 @@ To control extreme policy only</doc>
 					<from>sensitivity_of_investment_and_GDP_difference</from>
 					<to>effect_investment_and_GDP_difference_on_bank_exploration</to>
 				</connector>
-				<aux label_side="left" x="3201.36" y="1759.55" name="bank desired asset to\nliability ratio"/>
+				<aux label_side="left" x="3384.57" y="2079.22" name="bank desired asset to\nliability ratio"/>
 				<connector uid="155" angle="54.036">
 					<from>annual_bank_negative_profit_fractional_growth</from>
 					<to>effect_profit_decline_on_bank_exploration</to>
 				</connector>
-				<aux label_side="right" x="3407.83" y="1751.93" name="required government solvency\nsupport lending"/>
+				<aux label_side="right" x="3631.16" y="2028.6" name="required government solvency\nsupport lending"/>
 				<connector uid="157" angle="90">
 					<from>assets_to_liability_ratio</from>
 					<to>bailout_ratio_gap</to>
 				</connector>
-				<aux label_side="left" x="3407.83" y="1798.98" name="bailout ratio gap"/>
+				<aux label_side="left" x="3631.16" y="2075.65" name="bailout ratio gap"/>
 				<connector uid="158" angle="85.6098">
 					<from>bailout_ratio_gap</from>
 					<to>required_government_solvency_support_lending</to>
@@ -9149,7 +9411,7 @@ To control extreme policy only</doc>
 					<from>sensitivity_of_bank_exploration_to_profit_decline</from>
 					<to>effect_profit_decline_on_bank_exploration</to>
 				</connector>
-				<connector uid="161" angle="0">
+				<connector uid="161" angle="0.00340467">
 					<from>effect_profit_decline_on_bank_exploration</from>
 					<to>decline_in_bank_exploration_orientation</to>
 				</connector>
@@ -9752,13 +10014,13 @@ SDG 10.5.1</text_box>
 					<from>government_interest_payments</from>
 					<to>Return_on_assets_to_short_term_liabilities</to>
 				</connector>
-				<aux label_side="top" x="3328.43" y="1741.55" name="government bailout assets to liabilities threshold"/>
-				<connector uid="472" angle="324.123">
+				<aux label_side="right" label_angle="45" x="3538.43" y="1944.88" name="government bailout assets\nto liabilities threshold"/>
+				<connector uid="472" angle="305.343">
 					<from>government_bailout_assets_to_liabilities_threshold</from>
 					<to>bailout_ratio_gap</to>
 				</connector>
-				<aux label_side="left" x="3277.4" y="1802.55" name="equity ratio gap"/>
-				<connector uid="473" angle="330.514">
+				<aux label_side="top" x="3500.73" y="2079.22" name="equity ratio gap"/>
+				<connector uid="473" angle="0">
 					<from>bank_desired_asset_to_liability_ratio</from>
 					<to>equity_ratio_gap</to>
 				</connector>
@@ -10058,6 +10320,103 @@ SDG 10.5.1</text_box>
 					</from>
 					<to>nominal_investment_and_real_GDP_growth_difference</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="3430.33" y="1944.88" name="degrowth policy start time"/>
+				<connector uid="614" angle="0">
+					<from>degrowth_policy_start_time</from>
+					<to>government_bailout_assets_to_liabilities_threshold</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="135" x="3430.33" y="1888.88" name="degrowth government bailout assets\nto liabilities threshold"/>
+				<connector uid="615" angle="327.647">
+					<from>degrowth_government_bailout_assets_to_liabilities_threshold</from>
+					<to>government_bailout_assets_to_liabilities_threshold</to>
+				</connector>
+				<stock font_style="italic" font_weight="bold" label_side="left" x="1039.58" y="1931.5" name="Inflation Rate"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="3461.83" y="1845.67" name="SWITCH degrowth bailout"/>
+				<connector uid="616" angle="307.669">
+					<from>SWITCH_degrowth_bailout</from>
+					<to>government_bailout_assets_to_liabilities_threshold</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="1075.83" y="2015.31" name="degrowth policy start time 1"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="1075.83" y="2052.55" name="SWITCH degrowth inflation indexed\ninvestment growth"/>
+				<connector uid="620" angle="348.406">
+					<from>SWITCH_degrowth_inflation_indexed_investment_growth</from>
+					<to>bank_investment_growth_rate</to>
+				</connector>
+				<connector uid="621" angle="339.458">
+					<from>degrowth_policy_start_time_1</from>
+					<to>bank_investment_growth_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="796.25" y="1521.25" name="SWITCH degrowth no bank profits"/>
+				<connector uid="623" angle="136.283">
+					<from>
+						<alias uid="626"/>
+					</from>
+					<to>annual_bank_profit_payment</to>
+				</connector>
+				<connector uid="624" angle="126.87">
+					<from>SWITCH_degrowth_no_bank_profits</from>
+					<to>annual_bank_profit_payment</to>
+				</connector>
+				<connector uid="622" angle="322.872">
+					<from>Inflation_Rate</from>
+					<to>bank_investment_growth_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="315" x="877.5" y="1492.5" name="degrowth duration for reducing bank profits to zero"/>
+				<connector uid="625" angle="146.31">
+					<from>degrowth_duration_for_reducing_bank_profits_to_zero</from>
+					<to>annual_bank_profit_payment</to>
+				</connector>
+				<flow x="1196.34" y="1203.75" name="degrowth bank\nexploration adjustment">
+					<pts>
+						<pt x="1330" y="1203.75"/>
+						<pt x="1074.67" y="1203.75"/>
+					</pts>
+				</flow>
+				<connector uid="627" angle="273.291">
+					<from>
+						<alias uid="628"/>
+					</from>
+					<to>degrowth_bank_exploration_adjustment</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1202.5" y="843.75" name="SWITCH degrowth bank exploration fraction"/>
+				<connector uid="629" angle="283.241">
+					<from>SWITCH_degrowth_bank_exploration_fraction</from>
+					<to>degrowth_bank_exploration_adjustment</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1310.96" y="980" name="Degrowth bank exploration fraction"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1360.21" y="1045" name="degrowth bank exploration adjustment time"/>
+				<connector uid="630" angle="257.011">
+					<from>Degrowth_bank_exploration_fraction</from>
+					<to>degrowth_bank_exploration_adjustment</to>
+				</connector>
+				<connector uid="631" angle="239.229">
+					<from>degrowth_bank_exploration_adjustment_time</from>
+					<to>degrowth_bank_exploration_adjustment</to>
+				</connector>
+				<connector uid="632" angle="60.7884">
+					<from>Bank_Exploration_Orientation</from>
+					<to>degrowth_bank_exploration_adjustment</to>
+				</connector>
+				<connector uid="633" angle="228.814">
+					<from>SWITCH_degrowth_bank_exploration_fraction</from>
+					<to>increase_in_bank_exploration_orientation</to>
+				</connector>
+				<connector uid="634" angle="216.511">
+					<from>
+						<alias uid="628"/>
+					</from>
+					<to>increase_in_bank_exploration_orientation</to>
+				</connector>
+				<connector uid="635" angle="193.241">
+					<from>SWITCH_degrowth_bank_exploration_fraction</from>
+					<to>decline_in_bank_exploration_orientation</to>
+				</connector>
+				<connector uid="636" angle="183.981">
+					<from>
+						<alias uid="628"/>
+					</from>
+					<to>decline_in_bank_exploration_orientation</to>
+				</connector>
 				<alias label_side="right" uid="27" x="2212.67" y="2150.55" width="18" height="18">
 					<of>loan_maturation_time</of>
 				</alias>
@@ -10073,22 +10432,22 @@ SDG 10.5.1</text_box>
 				<alias font_style="italic" font_weight="bold" label_side="center" uid="170" x="2728.83" y="2907" width="45" height="35">
 					<of>Government_Debt</of>
 				</alias>
-				<alias font_style="italic" uid="87" x="3200.13" y="2009.34" width="45" height="35">
+				<alias font_style="italic" uid="87" x="3423.46" y="2286.01" width="45" height="35">
 					<of>Good_Loans</of>
 				</alias>
-				<alias font_style="italic" uid="83" x="3216" y="1861.17" width="45" height="35">
+				<alias font_style="italic" uid="83" x="3439.33" y="2137.84" width="45" height="35">
 					<of>Safe_Loans</of>
 				</alias>
-				<alias font_style="italic" uid="85" x="3171" y="1933.17" width="45" height="35">
+				<alias font_style="italic" uid="85" x="3394.33" y="2209.84" width="45" height="35">
 					<of>Bad_Loans</of>
 				</alias>
-				<alias font_style="italic" uid="106" x="3376.91" y="2146.63" width="45" height="35">
+				<alias font_style="italic" uid="106" x="3600.24" y="2423.3" width="45" height="35">
 					<of>Exploratory_Loans</of>
 				</alias>
 				<alias font_style="italic" label_side="center" uid="110" x="2729.16" y="3213.17" width="45" height="35">
 					<of>Exploratory_Loans</of>
 				</alias>
-				<alias font_style="italic" uid="128" x="3419.83" y="2024.42" width="45" height="35">
+				<alias font_style="italic" uid="128" x="3643.16" y="2301.09" width="45" height="35">
 					<of>safe_loans_for_financing_innovation</of>
 				</alias>
 				<alias font_style="italic" uid="130" x="2729.16" y="3045.21" width="45" height="35">
@@ -10169,6 +10528,12 @@ SDG 10.5.1</text_box>
 				</alias>
 				<alias font_style="italic" uid="258" x="570.389" y="1149.25" width="18" height="18">
 					<of>Investment_growth_rate</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="626" x="903.5" y="1569.75" width="18" height="18">
+					<of>degrowth_policy_start_time</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" label_side="right" uid="628" x="1245.21" y="902.25" width="18" height="18">
+					<of>degrowth_policy_start_time</of>
 				</alias>
 			</view>
 		</views>
@@ -10551,7 +10916,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="210.833" isee:scroll_y="165.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="185" isee:scroll_y="110.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -11083,7 +11448,11 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>rent_tax_1 + profit_tax_1 + wage_tax_1+sum_of_energy_taxes_in_nominal_terms+wealth_tax</eqn>
+				<eqn>rent_tax_1
++ profit_tax_1
++ wage_tax_1+sum_of_energy_taxes_in_nominal_terms
++ wealth_tax
++ worker_dividend_tax</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="averaging time to adjust tax based on income">
@@ -11135,7 +11504,10 @@ inflation_goal_policy</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(central_bank_interest_rate_reactivity*interest_rate_policy_discrepancy-Central_Bank_Safe_Interest+baseline_interest)/central_bank_adjustment_time</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time 
+AND SWITCH_degrowth_CB_interest=1
+THEN (degrowth_CB_interest_rate - Central_Bank_Safe_Interest)/time_to_implement_degrowth_CB_interest
+ELSE (central_bank_interest_rate_reactivity*interest_rate_policy_discrepancy-Central_Bank_Safe_Interest+baseline_interest)/central_bank_adjustment_time</eqn>
 				<units>1/year/Year</units>
 			</flow>
 			<aux name="central bank\ninterest rate\nreactivity">
@@ -11963,7 +12335,10 @@ effect_of_STA_on_public_consumption</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_government_risk_premium=1
+THEN 0
+ELSE maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium</eqn>
 				<units>1/year</units>
 			</aux>
 			<aux name="start year" access="input">
@@ -12272,6 +12647,33 @@ ELSE
 				<range min="0.5" max="1"/>
 				<units>dmnl</units>
 			</aux>
+			<aux name="degrowth policy start time" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="SWITCH degrowth government risk premium" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="SWITCH degrowth CB interest" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="time to implement degrowth CB interest" access="input">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="degrowth CB interest rate" access="input">
+				<eqn>0</eqn>
+				<units>dmnl/year</units>
+			</aux>
+			<aux name="worker dividend tax" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -12321,7 +12723,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="715.833" isee:scroll_y="667.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1214" isee:scroll_y="423" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13415,6 +13817,42 @@ ELSE
 					<from>historical_minimum_effect_of_deb_to_GDP_ratio_on_government_spending</from>
 					<to>minimum_effect_of_debt_to_GDP_ratio_on_government_spending</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="1255" y="1546.67" name="degrowth policy start time"/>
+				<aux font_style="italic" font_weight="bold" label_side="bottom" x="1291.45" y="1573.83" name="SWITCH degrowth government risk premium"/>
+				<connector uid="398" angle="43.1524">
+					<from>degrowth_policy_start_time</from>
+					<to>government_risk_premium</to>
+				</connector>
+				<connector uid="399" angle="75.8077">
+					<from>SWITCH_degrowth_government_risk_premium</from>
+					<to>government_risk_premium</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1746.67" y="1865.59" name="SWITCH degrowth CB interest"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" label_angle="315" x="1642.74" y="1959.34" name="time to implement degrowth CB interest"/>
+				<connector uid="400" angle="143.077">
+					<from>
+						<alias uid="401"/>
+					</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<connector uid="402" angle="158.598">
+					<from>time_to_implement_degrowth_CB_interest</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<connector uid="404" angle="184.106">
+					<from>SWITCH_degrowth_CB_interest</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1713.33" y="1916.67" name="degrowth CB interest rate"/>
+				<connector uid="405" angle="176.186">
+					<from>degrowth_CB_interest_rate</from>
+					<to>change_in_safe_interest</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1419.3" y="295" name="worker dividend tax"/>
+				<connector uid="406" angle="327.515">
+					<from>worker_dividend_tax</from>
+					<to>total_public_tax_income</to>
+				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
 					<of>baseline_interest</of>
 				</alias>
@@ -13464,6 +13902,9 @@ ELSE
 					<shape type="circle" radius="18"/>
 					<of>climate_driven_government_consumption</of>
 				</alias>
+				<alias font_style="italic" font_weight="bold" label_side="right" label_angle="315" uid="401" x="1582.38" y="1997.5" width="18" height="18">
+					<of>degrowth_policy_start_time</of>
+				</alias>
 			</view>
 		</views>
 	</model>
@@ -13486,7 +13927,7 @@ ELSE
 {IF TIME &gt; 2020 THEN inflation_percentage ELSE 0,1-RAMP(,002; STARTTIME)</eqn>
 				<units>1/year</units>
 			</flow>
-			<aux name="aggregate\nincome">
+			<aux name="aggregate\nincome" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -13588,6 +14029,7 @@ ELSE
 				<eqn>non_bank_profits
 + bank_profits
 + wages_1
++ degrowth_worker_dividend
 + rent</eqn>
 				<units>b$/year</units>
 			</aux>
@@ -14221,6 +14663,13 @@ ELSE
 0</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="degrowth worker dividend" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -14270,7 +14719,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="437.5" isee:scroll_y="225" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="803.333" isee:scroll_y="585.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14781,6 +15230,11 @@ ELSE
 					</from>
 					<to>hyper_inflation_deflation_stopper</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="155.515" y="806.5" name="degrowth worker dividend"/>
+				<connector uid="119" angle="349.569">
+					<from>degrowth_worker_dividend</from>
+					<to>private_income</to>
+				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="79" x="809.75" y="1305.5" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>time_to_measure_growth_rate</of>
@@ -14940,7 +15394,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="302" isee:scroll_y="269" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
