@@ -237,6 +237,8 @@
 		<variables>
 			<module name="GDP" isee:label="">
 				<format scale_by="auto"/>
+				<connect to='Government."inflation_adjustment_b$_per_bc$_3"' from='GDP."inflation_adjustment_b$_per_bc$"'/>
+				<connect2 to='Government."inflation_adjustment_b$_per_bc$_3"' from='GDP."inflation_adjustment_b$_per_bc$"'/>
 				<connect to="Finance.initial_nominal_GDP_growth_rate" from="GDP.initial_nominal_GDP_growth_rate"/>
 				<connect2 to="Finance.initial_nominal_GDP_growth_rate" from="GDP.initial_nominal_GDP_growth_rate"/>
 				<connect to="Circular_Flow.Nominal_GDP" from="GDP.Nominal_GDP"/>
@@ -290,6 +292,8 @@
 			</module>
 			<module name="Government" isee:label="">
 				<format scale_by="auto"/>
+				<connect to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
+				<connect2 to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
@@ -346,6 +350,8 @@
 				<connect2 to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
 				<connect to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
 				<connect2 to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
+				<connect to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
+				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
@@ -384,6 +390,8 @@
 				<connect2 to="Government.degrowth_CB_interest_rate" from="Government_Regulations.degrowth_CB_interest_rate"/>
 				<connect to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
 				<connect2 to="Government.degrowth_policy_start_time" from="Finance.degrowth_policy_start_time"/>
+				<connect to="Government.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Government.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
 				<connect to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
@@ -412,6 +420,8 @@
 				<connect2 to='Government."inflation_adjustment_b$_per_bc$_1"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
 				<connect to='Government."inflation_adjustment_b$_per_bc$_2"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
 				<connect2 to='Government."inflation_adjustment_b$_per_bc$_2"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
+				<connect to='Government."inflation_adjustment_b$_per_bc$_3"' from='GDP."inflation_adjustment_b$_per_bc$"'/>
+				<connect2 to='Government."inflation_adjustment_b$_per_bc$_3"' from='GDP."inflation_adjustment_b$_per_bc$"'/>
 				<connect to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
 				<connect2 to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
 				<connect to="Government.Investments_in_Biofuel_Capacity" from="energy_investments.Gross_Investments_in_Biofuel_Capacity"/>
@@ -426,12 +436,16 @@
 				<connect2 to="Government.Investments_in_wind_Energy_Capacity" from="energy_investments.Gross_Investments_in_wind_Energy_Capacity"/>
 				<connect to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect2 to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
+				<connect to="Government.Nominal_GDP" from="Demographics.Nominal_GDP"/>
+				<connect2 to="Government.Nominal_GDP" from="Demographics.Nominal_GDP"/>
 				<connect to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
 				<connect2 to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect2 to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
+				<connect to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
+				<connect2 to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
 				<connect to="Government.Population" from="Demographics.Population"/>
 				<connect2 to="Government.Population" from="Demographics.Population"/>
 				<connect to="Government.profit_tax_1" from="Circular_Flow.profit_tax"/>
@@ -450,6 +464,8 @@
 				<connect2 to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
 				<connect to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
 				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
+				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
@@ -484,6 +500,8 @@
 				<connect2 to="Government.wealth_tax" from="Circular_Flow.wealth_tax"/>
 				<connect to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
 				<connect2 to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
+				<connect to="Government.working_age_population" from="Employment.working_age_population"/>
+				<connect2 to="Government.working_age_population" from="Employment.working_age_population"/>
 			</module>
 			<module name="Circular Flow" isee:label="">
 				<format scale_by="auto"/>
@@ -519,6 +537,8 @@
 				<connect2 to="Inflation.rent" from="Circular_Flow.rent"/>
 				<connect to="Government.rent_tax_1" from="Circular_Flow.rent_tax"/>
 				<connect2 to="Government.rent_tax_1" from="Circular_Flow.rent_tax"/>
+				<connect to="Inflation.UBI" from="Circular_Flow.UBI"/>
+				<connect2 to="Inflation.UBI" from="Circular_Flow.UBI"/>
 				<connect to="Government.wage_tax_1" from="Circular_Flow.wage_tax"/>
 				<connect2 to="Government.wage_tax_1" from="Circular_Flow.wage_tax"/>
 				<connect to="Inflation.wages_1" from="Circular_Flow.wages"/>
@@ -533,6 +553,8 @@
 				<connect2 to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
 				<connect to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect2 to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
+				<connect to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
+				<connect2 to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect to='Circular_Flow."assets/_liabilities"' from="Finance.assets_to_liability_ratio"/>
 				<connect2 to='Circular_Flow."assets/_liabilities"' from="Finance.assets_to_liability_ratio"/>
 				<connect to="Circular_Flow.average_private_debt_interest" from="Finance.average_private_debt_safe_interest"/>
@@ -777,6 +799,8 @@
 				<connect2 to="Finance.Wage_Rate_1" from="Employment.Wage_Rate"/>
 				<connect to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
 				<connect2 to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
+				<connect to="Government.working_age_population" from="Employment.working_age_population"/>
+				<connect2 to="Government.working_age_population" from="Employment.working_age_population"/>
 				<connect to="Employment.actual_safe_investment_failure" from="Finance.actual_safe_investment_failure"/>
 				<connect2 to="Employment.actual_safe_investment_failure" from="Finance.actual_safe_investment_failure"/>
 				<connect to="Employment.Aged_1_to_20_years" from="Demographics.Aged_1_to_20_years"/>
@@ -801,6 +825,8 @@
 				<connect2 to="Employment.deaths_40_to_60_years" from="Demographics.deaths_40_to_60_years"/>
 				<connect to="Employment.deaths_60_to_65_years" from="Demographics.deaths_60_to_65_years"/>
 				<connect2 to="Employment.deaths_60_to_65_years" from="Demographics.deaths_60_to_65_years"/>
+				<connect to="Employment.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
+				<connect2 to="Employment.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
 				<connect2 to="Employment.exploratory_bank_investment" from="Finance.exploratory_bank_investment"/>
 				<connect to="Employment.exploratory_loan_failure" from="Finance.exploratory_loan_failure"/>
@@ -827,6 +853,8 @@
 				<connect2 to="Employment.safe_loans_financing_innovation" from="Finance.safe_loans_affected_innovation"/>
 				<connect to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
+				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
 				<connect to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect2 to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect to="Employment.today" from="Climate.climate_impact_stoptime"/>
@@ -928,6 +956,8 @@
 				<connect2 to="Inflation.Total_Energy_Output" from="energy_supply.Total_Energy_Output"/>
 				<connect to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
 				<connect2 to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
+				<connect to="Inflation.UBI" from="Circular_Flow.UBI"/>
+				<connect2 to="Inflation.UBI" from="Circular_Flow.UBI"/>
 				<connect to="Inflation.wages_1" from="Circular_Flow.wages"/>
 				<connect2 to="Inflation.wages_1" from="Circular_Flow.wages"/>
 			</module>
@@ -941,7 +971,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/clones/martin/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -1069,7 +1099,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="141" isee:scroll_y="109" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1282,6 +1312,10 @@
 					<from>Employment</from>
 					<to>Finance</to>
 				</connector>
+				<connector uid="59" isee:thickness="2" angle="253.755" isee:autocreated="true">
+					<from>Government</from>
+					<to>Employment</to>
+				</connector>
 			</view>
 		</views>
 	</model>
@@ -1424,6 +1458,7 @@ SMTH1(net_owner_income*desired_savings_as_multiple_of_profits, time_to_consider_
 				<inflow>worker_savings_interest</inflow>
 				<inflow>transfers</inflow>
 				<inflow>degrowth_worker_dividend</inflow>
+				<inflow>UBI</inflow>
 				<outflow>worker_consumption</outflow>
 				<outflow>wage_tax</outflow>
 				<outflow>worker_dividend_tax</outflow>
@@ -1738,7 +1773,7 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="annual\naggregate wages" access="input">
+			<aux name="annual\naggregate wages" access="output" throughput="true" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1905,7 +1940,7 @@ net_worker_income*fraction_of_income_to_consumption-annual_worker_savings_to_rea
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="Actual people retreat cost from SLR">
 				<doc>${Assumption}
@@ -2004,7 +2039,8 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>wages
 +worker_savings_interest
 +transfers
-+degrowth_worker_dividend</eqn>
++degrowth_worker_dividend
++UBI</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="gross owner income">
@@ -2079,7 +2115,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="non bank profits in 2021c$">
 				<dimensions>
@@ -2500,6 +2536,20 @@ ELSE 0</eqn>
 				<eqn>degrowth_worker_dividend*actual_profit_tax_rate</eqn>
 				<units>b$/year</units>
 			</flow>
+			<aux name="annual\nUBI rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<flow name="UBI" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>annual_UBI_rate</eqn>
+				<units>b$/year</units>
+			</flow>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -2549,7 +2599,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="725" isee:scroll_y="1043" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1142" isee:scroll_y="771" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3825,7 +3875,7 @@ ELSE 0</eqn>
 						<pt x="1905" y="1193.67"/>
 					</pts>
 				</flow>
-				<connector uid="422" angle="280.008">
+				<connector uid="422" angle="258.385">
 					<from>
 						<alias uid="423"/>
 					</from>
@@ -3834,6 +3884,21 @@ ELSE 0</eqn>
 				<connector uid="424" angle="43.5379">
 					<from>degrowth_worker_dividend</from>
 					<to>worker_dividend_tax</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1714.38" y="989.74" name="annual\nUBI rate"/>
+				<flow label_side="right" x="1741" y="1133.71" name="UBI">
+					<pts>
+						<pt x="1741" y="1067"/>
+						<pt x="1741" y="1191.42"/>
+					</pts>
+				</flow>
+				<connector uid="425" angle="258.765">
+					<from>annual_UBI_rate</from>
+					<to>UBI</to>
+				</connector>
+				<connector uid="427" angle="180.475">
+					<from>UBI</from>
+					<to>gross_worker_income</to>
 				</connector>
 				<alias label_side="top" uid="8" x="2047.5" y="1330.87" width="18" height="18">
 					<of>time_to_reach_savings_goal</of>
@@ -4015,7 +4080,7 @@ ELSE 0</eqn>
 				<alias font_style="italic" label_side="top" uid="420" x="1432" y="827" width="18" height="18">
 					<of>degrowth_worker_dividend</of>
 				</alias>
-				<alias font_style="italic" uid="423" x="1785" y="1091" width="18" height="18">
+				<alias font_style="italic" label_side="right" uid="423" x="1822.13" y="1085" width="18" height="18">
 					<of>actual_profit_tax_rate</of>
 				</alias>
 			</view>
@@ -4161,7 +4226,7 @@ https://rshiny.ilo.org/dataexplorer15/?id=EMP_2EMP_SEX_AGE_NB_A&amp;ref_area=X01
 				<eqn>1000000000</eqn>
 				<units>$/B$</units>
 			</aux>
-			<aux name="wage rate\nin billions per\nmillion people">
+			<aux name="wage rate\nin billions per\nmillion people" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -4310,7 +4375,7 @@ https://rshiny.ilo.org/dataexplorer32/?id=UNE_2EAP_SEX_AGE_RT_A&amp;ref_area=X01
 				<eqn>Unemployed/working_age_population</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="working\nage population">
+			<aux name="working\nage population" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -4380,7 +4445,7 @@ https://rshiny.ilo.org/dataexplorer32/?id=UNE_2EAP_SEX_AGE_RT_A&amp;ref_area=X01
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1</eqn>
+				<eqn>5</eqn>
 				<units>Years</units>
 			</aux>
 			<aux name="percentage\nof working age that\nare non active">
@@ -4394,7 +4459,12 @@ https://rshiny.ilo.org/dataexplorer32/?id=UNE_2EAP_SEX_AGE_RT_A&amp;ref_area=X01
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>working_age_population*labour_force_participation_rate</eqn>
+				<eqn>working_age_population*labour_force_participation_rate
+
+{IF TIME &gt; Government_Regulations.degrowth_policy_start_time
+AND Government_Regulations.SWITCH_degrowth_UBI=1
+THEN working_age_population * labour_force_participation_rate_under_UBI
+ELSE working_age_population*labour_force_participation_rate</eqn>
 				<units>Mp</units>
 			</aux>
 			<aux name="participation\ngap">
@@ -5517,6 +5587,29 @@ Interface explosion stopper</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
+			<aux name="SWITCH degrowth UBI" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="labour force participation rate under UBI">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>labour_force_participation_rate-(labour_force_participation_rate*&quot;\&quot;percentage_of_active_who_become_inactive_at_.75_UBI\&quot;_1&quot;)</eqn>
+			</aux>
+			<aux name='"percentage of active who\nbecome inactive at .75 UBI" 1'>
+				<eqn>1</eqn>
+			</aux>
+			<aux name="degrowth policy start time" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="Converter 1">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>participating_labourers/working_age_population</eqn>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -5566,7 +5659,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="135" isee:scroll_y="1334.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1224" isee:scroll_y="617" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6625,7 +6718,7 @@ Interface explosion stopper</doc>
 					</from>
 					<to>effect_of_labour_supply_on_hiring</to>
 				</connector>
-				<aux label_side="top" x="1558.64" y="1288.54" name="sensitivity\nof hiring to\nunemployment\nrate"/>
+				<aux label_angle="74.4863" x="1558.64" y="1288.54" name="sensitivity\nof hiring to\nunemployment\nrate"/>
 				<connector uid="220" angle="270">
 					<from>sensitivity_of_hiring_to_unemployment_rate</from>
 					<to>hiring</to>
@@ -6917,6 +7010,29 @@ furthermore. The structure that was previously decided on had the productivity g
 				<connector uid="297" angle="12.3808">
 					<from>safe_loan_defaults_1</from>
 					<to>total_defaults</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1674" y="910" name="SWITCH degrowth UBI"/>
+				<aux x="1773.5" y="692.836" name="labour force participation rate under UBI"/>
+				<aux x="1928.18" y="649.836" name='"percentage of active who\nbecome inactive at .75 UBI" 1'/>
+				<connector uid="304" angle="180.722">
+					<from>&quot;\&quot;percentage_of_active_who_become_inactive_at_.75_UBI\&quot;_1&quot;</from>
+					<to>labour_force_participation_rate_under_UBI</to>
+				</connector>
+				<connector uid="305" angle="36.0586">
+					<from>labour_force_participation_rate</from>
+					<to>labour_force_participation_rate_under_UBI</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1807" y="813" name="degrowth policy start time"/>
+				<aux x="1665" y="631.836" name="Converter 1"/>
+				<connector uid="309" angle="27.3556">
+					<from>participating_labourers</from>
+					<to>Converter_1</to>
+				</connector>
+				<connector uid="310" angle="43.3634">
+					<from>
+						<alias uid="84"/>
+					</from>
+					<to>Converter_1</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -8251,7 +8367,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="UNIT c$ per Bc$">
 				<doc>${Unit}
@@ -8847,7 +8963,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="72" isee:scroll_y="930" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="292" isee:scroll_y="1476" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10631,12 +10747,12 @@ SDG 10.5.1</text_box>
 				<eqn>TREND(&quot;Real_GDP_in_2021c$&quot;, time_to_measure_GDP_growth_rate, initial_real_GDP_growth_rate)</eqn>
 				<units>dmnl/year</units>
 			</aux>
-			<aux name="inflation adjustment b$ per bc$" access="input">
+			<aux name="inflation adjustment b$ per bc$" access="output" throughput="true" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="private investment" access="input">
 				<dimensions>
@@ -10914,7 +11030,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="165" isee:scroll_y="81.6667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_y="123.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -11411,7 +11527,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_transfer_payments, (transfer_payments_for_children+transfer_payments_for_retirees+transfer_payments_for_unemployed)/&quot;UNIT_$_per_B$&quot;)</eqn>
+				<eqn>MAX(MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_transfer_payments, (transfer_payments_for_children+transfer_payments_for_retirees+transfer_payments_for_unemployed)/&quot;UNIT_$_per_B$&quot;), 0)</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="public\ninvestment" access="output" isee:autocreated="true">
@@ -12031,7 +12147,7 @@ expenditure_on_subsidies_for_investments_in_gas_energy_conversion + expenditure_
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="Total nominal SLR\nprotection cost" access="input">
 				<dimensions>
@@ -12127,7 +12243,11 @@ ELSE historical_minimum_effect_of_deb_to_GDP_ratio_on_government_spending</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>public_expenditure_before_subsidies_and_interest_payments+sum_of_subsidies_spent+government_interest_payments + STA_driven_government_consumption +Paid_Total_Nominal_SLR_protection_cost</eqn>
+				<eqn>public_expenditure_before_subsidies_and_interest_payments
++sum_of_subsidies_spent
++ government_interest_payments 
++ STA_driven_government_consumption 
++ Paid_Total_Nominal_SLR_protection_cost</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="additional transfers policy" access="input">
@@ -12221,7 +12341,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<stock name="Employed" access="input">
 				<dimensions>
@@ -12284,7 +12404,7 @@ effect_of_STA_on_public_consumption</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="government spending\nwithout climate impact">
 				<dimensions>
@@ -12456,7 +12576,9 @@ ELSE maximum_risk_premium * effect_of_debt_to_GDP_ratio_on_risk_premium</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>public_expenditure_before_subsidies_and_interest_payments-government_transfers</eqn>
+				<eqn>public_expenditure_before_subsidies_and_interest_payments
+-government_transfers
+-annual_UBI_rate</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="normal share of public expenditure\navailable for investment and consumption\nto consumption">
@@ -12686,6 +12808,106 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<eqn>.8</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="universal basic income rate">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; degrowth_policy_start_time_1
+AND SWITCH_degrowth_UBI = 1
+THEN Wage_Rate*fraction_of_wages_as_UBI ELSE 0</eqn>
+				<units>$/p</units>
+			</aux>
+			<aux name="fraction of wages as UBI">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="working\nage population" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mp</units>
+			</aux>
+			<aux name="UNIT persons per\nmillion people">
+				<doc>${Unit}
+</doc>
+				<eqn>1000000</eqn>
+				<units>p/Mp</units>
+			</aux>
+			<aux name="UBI rate in billions\nper million people">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>universal_basic_income_rate/UNIT_dollars_per_billion*UNIT_persons_per_million_people</eqn>
+				<units>B$/Mp</units>
+			</aux>
+			<aux name="UNIT dollars per billion">
+				<doc>${Unit}
+</doc>
+				<eqn>1000000000</eqn>
+				<units>$/B$</units>
+			</aux>
+			<aux name="UNIT one year">
+				<doc>${Unit}
+</doc>
+				<eqn>1</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="annual\nUBI rate" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_UBI, 
+UBI_rate_in_billions_per_million_people*(working_age_population+old_age_dependents_1)/UNIT_one_year)</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="Nominal GDP" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="degrowth policy start time 1" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="SWITCH degrowth UBI" access="output" throughput="true" isee:autocreated="true">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="old age\ndependents 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mp</units>
+			</aux>
+			<aux name="UBI fixed rate in real 2021 USD">
+				<eqn>10000</eqn>
+				<units>c$/p</units>
+			</aux>
+			<aux name="inflation adjustment b$ per bc$ 3" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>$/c$</units>
+			</aux>
+			<aux name="nominal UBI">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; degrowth_policy_start_time_1
+AND SWITCH_degrowth_UBI = 1
+THEN UBI_fixed_rate_in_real_2021_USD*&quot;inflation_adjustment_b$_per_bc$_3&quot;
+ELSE 0</eqn>
+				<units>$/p</units>
+			</aux>
+			<aux name="maximum percentage of government budget to UBI">
+				<eqn>1-maximum_percentage_of_government_budget_to_transfer_payments</eqn>
+				<units>dmnl</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -12735,7 +12957,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="838" isee:scroll_y="1269" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="910.833" isee:scroll_y="696.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13338,18 +13560,18 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>bank_bailouts</from>
 					<to>bailouts</to>
 				</connector>
-				<aux label_side="top" x="1522.83" y="723.442" name="public\nexpenditure"/>
-				<connector uid="166" angle="175.204">
+				<aux label_side="top" x="1520.83" y="721.02" name="public\nexpenditure"/>
+				<connector uid="166" angle="173.741">
 					<from>
 						<alias uid="164"/>
 					</from>
 					<to>public_expenditure</to>
 				</connector>
-				<connector uid="165" angle="87.3573">
+				<connector uid="165" angle="88.8574">
 					<from>public_expenditure_before_subsidies_and_interest_payments</from>
 					<to>public_expenditure</to>
 				</connector>
-				<connector uid="10" angle="46.0059">
+				<connector uid="10" angle="45.5373">
 					<from>public_expenditure</from>
 					<to>government_taking_up_debt</to>
 				</connector>
@@ -13359,7 +13581,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>computed_government_debt_to_GDP_ratio_target</from>
 					<to>one_to_one_effect_of_debt_to_GDP_ratio_on_government_spending</to>
 				</connector>
-				<aux x="1498.77" y="1186.06" name="average government debt\ninterest rate"/>
+				<aux label_side="left" x="1498.77" y="1186.06" name="average government debt\ninterest rate"/>
 				<connector uid="229" angle="87.0277">
 					<from>safe_interest</from>
 					<to>current_government_debt_interest_rate</to>
@@ -13525,12 +13747,12 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					</graph>
 				</stacked_container>
 				<aux label_side="right" x="1574.6" y="1623.93" name="initial safe interest"/>
-				<connector uid="287" angle="140.214">
+				<connector uid="287" angle="140.529">
 					<from>government_interest_payments</from>
 					<to>public_expenditure</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="649.881" y="855.58" name="child age\ndependents"/>
-				<aux font_style="italic" font_weight="bold" x="851.31" y="1032.72" name="old age\ndependents"/>
+				<aux font_style="italic" font_weight="bold" x="720.333" y="1040.45" name="old age\ndependents"/>
 				<aux x="747.798" y="630.66" name="actual transfer payments per child"/>
 				<aux x="937.548" y="484.084" name="indicated\ntransfer payments\nper retiree"/>
 				<aux x="776.548" y="950.283" name="transfer payments\nfor children"/>
@@ -13543,7 +13765,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>child_age_dependents</from>
 					<to>transfer_payments_for_children</to>
 				</connector>
-				<connector uid="291" angle="50.523">
+				<connector uid="291" angle="30.0992">
 					<from>old_age_dependents</from>
 					<to>transfer_payments_for_retirees</to>
 				</connector>
@@ -13624,7 +13846,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>non_climate_driven_government_consumption</from>
 					<to>government_consumption</to>
 				</connector>
-				<connector uid="340" angle="307.862">
+				<connector uid="340" angle="359.172">
 					<from>
 						<alias uid="341"/>
 					</from>
@@ -13860,7 +14082,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>Total_nominal_SLR_protection_cost</from>
 					<to>Paid_Total_Nominal_SLR_protection_cost</to>
 				</connector>
-				<connector uid="408" angle="2.90613">
+				<connector uid="408" angle="3.9414">
 					<from>Paid_Total_Nominal_SLR_protection_cost</from>
 					<to>public_expenditure</to>
 				</connector>
@@ -13888,6 +14110,100 @@ In massive inflation spikes prevents the government from not doing any consumpti
 						<alias uid="413"/>
 					</from>
 					<to>change_in_safe_interest</to>
+				</connector>
+				<aux label_side="right" label_angle="45" x="438.347" y="489.461" name="universal basic income rate"/>
+				<connector uid="414" angle="130.344">
+					<from>Wage_Rate</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<aux label_side="left" x="442.167" y="539.794" name="fraction of wages as UBI"/>
+				<connector uid="415" angle="94.3401">
+					<from>fraction_of_wages_as_UBI</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="386.18" y="920.221" name="working\nage population"/>
+				<aux label_side="left" label_angle="225" x="354.18" y="821.41" name="UNIT persons per\nmillion people"/>
+				<aux label_side="right" label_angle="45" x="433.881" y="763" name="UBI rate in billions\nper million people"/>
+				<connector uid="419" angle="36.2363">
+					<from>UNIT_persons_per_million_people</from>
+					<to>UBI_rate_in_billions_per_million_people</to>
+				</connector>
+				<aux label_side="left" x="336.18" y="775.02" name="UNIT dollars per billion"/>
+				<connector uid="420" angle="7.01376">
+					<from>UNIT_dollars_per_billion</from>
+					<to>UBI_rate_in_billions_per_million_people</to>
+				</connector>
+				<aux label_side="right" label_angle="315" x="494.22" y="912.717" name="annual\nUBI rate"/>
+				<connector uid="421" angle="37.7028">
+					<from>UNIT_one_year</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<aux x="409.18" y="978.45" name="UNIT one year"/>
+				<connector uid="422" angle="329.138">
+					<from>UBI_rate_in_billions_per_million_people</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<connector uid="423" angle="3.97314">
+					<from>working_age_population</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="296.333" y="288.167" name="Nominal GDP"/>
+				<aux font_style="italic" font_weight="bold" x="178.333" y="429.167" name="degrowth policy start time 1"/>
+				<connector uid="442" angle="346.945">
+					<from>degrowth_policy_start_time_1</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="218.333" y="406.251" name="SWITCH degrowth UBI"/>
+				<connector uid="443" angle="339.283">
+					<from>SWITCH_degrowth_UBI</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="303.333" y="978.45" name="old age\ndependents 1"/>
+				<connector uid="444" angle="19.0015">
+					<from>old_age_dependents_1</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<aux label_side="right" x="451.881" y="612.66" name="UBI fixed rate in real 2021 USD"/>
+				<aux font_style="italic" font_weight="bold" x="248.333" y="648.66" name="inflation adjustment b$ per bc$ 3"/>
+				<aux label_side="right" x="386.18" y="666.66" name="nominal UBI"/>
+				<connector uid="445" angle="205.115">
+					<from>UBI_fixed_rate_in_real_2021_USD</from>
+					<to>nominal_UBI</to>
+				</connector>
+				<connector uid="446" angle="43.5111">
+					<from>&quot;inflation_adjustment_b$_per_bc$_3&quot;</from>
+					<to>nominal_UBI</to>
+				</connector>
+				<connector uid="448" angle="327.804">
+					<from>SWITCH_degrowth_UBI</from>
+					<to>nominal_UBI</to>
+				</connector>
+				<connector uid="449" angle="277.125">
+					<from>degrowth_policy_start_time_1</from>
+					<to>nominal_UBI</to>
+				</connector>
+				<connector uid="451" angle="93.3665">
+					<from>
+						<alias uid="452"/>
+					</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<aux x="578.333" y="996.45" name="maximum percentage of government budget to UBI"/>
+				<connector uid="453" angle="119.929">
+					<from>maximum_percentage_of_government_budget_to_UBI</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<connector uid="455" angle="298.299">
+					<from>annual_UBI_rate</from>
+					<to>public_expenditure_available_for_investment_and_consumption</to>
+				</connector>
+				<connector uid="456" angle="221.143">
+					<from>maximum_percentage_of_government_budget_to_transfer_payments</from>
+					<to>maximum_percentage_of_government_budget_to_UBI</to>
+				</connector>
+				<connector uid="457" angle="338.689">
+					<from>universal_basic_income_rate</from>
+					<to>UBI_rate_in_billions_per_million_people</to>
 				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
 					<of>baseline_interest</of>
@@ -13943,6 +14259,9 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				</alias>
 				<alias font_style="italic" font_weight="bold" label_side="right" label_angle="315" uid="413" x="1582.38" y="1997.5" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
+				</alias>
+				<alias font_style="italic" uid="452" x="486.833" y="1061.83" width="18" height="18">
+					<of>public_expenditure_before_subsidies_and_interest_payments</of>
 				</alias>
 			</view>
 		</views>
@@ -14069,7 +14388,8 @@ In massive inflation spikes prevents the government from not doing any consumpti
 + bank_profits
 + wages_1
 + degrowth_worker_dividend
-+ rent</eqn>
++ rent
++ UBI</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="crop production" access="input">
@@ -14581,7 +14901,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Inflation_Index*&quot;unit_b$_per_bc$&quot;</eqn>
-				<units>b$/bc$</units>
+				<units>$/c$</units>
 			</aux>
 			<aux name="unit b$ per bc$">
 				<doc>${Unit}
@@ -14716,6 +15036,13 @@ ELSE
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>Mp</units>
 			</aux>
+			<aux name="UBI" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -14765,7 +15092,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="210" isee:scroll_y="573.333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="265.833" isee:scroll_y="685" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -15281,6 +15608,11 @@ ELSE
 				<connector uid="120" angle="342.688">
 					<from>degrowth_employed</from>
 					<to>employment_growth</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="154.167" y="741.667" name="UBI"/>
+				<connector uid="121" angle="337.479">
+					<from>UBI</from>
+					<to>private_income</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="79" x="809.75" y="1305.5" width="18" height="18">
 					<shape type="circle" radius="18"/>

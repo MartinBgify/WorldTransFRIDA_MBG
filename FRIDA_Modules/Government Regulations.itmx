@@ -901,35 +901,35 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth inflation indexed\ninvestment growth" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth bailout" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth worker dividend" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth work day">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth government risk premium" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth no austerity measure">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -943,7 +943,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="SWITCH degrowth CB interest" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -953,11 +953,14 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>years</units>
 			</aux>
 			<aux name="SWITCH degrowth no bank profits" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="working hours reduction" access="output" isee:autocreated="true">
-				<eqn>RAMP(slope, degrowth_policy_start_time, degrowth_policy_start_time+time_to_implement)</eqn>
+				<eqn>IF TIME &gt; degrowth_policy_start_time
+AND SWITCH_degrowth_work_day=1
+THEN RAMP(slope, degrowth_policy_start_time, degrowth_policy_start_time+time_to_implement)
+ELSE 0</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="slope">
@@ -973,7 +976,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>years</units>
 			</aux>
 			<aux name="SWITCH degrowth bank exploration fraction" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -985,6 +988,12 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 			<aux name="degrowth bank exploration adjustment time" access="output" isee:autocreated="true">
 				<eqn>10</eqn>
 				<units>years</units>
+			</aux>
+			<aux name="SWITCH degrowth UBI" access="output" isee:autocreated="true">
+				<eqn>0</eqn>
+				<format precision="1"/>
+				<range min="0" max="1"/>
+				<units>dmnl</units>
 			</aux>
 		</variables>
 		<views>
@@ -1035,7 +1044,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="4" isee:scroll_y="1021.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="4" isee:scroll_x="352.5" isee:scroll_y="1033.75" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1267,6 +1276,11 @@ Negative taxes are subsidies</text_box>
 				<aux label_side="right" x="1313" y="1612.5" name="SWITCH degrowth bank exploration fraction"/>
 				<aux label_side="right" x="1313" y="1563.75" name="Degrowth bank exploration fraction"/>
 				<aux label_side="right" x="1313" y="1516.25" name="degrowth bank exploration adjustment time"/>
+				<aux label_side="right" x="1313" y="2137.5" name="SWITCH degrowth UBI"/>
+				<connector uid="57" angle="346.082">
+					<from>SWITCH_degrowth_work_day</from>
+					<to>working_hours_reduction</to>
+				</connector>
 				<alias font_style="italic" label_side="right" uid="47" x="349" y="1767.67" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
 				</alias>
