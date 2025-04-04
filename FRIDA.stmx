@@ -2887,12 +2887,16 @@
 				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
 				<connect to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
 				<connect2 to="Finance.SWITCH_degrowth_inflation_indexed_investment_growth" from="Government_Regulations.SWITCH_degrowth_inflation_indexed_investment_growth"/>
+				<connect to="Government.SWITCH_degrowth_no_austerity_measure" from="Government_Regulations.SWITCH_degrowth_no_austerity_measure"/>
+				<connect2 to="Government.SWITCH_degrowth_no_austerity_measure" from="Government_Regulations.SWITCH_degrowth_no_austerity_measure"/>
 				<connect to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
 				<connect2 to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
 				<connect to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
+				<connect to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
+				<connect2 to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
 				<connect to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect2 to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect to="Freshwater.switch_non_agricultural_water_use_policy" from="Government_Regulations.switch_non_agricultural_water_use_policy"/>
@@ -3078,6 +3082,8 @@
 				<connect2 to="Circular_Flow.start_year" from="Government_Regulations.wage_tax_policy_start_year"/>
 				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
+				<connect to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
+				<connect2 to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
 				<connect to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect2 to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
@@ -3276,6 +3282,8 @@
 				<connect2 to="Government.SWITCH_degrowth_CB_interest" from="Government_Regulations.SWITCH_degrowth_CB_interest"/>
 				<connect to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
 				<connect2 to="Government.SWITCH_degrowth_government_risk_premium" from="Government_Regulations.SWITCH_degrowth_government_risk_premium"/>
+				<connect to="Government.SWITCH_degrowth_no_austerity_measure" from="Government_Regulations.SWITCH_degrowth_no_austerity_measure"/>
+				<connect2 to="Government.SWITCH_degrowth_no_austerity_measure" from="Government_Regulations.SWITCH_degrowth_no_austerity_measure"/>
 				<connect to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
@@ -3423,7 +3431,7 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 			<aux name="Simulation End">
 				<doc>${No Sensi}
 This is what determines when the model stops calculating</doc>
-				<eqn>2150</eqn>
+				<eqn>2100</eqn>
 				<format precision="1"/>
 				<range min="2023" max="2200"/>
 				<units>years</units>
@@ -3483,7 +3491,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="16" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="10" isee:scroll_x="1872.5" isee:scroll_y="2147.5" zoom="200" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4343,6 +4351,527 @@ This is what determines when the model stops calculating</doc>
 				</connector>
 				<aux x="1006.5" y="48.1667" name="Simulation End"/>
 				<isee:placeholder x="1135.5" y="978.583" name="Dashboard Right Placeholder"/>
+				<stacked_container uid="166" x="1900.5" y="1950.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="167" x="2326.25" y="1950.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="168" x="2787.92" y="1950.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="MIN UBI: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="169" x="3225.92" y="1950.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="171" x="1900.5" y="2266.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="172" x="2326.25" y="2266.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI bank &amp; Wealth Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="173" x="2787.92" y="2266.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<text_box font_size="36pt" uid="174" x="1901.67" y="1880" width="260" height="58">ALL</text_box>
+				<text_box font_size="36pt" uid="175" x="1897.17" y="2590.33" width="260" height="58">Min UBI</text_box>
+				<stacked_container uid="182" x="1892.83" y="2662.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="183" x="2318.58" y="2662.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="184" x="2780.25" y="2662.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="MIN UBI: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="185" x="3218.25" y="2662.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="186" x="1892.83" y="2978.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="187" x="2318.58" y="2978.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="188" x="2780.25" y="2978.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="6" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="189" x="3222.75" y="2981.91" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Bank Profits" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.bank_profits[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="red" title="Min UBI: Bank Profits" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.bank_profits[1]"/>
+							<isee:data name="1. MIN UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<text_box font_size="36pt" uid="190" x="1897.17" y="3312.83" width="260" height="58">UBI Bank Tax</text_box>
+				<stacked_container uid="191" x="1895" y="3374.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="192" x="2320.75" y="3374.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="193" x="2782.42" y="3374.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="194" x="3220.42" y="3374.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="195" x="1895" y="3689.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="6" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="196" x="2320.75" y="3689.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="197" x="2782.42" y="3689.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#008F44" title="UBI Bank Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="2. UBI Bank Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<text_box font_size="36pt" uid="198" x="1880.5" y="4015.16" width="443.333" height="58">UBI Bank &amp; Wealth Tax </text_box>
+				<stacked_container uid="199" x="1885.5" y="4089.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="200" x="2311.25" y="4089.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="201" x="2772.92" y="4089.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="202" x="3210.92" y="4089.33" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="203" x="1885.5" y="4404.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="204" x="2311.25" y="4404.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI bank &amp; Wealth Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="205" x="2772.92" y="4404.66" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="3. UBI Bank &amp; Wealth Tax"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<text_box font_size="36pt" uid="206" x="1889.31" y="4720.02" width="443.333" height="58">Max UBI</text_box>
+				<stacked_container uid="208" x="2315.25" y="4796.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Employment.unemployment_rate[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="209" x="2776.92" y="4796.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="210" x="3214.92" y="4796.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="211" x="1889.5" y="5112.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="212" x="2315.25" y="5112.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="213" x="2776.92" y="5112.16" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="207" x="1889.5" y="4796.83" width="400" height="285">
+					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="BAU"/>
+						</plot>
+						<plot color="#7F00FF" title="Max UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<isee:data name="4. MAX UBI"/>
+						</plot>
+					</graph>
+				</stacked_container>
 			</view>
 			<view isee:template_view="template:1" isee:name="Landing Page without image" isee:original_design="Deluxe Prev-Next Blue Green Pastel" background="white" page_width="1066" page_height="600" home_view="true" type="interface">
 				<style>
