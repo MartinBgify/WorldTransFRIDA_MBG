@@ -87,9 +87,13 @@
 	<data>
 		<import isee:overwrite="false" isee:timevarying="true" resource="r../Data/frida_input_data.csv"/>
 	</data>
-	<isee:sensi_specs_list active_index="0">
+	<isee:sensi_specs_list active_index="1">
 		<isee:sensi_specs name="Climate Sensitivity" method="grid">
 			<isee:variable starting_value="1" ending_value="100" type="incremental" min="1" max="100" seed="12345" name="Climate_Units.selected_climate_case[1]" num_samples="100"/>
+		</isee:sensi_specs>
+		<isee:sensi_specs name="Sensitivity" method="external" sheet="Sheet1" path="r../Data/green_investment_scenarios.xlsx">
+			<isee:variable type="adhoc" name="Green_Innovation.additional_government_innovative_investment_fraction"/>
+			<isee:variable type="adhoc" name="Green_Innovation.green_government_fraction_of_innovation_investment"/>
 		</isee:sensi_specs>
 	</isee:sensi_specs_list>
 	<isee:optimizer_specs_list active_index="7">
@@ -1859,6 +1863,8 @@
 				<connect2 to="Coastal_population.population_growth_rate" from="Demographics.population_growth_rate"/>
 				<connect to='Inflation."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect2 to='Inflation."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
+				<connect to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
+				<connect2 to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
 				<connect to="Animal_Products_Demand.real_GDP_per_person_1" from="Demographics.real_GDP_per_person"/>
 				<connect2 to="Animal_Products_Demand.real_GDP_per_person_1" from="Demographics.real_GDP_per_person"/>
 				<connect to="Concrete.real_GDP_per_person" from="Demographics.real_GDP_per_person"/>
@@ -2110,6 +2116,8 @@
 				<connect2 to="Emissions.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect to="Emissions.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="Emissions.start_year" from="Government_Regulations.start_year"/>
+				<connect to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
+				<connect2 to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
 				<connect to="Concrete.Absolute_Surface_Temperature" from="Energy_Balance_Model.Absolute_Surface_Temperature"/>
 				<connect2 to="Concrete.Absolute_Surface_Temperature" from="Energy_Balance_Model.Absolute_Surface_Temperature"/>
 				<connect to="Crop.Absolute_Surface_Temperature" from="Energy_Balance_Model.Absolute_Surface_Temperature"/>
@@ -2142,6 +2150,8 @@
 				<connect2 to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Grass.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Grass.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Planetary_Boundaries.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
 				<connect2 to="Planetary_Boundaries.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
 				<connect to="Crop.Atmospheric_CO2_Concentration_1" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
@@ -3204,6 +3214,12 @@
 				<connect2 to="Government.today_1" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect2 to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
+				<connect to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
+				<connect2 to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
+				<connect to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
+				<connect2 to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
+				<connect to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Inflation.animal_products_demand" from="Food_Demand.animal_products_demand"/>
 				<connect2 to="Inflation.animal_products_demand" from="Food_Demand.animal_products_demand"/>
 				<connect to="Inflation.animal_products_production" from="Animal_Products.animal_products_production"/>
@@ -3383,7 +3399,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="8" isee:scroll_y="240" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="8" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4242,6 +4258,74 @@ This is what determines when the model stops calculating</doc>
 				</connector>
 				<aux x="1006.5" y="48.1667" name="Simulation End"/>
 				<isee:placeholder x="1014.5" y="927.583" name="Dashboard Right Placeholder"/>
+				<connector uid="166" isee:thickness="2" angle="107.688" isee:autocreated="true">
+					<from>Economy</from>
+					<to>Climate</to>
+				</connector>
+				<stacked_container uid="167" x="1764" y="1838.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="7" title="Real GDP in 2021$" isee:fill_intensity="0.1" to="2075" from="2025" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<scale min="175000" max="475000"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="168" x="2920.67" y="1838.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="6" title="Surface Temperature Anomaly" isee:fill_intensity="0.1" to="2075" from="2025" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<scale min="1.25" max="2.5"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="169" x="2342.33" y="1838.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="6" title="Realised Productivity" isee:fill_intensity="0.1" to="2075" from="2025" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.realised_productivity[1]"/>
+							<scale min="2.75" max="7.75"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="170" x="3498" y="1838.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="7" title="Total CO2 Emissions" isee:fill_intensity="0.1" to="2075" from="2025" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Emissions.Total_CO2_Emissions[1]"/>
+							<scale min="44000" max="68000"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="171" x="1993.67" y="2437.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="7" title="Real GDP in 2021$" isee:fill_intensity="0.1" to="2075" from="2065" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+							<scale min="375000" max="465000"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="172" x="3150.34" y="2437.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="5" title="Surface Temperature Anomaly" isee:fill_intensity="0.1" to="2075" from="2065" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+							<scale min="2.1" max="2.5"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="173" x="2572" y="2437.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="6" title="Realised Productivity" isee:fill_intensity="0.1" to="2075" from="2065" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Employment.realised_productivity[1]"/>
+							<scale min="6" max="7.75"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="174" x="3727.67" y="2437.5" width="559" height="519">
+					<graph width="559" height="519" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="true" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="11" num_y_labels="7" title="Total CO2 Emissions" isee:fill_intensity="0.1" to="2075" from="2065" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="false" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Emissions.Total_CO2_Emissions[1]"/>
+							<scale min="57500" max="67500"/>
+						</plot>
+					</graph>
+				</stacked_container>
 			</view>
 			<view isee:template_view="template:1" isee:name="Landing Page without image" isee:original_design="Deluxe Prev-Next Blue Green Pastel" background="white" page_width="1066" page_height="600" home_view="true" type="interface">
 				<style>

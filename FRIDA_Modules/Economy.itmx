@@ -3,7 +3,7 @@
 	<header>
 		<smile version="1.0" namespace="std, isee" uses_arrays="2" uses_conveyor="" uses_submodels=""/>
 		<name>Economy</name>
-		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
+		<uuid>87c9d369-189f-4c9a-86f9-24635ff46796</uuid>
 		<vendor>isee systems, inc.</vendor>
 		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
@@ -249,6 +249,8 @@
 				<connect2 to="Finance.Nominal_GDP" from="GDP.Nominal_GDP"/>
 				<connect to="Government.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Government.GDP" from="GDP.Nominal_GDP"/>
+				<connect to="Green_Innovation.Nominal_GDP" from="GDP.Nominal_GDP"/>
+				<connect2 to="Green_Innovation.Nominal_GDP" from="GDP.Nominal_GDP"/>
 				<connect to="Inflation.Nominal_GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Inflation.Nominal_GDP" from="GDP.Nominal_GDP"/>
 				<connect to="Finance.nominal_GDP_growth_rate" from="GDP.nominal_GDP_growth_rate"/>
@@ -265,6 +267,8 @@
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="GDP.Government_Spending_1" from="Government.government_consumption"/>
@@ -292,6 +296,10 @@
 				<format scale_by="auto"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
+				<connect to="Green_Innovation.Central_Bank_Safe_Interest" from="Government.Central_Bank_Safe_Interest"/>
+				<connect2 to="Green_Innovation.Central_Bank_Safe_Interest" from="Government.Central_Bank_Safe_Interest"/>
+				<connect to="Green_Innovation.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect2 to="Green_Innovation.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -340,6 +348,8 @@
 				<connect2 to="Finance.public_investment" from="Government.public_investment"/>
 				<connect to="GDP.public_investment" from="Government.public_investment"/>
 				<connect2 to="GDP.public_investment" from="Government.public_investment"/>
+				<connect to="Green_Innovation.public_investment" from="Government.public_investment"/>
+				<connect2 to="Green_Innovation.public_investment" from="Government.public_investment"/>
 				<connect to="Finance.safe_interest" from="Government.safe_interest"/>
 				<connect2 to="Finance.safe_interest" from="Government.safe_interest"/>
 				<connect to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
@@ -432,6 +442,10 @@
 				<connect2 to="Government.Population" from="Demographics.Population"/>
 				<connect to="Government.profit_tax_1" from="Circular_Flow.profit_tax"/>
 				<connect2 to="Government.profit_tax_1" from="Circular_Flow.profit_tax"/>
+				<connect to="Government.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Government.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect to="Government.public_innovation_investment_1" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Government.public_innovation_investment_1" from="Green_Innovation.public_innovation_investment"/>
 				<connect to="Government.rent_tax_1" from="Circular_Flow.rent_tax"/>
 				<connect2 to="Government.rent_tax_1" from="Circular_Flow.rent_tax"/>
 				<connect to="Government.required_last_resort_lending" from="Finance.required_government_solvency_support_lending"/>
@@ -547,6 +561,8 @@
 				<connect2 to="Circular_Flow.profit_tax_policy_start_year" from="Government_Regulations.profit_tax_policy_start_year"/>
 				<connect to="Circular_Flow.profit_tax_rate_policy" from="Government_Regulations.profit_tax_policy"/>
 				<connect2 to="Circular_Flow.profit_tax_rate_policy" from="Government_Regulations.profit_tax_policy"/>
+				<connect to="Circular_Flow.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Circular_Flow.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
 				<connect to="Circular_Flow.public_investment_1" from="Government.public_investment"/>
 				<connect2 to="Circular_Flow.public_investment_1" from="Government.public_investment"/>
 				<connect to="Circular_Flow.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
@@ -709,10 +725,18 @@
 				<connect2 to="Inflation.Employed" from="Employment.Employed"/>
 				<connect to="Sea_level_rise_costs_and_impacts.Employed" from="Employment.Employed"/>
 				<connect2 to="Sea_level_rise_costs_and_impacts.Employed" from="Employment.Employed"/>
+				<connect to='Green_Innovation."indicated_productivity_growth_from_non-bank_innovation_1"' from="Employment.indicated_productivity_growth_from_non_bank_innovation"/>
+				<connect2 to='Green_Innovation."indicated_productivity_growth_from_non-bank_innovation_1"' from="Employment.indicated_productivity_growth_from_non_bank_innovation"/>
+				<connect to="Green_Innovation.indicated_productivity_growth_from_bank_exploration_1" from="Employment.indicated_productivity_growth_from_bank_exploration"/>
+				<connect2 to="Green_Innovation.indicated_productivity_growth_from_bank_exploration_1" from="Employment.indicated_productivity_growth_from_bank_exploration"/>
+				<connect to="Green_Innovation.productivity_yield_of_exploratory_investment_1" from="Employment.productivity_yield_of_exploratory_investment"/>
+				<connect2 to="Green_Innovation.productivity_yield_of_exploratory_investment_1" from="Employment.productivity_yield_of_exploratory_investment"/>
 				<connect to="Inflation.realised_productivity" from="Employment.realised_productivity"/>
 				<connect2 to="Inflation.realised_productivity" from="Employment.realised_productivity"/>
 				<connect to="Circular_Flow.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
 				<connect2 to="Circular_Flow.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
+				<connect to="Green_Innovation.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
+				<connect2 to="Green_Innovation.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
 				<connect to="Inflation.productivity_growth_1" from="Employment.realised_productivity_growth"/>
 				<connect2 to="Inflation.productivity_growth_1" from="Employment.realised_productivity_growth"/>
 				<connect to="Circular_Flow.rent_3" from="Employment.rent"/>
@@ -723,10 +747,14 @@
 				<connect2 to="Finance.unemployment_rate" from="Employment.unemployment_rate"/>
 				<connect to="Government.unemployment_rate_1" from="Employment.unemployment_rate"/>
 				<connect2 to="Government.unemployment_rate_1" from="Employment.unemployment_rate"/>
+				<connect to="Green_Innovation.unemployment_rate" from="Employment.unemployment_rate"/>
+				<connect2 to="Green_Innovation.unemployment_rate" from="Employment.unemployment_rate"/>
 				<connect to="Finance.Wage_Rate_1" from="Employment.Wage_Rate"/>
 				<connect2 to="Finance.Wage_Rate_1" from="Employment.Wage_Rate"/>
 				<connect to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
 				<connect2 to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
+				<connect to="Green_Innovation.Wage_Rate" from="Employment.Wage_Rate"/>
+				<connect2 to="Green_Innovation.Wage_Rate" from="Employment.Wage_Rate"/>
 				<connect to="Employment.actual_safe_investment_failure" from="Finance.actual_safe_investment_failure"/>
 				<connect2 to="Employment.actual_safe_investment_failure" from="Finance.actual_safe_investment_failure"/>
 				<connect to="Employment.Aged_1_to_20_years" from="Demographics.Aged_1_to_20_years"/>
@@ -759,6 +787,12 @@
 				<connect2 to="Employment.exploratory_loan_defaults_from_from_interest" from="Finance.exploratory_loan_defaults_from_from_interest"/>
 				<connect to="Employment.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Employment.GDP" from="GDP.Nominal_GDP"/>
+				<connect to="Employment.green_finance_fraction_of_innovation" from="Green_Innovation.green_finance_fraction_of_innovation"/>
+				<connect2 to="Employment.green_finance_fraction_of_innovation" from="Green_Innovation.green_finance_fraction_of_innovation"/>
+				<connect to="Employment.green_innovation_adjusted_indicated_productivity_growth_from_government_investment" from="Green_Innovation.green_innovation_adjusted_indicated_productivity_growth_from_government_investment"/>
+				<connect2 to="Employment.green_innovation_adjusted_indicated_productivity_growth_from_government_investment" from="Green_Innovation.green_innovation_adjusted_indicated_productivity_growth_from_government_investment"/>
+				<connect to="Employment.green_non_bank_innovation_policy" from="Green_Innovation.green_non_bank_innovation_policy"/>
+				<connect2 to="Employment.green_non_bank_innovation_policy" from="Green_Innovation.green_non_bank_innovation_policy"/>
 				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect to="Employment.Passing_66" from="Demographics.Passing_65"/>
@@ -814,12 +848,16 @@
 				<connect2 to='Sea_level_rise_costs_and_impacts."inflation_adjustment_b$_per_bc$_1"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
 				<connect to="Employment.Cumulative_inflation" from="Inflation.Inflation_Index"/>
 				<connect2 to="Employment.Cumulative_inflation" from="Inflation.Inflation_Index"/>
+				<connect to="Green_Innovation.Inflation_Index" from="Inflation.Inflation_Index"/>
+				<connect2 to="Green_Innovation.Inflation_Index" from="Inflation.Inflation_Index"/>
 				<connect to="Circular_Flow.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Circular_Flow.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Government.inflation" from="Inflation.Inflation_Rate"/>
+				<connect to="Green_Innovation.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Green_Innovation.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Circular_Flow.UNIT_Percent" from="Inflation.UNIT_Percent"/>
 				<connect2 to="Circular_Flow.UNIT_Percent" from="Inflation.UNIT_Percent"/>
 				<connect to="Employment.UNIT_percent_1" from="Inflation.UNIT_Percent"/>
@@ -883,7 +921,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/clones/me/WorldTransFRIDA/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -962,6 +1000,53 @@
 				<connect to="Sea_level_rise_costs_and_impacts.switch_sea_level_rise_relocation_damage" from="Climate.switch_sea_level_rise_relocation_cost_damage"/>
 				<connect2 to="Sea_level_rise_costs_and_impacts.switch_sea_level_rise_relocation_damage" from="Climate.switch_sea_level_rise_relocation_cost_damage"/>
 			</module>
+			<module name="Green Innovation" isee:label="">
+				<format scale_by="auto"/>
+				<connect to="Employment.green_finance_fraction_of_innovation" from="Green_Innovation.green_finance_fraction_of_innovation"/>
+				<connect2 to="Employment.green_finance_fraction_of_innovation" from="Green_Innovation.green_finance_fraction_of_innovation"/>
+				<connect to="Employment.green_innovation_adjusted_indicated_productivity_growth_from_government_investment" from="Green_Innovation.green_innovation_adjusted_indicated_productivity_growth_from_government_investment"/>
+				<connect2 to="Employment.green_innovation_adjusted_indicated_productivity_growth_from_government_investment" from="Green_Innovation.green_innovation_adjusted_indicated_productivity_growth_from_government_investment"/>
+				<connect to="Employment.green_non_bank_innovation_policy" from="Green_Innovation.green_non_bank_innovation_policy"/>
+				<connect2 to="Employment.green_non_bank_innovation_policy" from="Green_Innovation.green_non_bank_innovation_policy"/>
+				<connect to="Circular_Flow.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Circular_Flow.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect to="Government.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Government.public_innovation_investment" from="Green_Innovation.public_innovation_investment"/>
+				<connect to="Government.public_innovation_investment_1" from="Green_Innovation.public_innovation_investment"/>
+				<connect2 to="Government.public_innovation_investment_1" from="Green_Innovation.public_innovation_investment"/>
+				<connect to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
+				<connect2 to="Emissions.Sustainability" from="Green_Innovation.Sustainability"/>
+				<connect to="Green_Innovation.Central_Bank_Safe_Interest" from="Government.Central_Bank_Safe_Interest"/>
+				<connect2 to="Green_Innovation.Central_Bank_Safe_Interest" from="Government.Central_Bank_Safe_Interest"/>
+				<connect to="Green_Innovation.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect2 to="Green_Innovation.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect to='Green_Innovation."indicated_productivity_growth_from_non-bank_innovation_1"' from="Employment.indicated_productivity_growth_from_non_bank_innovation"/>
+				<connect2 to='Green_Innovation."indicated_productivity_growth_from_non-bank_innovation_1"' from="Employment.indicated_productivity_growth_from_non_bank_innovation"/>
+				<connect to="Green_Innovation.indicated_productivity_growth_from_bank_exploration_1" from="Employment.indicated_productivity_growth_from_bank_exploration"/>
+				<connect2 to="Green_Innovation.indicated_productivity_growth_from_bank_exploration_1" from="Employment.indicated_productivity_growth_from_bank_exploration"/>
+				<connect to="Green_Innovation.Inflation_Index" from="Inflation.Inflation_Index"/>
+				<connect2 to="Green_Innovation.Inflation_Index" from="Inflation.Inflation_Index"/>
+				<connect to="Green_Innovation.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Green_Innovation.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect to="Green_Innovation.Nominal_GDP" from="GDP.Nominal_GDP"/>
+				<connect2 to="Green_Innovation.Nominal_GDP" from="GDP.Nominal_GDP"/>
+				<connect to="Green_Innovation.productivity_yield_of_exploratory_investment_1" from="Employment.productivity_yield_of_exploratory_investment"/>
+				<connect2 to="Green_Innovation.productivity_yield_of_exploratory_investment_1" from="Employment.productivity_yield_of_exploratory_investment"/>
+				<connect to="Green_Innovation.public_investment" from="Government.public_investment"/>
+				<connect2 to="Green_Innovation.public_investment" from="Government.public_investment"/>
+				<connect to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Green_Innovation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
+				<connect2 to="Green_Innovation.real_GDP_per_capita" from="Demographics.real_GDP_per_capita"/>
+				<connect to="Green_Innovation.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
+				<connect2 to="Green_Innovation.realised_productivity_growth" from="Employment.realised_productivity_growth"/>
+				<connect to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Green_Innovation.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Green_Innovation.unemployment_rate" from="Employment.unemployment_rate"/>
+				<connect2 to="Green_Innovation.unemployment_rate" from="Employment.unemployment_rate"/>
+				<connect to="Green_Innovation.Wage_Rate" from="Employment.Wage_Rate"/>
+				<connect2 to="Green_Innovation.Wage_Rate" from="Employment.Wage_Rate"/>
+			</module>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1011,7 +1096,54 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="141" isee:scroll_y="109" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
+				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
+				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:sim_speed_slider color="black" background="white"/>
+				<isee:time_slider color="#E95F74" background="silver"/>
+				<isee:pie_input color="black" background="white" font_size="12pt" legend_position="bottom" isee:transparent="false"/>
+				<knob color="#66CC66" background="#E0E0E0" font_size="12pt" label_side="bottom" wrap_title="true"/>
+				<numeric_input color="black" background="#E0E0E0" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<isee:dropdown_input color="black" background="white" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<switch color="black" background="#E0E0E0" font_size="12pt" label_side="top" wrap_title="true" isee:appearance="switch" isee:on_color="green"/>
+				<options color="black" background="white" appearance="radio-buttons" arrangement="vertical"/>
+				<graphical_input color="black" background="#E0E0E0" font_size="12pt" isee:show_hover_tip="true"/>
+				<group_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<lamp color="black" background="white" font_size="9pt"/>
+				<gauge color="black" background="white" font_size="9pt" needle_color="#F09F72" bar_color="#EEEEEE" bar_progress_color="black" appearance="radial" num_major_ticks="11" num_minor_ticks="11" show_numeric_value="true"/>
+				<isee:spatial_map color="black" background="white" font_size="12pt"/>
+				<isee:animation_object color="black" background="white" font_size="12pt"/>
+				<isee:navigation_widget color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="6" appearance="tabs" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:shape color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid" opacity="1" transparent_background="true" corner_radius="1"/>
+				<isee:selector color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
+				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+			</style>
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="25" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1223,6 +1355,31 @@
 				<connector uid="57" isee:thickness="2" angle="156.969" isee:autocreated="true">
 					<from>Employment</from>
 					<to>Finance</to>
+				</connector>
+				<module x="750.833" y="110.593" name="Green Innovation"/>
+				<connector uid="59" isee:thickness="2" angle="95.1346" isee:autocreated="true">
+					<from>Government</from>
+					<to>Green_Innovation</to>
+				</connector>
+				<connector uid="60" isee:thickness="2" angle="83.0874" isee:autocreated="true">
+					<from>Employment</from>
+					<to>Green_Innovation</to>
+				</connector>
+				<connector uid="61" isee:thickness="2" angle="39.4431" isee:autocreated="true">
+					<from>GDP</from>
+					<to>Green_Innovation</to>
+				</connector>
+				<connector uid="62" isee:thickness="2" angle="263.087" isee:autocreated="true">
+					<from>Green_Innovation</from>
+					<to>Employment</to>
+				</connector>
+				<connector uid="63" isee:thickness="2" angle="275.135" isee:autocreated="true">
+					<from>Green_Innovation</from>
+					<to>Government</to>
+				</connector>
+				<connector uid="64" isee:thickness="2" angle="243.335" isee:autocreated="true">
+					<from>Green_Innovation</from>
+					<to>Circular_Flow</to>
 				</connector>
 			</view>
 		</views>
@@ -1510,7 +1667,10 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>government_consumption+public_investment_1+sum_of_subsidies_spent</eqn>
+				<eqn>government_consumption
++public_investment_1
++sum_of_subsidies_spent
++public_innovation_investment</eqn>
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
@@ -2400,6 +2560,13 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>2025</eqn>
 				<units>Year</units>
 			</aux>
+			<aux name="public\ninnovation\ninvestment" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -2449,7 +2616,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2166.67" isee:scroll_y="1095" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="965" isee:scroll_y="775.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3670,6 +3837,11 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<connector uid="406" angle="102.875">
 					<from>wealth_tax_policy_start_year</from>
 					<to>actual_wealth_tax_rate</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1144.17" y="834.167" name="public\ninnovation\ninvestment"/>
+				<connector uid="407" angle="296.03">
+					<from>public_innovation_investment</from>
+					<to>government_spending</to>
 				</connector>
 				<alias label_side="top" uid="8" x="2047.5" y="1330.87" width="18" height="18">
 					<of>time_to_reach_savings_goal</of>
@@ -5100,7 +5272,7 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<range min="0.05" max="0.25"/>
 				<units>1/year</units>
 			</aux>
-			<aux name="indicated productivity growth\nfrom non bank innovation">
+			<aux name="indicated productivity growth\nfrom non bank innovation" access="output">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -5114,14 +5286,14 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<eqn>exploratory_bank_investment/GDP</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="indicated productivity growth from bank exploration">
+			<aux name="indicated productivity growth from bank exploration" access="output">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>exploratory_bank_investment_share_of_GDP*productivity_yield_of_exploratory_investment</eqn>
 				<units>1/year</units>
 			</aux>
-			<aux name="productivity yield of exploratory investment">
+			<aux name="productivity yield of exploratory investment" access="output">
 				<doc>${Assumption,Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -5260,7 +5432,9 @@ Fractional exposure levels to temperature for service related labour. Assumption
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>indicated_productivity_growth_from_bank_exploration+indicated_productivity_growth_from_non_bank_innovation</eqn>
+				<eqn>indicated_productivity_growth_from_bank_exploration * (1-green_finance_fraction_of_innovation)
++indicated_productivity_growth_from_non_bank_innovation * (1-green_non_bank_innovation_policy)
++green_innovation_adjusted_indicated_productivity_growth_from_government_investment</eqn>
 				<units>1/year</units>
 			</aux>
 			<aux name="UNIT percent 1" access="input">
@@ -5335,6 +5509,24 @@ Interface explosion stopper</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
+			<aux name="green non bank\ninnovation policy" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green finance\nfraction of innovation" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green innovation adjusted\nindicated productivity growth\nfrom government investment" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -5384,7 +5576,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="135" isee:scroll_y="1334.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_y="1193.33" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6489,7 +6681,7 @@ Interface explosion stopper</doc>
 					<from>productivity_yield_of_exploratory_investment</from>
 					<to>indicated_productivity_growth_from_bank_exploration</to>
 				</connector>
-				<text_box uid="229" x="129.583" y="1521.67" width="260" height="220.5">They are not comparable, Ben was right. And it is not sufficient to say the bank investments are more productive, and let that be decided by the size of investment relative to safe assets, without defining how much more. I believe the below gets around that.
+				<text_box uid="229" x="37.9163" y="1279.17" width="260" height="220.5">They are not comparable, Ben was right. And it is not sufficient to say the bank investments are more productive, and let that be decided by the size of investment relative to safe assets, without defining how much more. I believe the below gets around that.
 
 furthermore. The structure that was previously decided on had the productivity growth be a function of &quot;orientation&quot; which is upstream from actual investment. It is, after all, the investment that ends up as productivity gains, and thus productivity should be downstream of investment and not circumventing it directly from &quot;orientation&quot;.</text_box>
 				<aux label_side="right" x="875.5" y="1266.08" name="time for\nproductivity\nto affect firing"/>
@@ -6725,6 +6917,21 @@ furthermore. The structure that was previously decided on had the productivity g
 				<connector uid="297" angle="12.3808">
 					<from>safe_loan_defaults_1</from>
 					<to>total_defaults</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="135" x="420" y="1603.33" name="green non bank\ninnovation policy"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="135" x="373.333" y="1657.69" name="green finance\nfraction of innovation"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="323.333" y="1705.83" name="green innovation adjusted\nindicated productivity growth\nfrom government investment"/>
+				<connector uid="298" angle="333.435">
+					<from>green_non_bank_innovation_policy</from>
+					<to>indicated_productivity_growth</to>
+				</connector>
+				<connector uid="299" angle="349.319">
+					<from>green_finance_fraction_of_innovation</from>
+					<to>indicated_productivity_growth</to>
+				</connector>
+				<connector uid="300" angle="358.603">
+					<from>green_innovation_adjusted_indicated_productivity_growth_from_government_investment</from>
+					<to>indicated_productivity_growth</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -8583,7 +8790,7 @@ To control extreme policy only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="1590" isee:scroll_y="1747" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="1809" isee:scroll_y="1707" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10544,7 +10751,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="210.833" isee:scroll_y="165.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="49.1667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10976,7 +11183,7 @@ ELSE
 				<eqn>Government_Debt*average_government_debt_interest_rate</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="debt to\nGDP ratio">
+			<aux name="debt to\nGDP ratio" access="output">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -11116,7 +11323,7 @@ inflation_goal_policy</eqn>
 				<eqn>inflation-central_bank_goal_inflation</eqn>
 				<units>1/year</units>
 			</aux>
-			<stock name="Central Bank\nSafe Interest">
+			<stock name="Central Bank\nSafe Interest" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -11750,7 +11957,12 @@ ELSE historical_minimum_effect_of_deb_to_GDP_ratio_on_government_spending</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>public_expenditure_before_subsidies_and_interest_payments+sum_of_subsidies_spent+government_interest_payments + STA_driven_government_consumption +Paid_Total_Nominal_SLR_protection_cost</eqn>
+				<eqn>public_expenditure_before_subsidies_and_interest_payments
++sum_of_subsidies_spent
++government_interest_payments
++STA_driven_government_consumption
++Paid_Total_Nominal_SLR_protection_cost
++public_innovation_investment_1</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="additional transfers policy" access="input">
@@ -12279,6 +12491,20 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<eqn>.8</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="public\ninnovation\ninvestment" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="public\ninnovation\ninvestment 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -12328,7 +12554,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="715.833" isee:scroll_y="667.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1385.83" isee:scroll_y="415" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13446,6 +13672,12 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>maximum_percentage_of_government_budget_to_transfer_payments</from>
 					<to>government_transfers</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="1279.33" y="861.92" name="public\ninnovation\ninvestment"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="1308.22" y="571.358" name="public\ninnovation\ninvestment 1"/>
+				<connector uid="408" angle="306.56">
+					<from>public_innovation_investment_1</from>
+					<to>public_expenditure</to>
+				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
 					<of>baseline_interest</of>
 				</alias>
@@ -13497,6 +13729,566 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				</alias>
 				<alias font_style="italic" uid="405" x="729.333" y="1177.67" width="18" height="18">
 					<of>Paid_Total_Nominal_SLR_protection_cost</of>
+				</alias>
+			</view>
+		</views>
+	</model>
+	<model name="Green_Innovation">
+		<variables>
+			<aux name="indicated\nproductivity growth\nfrom government investment">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>public_innovation_share_of_gdp*productivity_yield_of_public_innovation_investment</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="green innovation adjusted\nindicated productivity growth\nfrom government investment" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>indicated_productivity_growth_from_government_investment*(1-green_government_fraction_of_innovation_investment)</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="public innovation\nshare of gdp">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>public_innovation_investment/Nominal_GDP</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="productivity yield of public innovation investment">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>productivity_yield_of_exploratory_investment_1 * productivity_of_government_investment_versus_private</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="productivity of government\ninvestment versus private">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="public\ninnovation\ninvestment" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>government_innovation_policy*public_investment</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="green government fraction of innovation investment">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green non bank\ninnovation policy" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; green_innovation_policy_start_time THEN &quot;green_non-bank_fraction_of_innovation&quot; ELSE 0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green\nnon-bank fraction\nof innovation">
+				<eqn>0.05</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green finance\nfraction of innovation" access="output" isee:autocreated="true">
+				<eqn>IF TIME &gt; green_innovation_policy_start_time THEN green_finance_fraction_of_exploration ELSE 0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="green finance fraction\nof exploration">
+				<eqn>0.05</eqn>
+				<units>dmnl</units>
+			</aux>
+			<stock name="Sustainability" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>1</eqn>
+				<inflow>change_in_sustainability</inflow>
+				<units>dmnl</units>
+			</stock>
+			<flow name="change in\nsustainability">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Sustainability_Under_Development/average_development_completion_time</eqn>
+				<non_negative/>
+				<units>1/year</units>
+			</flow>
+			<stock name="Sustainability\nUnder Development">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Sustainability*indicated_sustainability_growth*average_development_completion_time</eqn>
+				<inflow>productivity_starting_development</inflow>
+				<outflow>change_in_sustainability</outflow>
+				<units>dmnl</units>
+			</stock>
+			<flow name="productivity\nstarting development">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Sustainability * indicated_sustainability_growth</eqn>
+				<non_negative/>
+				<units>1/year</units>
+			</flow>
+			<aux name="average\ndevelopment\ncompletion time">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="indicated sustainability growth">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; green_innovation_policy_start_time THEN
+non_bank_sustainability_growth_component
++finance_sustainability_growth_component
++government_sustainability_growth_component
+ELSE 0</eqn>
+				<units>dmnl/year</units>
+			</aux>
+			<aux name="non bank sustainability\ngrowth component">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>&quot;indicated_productivity_growth_from_non-bank_innovation_1&quot;*&quot;green_non-bank_fraction_of_innovation&quot;</eqn>
+				<units>dmnl/year</units>
+			</aux>
+			<aux name="finance sustainability growth component">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>indicated_productivity_growth_from_bank_exploration_1*green_finance_fraction_of_exploration</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="government sustainability growth component">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>indicated_productivity_growth_from_government_investment * green_government_fraction_of_innovation_investment</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="green innovation\npolicy start time">
+				<eqn>2025</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="indicated productivity growth\nfrom non-bank innovation 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="indicated productivity growth from bank exploration 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="Nominal GDP" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="government\ninnovation policy">
+				<eqn>IF TIME &gt; green_innovation_policy_start_time  THEN additional_government_innovative_investment_fraction ELSE 0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="public\ninvestment" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="additional government\ninnovative investment fraction">
+				<eqn>0.1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="Real GDP in 2021c$" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>bc$/year</units>
+			</aux>
+			<aux name="real GDP per capita" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/person/year</units>
+			</aux>
+			<aux name="unemployment rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<stock name="Inflation Rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</stock>
+			<aux name="debt to\nGDP ratio" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="realised\nproductivity\ngrowth" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl/Year</units>
+			</aux>
+			<aux name="Surface Temperature Anomaly" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>deg C</units>
+			</aux>
+			<stock name="Wage Rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>$/p</units>
+			</stock>
+			<stock name="Central Bank\nSafe Interest" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</stock>
+			<aux name="productivity yield of exploratory investment 1" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>1.9473283132336</eqn>
+				<units>1/year</units>
+			</aux>
+			<aux name="Real Wage Rate in 2021$">
+				<doc>${Green Innovation}
+</doc>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Wage_Rate/Inflation_Index</eqn>
+				<format precision="full"/>
+				<units>$/p</units>
+			</aux>
+			<stock name="Inflation Index" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</stock>
+		</variables>
+		<views>
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
+				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
+				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:sim_speed_slider color="black" background="white"/>
+				<isee:time_slider color="#E95F74" background="silver"/>
+				<isee:pie_input color="black" background="white" font_size="12pt" legend_position="bottom" isee:transparent="false"/>
+				<knob color="#66CC66" background="#E0E0E0" font_size="12pt" label_side="bottom" wrap_title="true"/>
+				<numeric_input color="black" background="#E0E0E0" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<isee:dropdown_input color="black" background="white" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<switch color="black" background="#E0E0E0" font_size="12pt" label_side="top" wrap_title="true" isee:appearance="switch" isee:on_color="green"/>
+				<options color="black" background="white" appearance="radio-buttons" arrangement="vertical"/>
+				<graphical_input color="black" background="#E0E0E0" font_size="12pt" isee:show_hover_tip="true"/>
+				<group_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<lamp color="black" background="white" font_size="9pt"/>
+				<gauge color="black" background="white" font_size="9pt" needle_color="#F09F72" bar_color="#EEEEEE" bar_progress_color="black" appearance="radial" num_major_ticks="11" num_minor_ticks="11" show_numeric_value="true"/>
+				<isee:spatial_map color="black" background="white" font_size="12pt"/>
+				<isee:animation_object color="black" background="white" font_size="12pt"/>
+				<isee:navigation_widget color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="6" appearance="tabs" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:shape color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid" opacity="1" transparent_background="true" corner_radius="1"/>
+				<isee:selector color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
+				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+			</style>
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="382" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+						<shape type="rectangle" width="45" height="35"/>
+					</stock>
+					<flow color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</flow>
+					<isee:placeholder color="#228B22" background="white" font_color="#228B22" font_size="11pt" label_side="bottom"/>
+					<module color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+						<shape type="rectangle" width="67" height="55"/>
+					</module>
+					<aux color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</aux>
+					<group color="red" background="white" font_color="red" font_size="11pt"/>
+					<connector color="#FF007F" background="white" font_color="#FF007F" font_size="9pt" isee:thickness="1"/>
+					<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+					<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+						<isee:series_styles>
+							<isee:series_style color="blue" thickness="1"/>
+							<isee:series_style color="red" thickness="1"/>
+							<isee:series_style color="fuchsia" thickness="1"/>
+							<isee:series_style color="#008F44" thickness="1"/>
+							<isee:series_style color="#FF7F00" thickness="1"/>
+							<isee:series_style color="#7F00FF" thickness="1"/>
+							<isee:series_style color="#0CA0FF" thickness="1"/>
+							<isee:series_style color="lime" thickness="1"/>
+							<isee:series_style color="#FF007F" thickness="1"/>
+							<isee:series_style color="aqua" thickness="1"/>
+							<isee:series_style color="#F586FF" thickness="1"/>
+							<isee:series_style color="black" thickness="1"/>
+							<isee:series_style color="#C8C8C8" thickness="1"/>
+						</isee:series_styles>
+					</graph>
+					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				</style>
+				<aux label_side="bottom" x="340.25" y="273.08" name="indicated\nproductivity growth\nfrom government investment"/>
+				<aux label_side="bottom" x="494.833" y="273.08" name="green innovation adjusted\nindicated productivity growth\nfrom government investment"/>
+				<connector uid="1" angle="358.837">
+					<from>indicated_productivity_growth_from_government_investment</from>
+					<to>green_innovation_adjusted_indicated_productivity_growth_from_government_investment</to>
+				</connector>
+				<aux label_side="top" x="239.25" y="305.08" name="public innovation\nshare of gdp"/>
+				<aux label_side="right" label_angle="45" x="239.25" y="241.75" name="productivity yield of public innovation investment"/>
+				<aux label_side="top" x="239.25" y="178.75" name="productivity of government\ninvestment versus private"/>
+				<connector uid="2" angle="270">
+					<from>productivity_of_government_investment_versus_private</from>
+					<to>productivity_yield_of_public_innovation_investment</to>
+				</connector>
+				<connector uid="3" angle="1.71836">
+					<from>public_innovation_share_of_gdp</from>
+					<to>indicated_productivity_growth_from_government_investment</to>
+				</connector>
+				<connector uid="4" angle="0">
+					<from>productivity_yield_of_public_innovation_investment</from>
+					<to>indicated_productivity_growth_from_government_investment</to>
+				</connector>
+				<aux label_side="left" x="239.25" y="365.75" name="public\ninnovation\ninvestment"/>
+				<connector uid="5" angle="90">
+					<from>public_innovation_investment</from>
+					<to>public_innovation_share_of_gdp</to>
+				</connector>
+				<aux label_side="top" x="494.833" y="219.75" name="green government fraction of innovation investment"/>
+				<connector uid="6" angle="267.482">
+					<from>green_government_fraction_of_innovation_investment</from>
+					<to>green_innovation_adjusted_indicated_productivity_growth_from_government_investment</to>
+				</connector>
+				<aux label_side="top" x="653" y="458.92" name="green non bank\ninnovation policy"/>
+				<aux label_side="left" x="551" y="435.92" name="green\nnon-bank fraction\nof innovation"/>
+				<connector uid="7" angle="347.293">
+					<from>&quot;green_non-bank_fraction_of_innovation&quot;</from>
+					<to>green_non_bank_innovation_policy</to>
+				</connector>
+				<aux label_side="bottom" x="653" y="516.92" name="green finance\nfraction of innovation"/>
+				<aux label_side="left" x="551" y="526.92" name="green finance fraction\nof exploration"/>
+				<connector uid="8" angle="5.59934">
+					<from>green_finance_fraction_of_exploration</from>
+					<to>green_finance_fraction_of_innovation</to>
+				</connector>
+				<stock label_side="top" x="1311.17" y="201.39" name="Sustainability"/>
+				<flow label_side="left" x="1311.23" y="271.43" name="change in\nsustainability">
+					<pts>
+						<pt x="1311.23" y="311.97"/>
+						<pt x="1311.23" y="218.89"/>
+					</pts>
+				</flow>
+				<stock label_side="right" x="1311.29" y="329.47" name="Sustainability\nUnder Development"/>
+				<flow label_side="right" x="1311.29" y="399.435" name="productivity\nstarting development">
+					<pts>
+						<pt x="1311.29" y="451.9"/>
+						<pt x="1311.29" y="346.97"/>
+					</pts>
+				</flow>
+				<aux label_side="right" x="1367.5" y="200.43" name="average\ndevelopment\ncompletion time"/>
+				<connector uid="9" angle="187.055">
+					<from>Sustainability</from>
+					<to>productivity_starting_development</to>
+				</connector>
+				<connector uid="10" angle="231.6">
+					<from>average_development_completion_time</from>
+					<to>change_in_sustainability</to>
+				</connector>
+				<connector uid="11" angle="50.9771">
+					<from>Sustainability_Under_Development</from>
+					<to>change_in_sustainability</to>
+				</connector>
+				<aux label_side="right" x="1017.5" y="320.435" name="indicated sustainability growth"/>
+				<connector uid="12" angle="332.666">
+					<from>indicated_sustainability_growth</from>
+					<to>productivity_starting_development</to>
+				</connector>
+				<aux label_side="right" x="1017.5" y="194.435" name="non bank sustainability\ngrowth component"/>
+				<connector uid="13" angle="270">
+					<from>non_bank_sustainability_growth_component</from>
+					<to>indicated_sustainability_growth</to>
+				</connector>
+				<aux label_side="right" x="1017.5" y="456.75" name="finance sustainability growth component"/>
+				<connector uid="14" angle="90">
+					<from>finance_sustainability_growth_component</from>
+					<to>indicated_sustainability_growth</to>
+				</connector>
+				<aux label_side="left" x="941.611" y="320.435" name="government sustainability growth component"/>
+				<connector uid="15" angle="0">
+					<from>government_sustainability_growth_component</from>
+					<to>indicated_sustainability_growth</to>
+				</connector>
+				<aux label_side="right" x="1194.5" y="121.75" name="green innovation\npolicy start time"/>
+				<connector uid="16" angle="270">
+					<from>green_innovation_policy_start_time</from>
+					<to>indicated_sustainability_growth</to>
+				</connector>
+				<connector uid="17" angle="344.65">
+					<from>
+						<alias uid="18"/>
+					</from>
+					<to>green_finance_fraction_of_innovation</to>
+				</connector>
+				<connector uid="19" angle="16.3895">
+					<from>
+						<alias uid="18"/>
+					</from>
+					<to>green_non_bank_innovation_policy</to>
+				</connector>
+				<connector uid="20" angle="83.5998">
+					<from>
+						<alias uid="21"/>
+					</from>
+					<to>government_sustainability_growth_component</to>
+				</connector>
+				<connector uid="22" angle="271.441">
+					<from>
+						<alias uid="23"/>
+					</from>
+					<to>government_sustainability_growth_component</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="896.5" y="194.435" name="indicated productivity growth\nfrom non-bank innovation 1"/>
+				<connector uid="24" angle="0">
+					<from>&quot;indicated_productivity_growth_from_non-bank_innovation_1&quot;</from>
+					<to>non_bank_sustainability_growth_component</to>
+				</connector>
+				<connector uid="25" angle="270">
+					<from>
+						<alias uid="26"/>
+					</from>
+					<to>non_bank_sustainability_growth_component</to>
+				</connector>
+				<connector uid="27" angle="90">
+					<from>
+						<alias uid="28"/>
+					</from>
+					<to>finance_sustainability_growth_component</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="941.611" y="458.92" name="indicated productivity growth from bank exploration 1"/>
+				<connector uid="29" angle="1.63789">
+					<from>indicated_productivity_growth_from_bank_exploration_1</from>
+					<to>finance_sustainability_growth_component</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="152.25" y="305.08" name="Nominal GDP"/>
+				<connector uid="30" angle="0">
+					<from>Nominal_GDP</from>
+					<to>public_innovation_share_of_gdp</to>
+				</connector>
+				<aux label_side="right" x="239.25" y="421.435" name="government\ninnovation policy"/>
+				<connector uid="31" angle="90">
+					<from>government_innovation_policy</from>
+					<to>public_innovation_investment</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="301.25" y="365.75" name="public\ninvestment"/>
+				<connector uid="32" angle="180">
+					<from>public_investment</from>
+					<to>public_innovation_investment</to>
+				</connector>
+				<aux label_side="left" label_angle="225" x="212.25" y="472.89" name="additional government\ninnovative investment fraction"/>
+				<connector uid="33" angle="62.3126">
+					<from>additional_government_innovative_investment_fraction</from>
+					<to>government_innovation_policy</to>
+				</connector>
+				<connector uid="34" angle="116.807">
+					<from>
+						<alias uid="35"/>
+					</from>
+					<to>government_innovation_policy</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="159.25" y="616.25" name="Real GDP in 2021c$"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="159.25" y="666.25" name="real GDP per capita"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="159.25" y="717.5" name="unemployment rate"/>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="148.804" y="756.25" width="20.89" height="16.25" name="Inflation Rate"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="160" y="813.75" name="debt to\nGDP ratio"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="160" y="858.75" name="realised\nproductivity\ngrowth"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="160" y="911.25" name="Surface Temperature Anomaly"/>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="149.555" y="953.75" width="20.89" height="16.25" name="Wage Rate"/>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="149.555" y="1002.5" width="20.89" height="16.25" name="Central Bank\nSafe Interest"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="152.25" y="241.75" name="productivity yield of exploratory investment 1"/>
+				<connector uid="36" angle="0">
+					<from>productivity_yield_of_exploratory_investment_1</from>
+					<to>productivity_yield_of_public_innovation_investment</to>
+				</connector>
+				<aux label_side="right" x="417.5" y="813.75" name="Real Wage Rate in 2021$"/>
+				<stock font_style="italic" font_weight="bold" x="417.5" y="666.25" name="Inflation Index"/>
+				<connector uid="37" angle="264.094">
+					<from>Inflation_Index</from>
+					<to>&quot;Real_Wage_Rate_in_2021$&quot;</to>
+				</connector>
+				<connector uid="38" angle="352.875">
+					<from>Wage_Rate</from>
+					<to>&quot;Real_Wage_Rate_in_2021$&quot;</to>
+				</connector>
+				<alias font_style="italic" label_side="left" uid="18" x="542" y="479.92" width="18" height="18">
+					<of>green_innovation_policy_start_time</of>
+				</alias>
+				<alias font_style="italic" label_side="left" uid="21" x="932.611" y="367.42" width="18" height="18">
+					<of>indicated_productivity_growth_from_government_investment</of>
+				</alias>
+				<alias font_style="italic" label_side="left" uid="23" x="932.611" y="253.42" width="18" height="18">
+					<of>green_government_fraction_of_innovation_investment</of>
+				</alias>
+				<alias font_style="italic" label_side="top" uid="26" x="1008.5" y="117.75" width="18" height="18">
+					<of>&quot;green_non-bank_fraction_of_innovation&quot;</of>
+				</alias>
+				<alias font_style="italic" uid="28" x="1008.5" y="522.75" width="18" height="18">
+					<of>green_finance_fraction_of_exploration</of>
+				</alias>
+				<alias font_style="italic" label_side="right" label_angle="315" uid="35" x="256.25" y="463.89" width="18" height="18">
+					<of>green_innovation_policy_start_time</of>
 				</alias>
 			</view>
 		</views>
@@ -14304,7 +15096,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="437.5" isee:scroll_y="225" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="637.5" isee:scroll_y="520.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>

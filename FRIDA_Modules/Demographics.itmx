@@ -1247,7 +1247,7 @@ AGECOUNT(Aged_65_to_75_years, 0, 5)</eqn>
 initial_fertility+effect_of_GDP_on_change_in_fertility+effect_of_literacy_on_change_in_fertility</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="real GDP per capita">
+			<aux name="real GDP per capita" access="output">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
