@@ -660,7 +660,7 @@ This policy lever simulates stricter/looser building standards for concrete stru
 			<aux name="wealth tax policy" access="output" isee:autocreated="true">
 				<doc>${Policy}
 </doc>
-				<eqn>0.075</eqn>
+				<eqn>0</eqn>
 				<format precision="0.001"/>
 				<range min="0" max="0.02"/>
 				<units>1/year</units>
@@ -898,7 +898,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth inflation indexed\ninvestment growth" access="output" isee:autocreated="true">
-				<eqn>0</eqn>
+				<eqn>1</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -995,7 +995,7 @@ ELSE 0</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH differentiated bank profit tax rate" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<units>dmnl</units>
 			</aux>
 		</variables>
