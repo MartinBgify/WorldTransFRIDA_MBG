@@ -5,7 +5,7 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8.1" isee:build_number="3623" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -91,9 +91,124 @@
 		<isee:sensi_specs name="Climate Sensitivity" method="grid">
 			<isee:variable starting_value="1" ending_value="100" type="incremental" min="1" max="100" seed="12345" name="Climate_Units.selected_climate_case[1]" num_samples="100"/>
 		</isee:sensi_specs>
-		<isee:sensi_specs name="Sensitivity" method="external" sheet="Sheet1" path="r../Data/green_investment_scenarios.xlsx">
-			<isee:variable type="adhoc" name="Green_Innovation.additional_government_innovative_investment_fraction"/>
-			<isee:variable type="adhoc" name="Green_Innovation.green_government_fraction_of_innovation_investment"/>
+		<isee:sensi_specs name="Sensitivity" method="external" sheet="uncertainty_parameters" path="r../FRIDA Uncertainity Dashboard/Data/uncertainty_parameters.xlsx">
+			<isee:variable type="adhoc" name="Emissions.desulphurisation_rate_of_energy_related_emissions[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.desulphurisation_rate_of_energy_related_emissions[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.desulphurisation_rate_of_energy_related_emissions[*, Coal]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_CH4_Intensity[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_CH4_Intensity[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_CH4_Intensity[*, Coal]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_N2O_Intensity[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_N2O_Intensity[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_N2O_Intensity[*, Coal]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_Sulfur_Intensity[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_Sulfur_Intensity[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.Initial_Fossil_Energy_Sulfur_Intensity[*, Coal]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_CH4_emissions[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_CH4_emissions[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_CH4_emissions[*, Coal]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_N2O_emissions[*, Gas]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_N2O_emissions[*, Oil]"/>
+			<isee:variable type="adhoc" name="Emissions.rate_of_change_in_energy_related_N2O_emissions[*, Coal]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_fuel_extraction, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Coal_energy_conversion, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_fuel_extraction, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Oil_energy_conversion, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_fuel_extraction, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Gas_energy_conversion, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Hydropower, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Nuclear, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Bio, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Solar, 9]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 1]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 2]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 3]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 4]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 5]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 6]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 7]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 8]"/>
+			<isee:variable type="adhoc" name="energy_investments.historical_cost_adjustment[*, Wind, 9]"/>
 		</isee:sensi_specs>
 	</isee:sensi_specs_list>
 	<isee:optimizer_specs_list active_index="7">
@@ -3376,7 +3491,7 @@ This is what determines when the model stops calculating</doc>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -3399,7 +3514,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="8" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="2260" isee:scroll_y="440" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4324,6 +4439,167 @@ This is what determines when the model stops calculating</doc>
 							<entity name="Emissions.Total_CO2_Emissions[1]"/>
 							<scale min="57500" max="67500"/>
 						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="175" x="4483.5" y="178.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<text_box font_size="36pt" uid="176" x="4484.5" y="112.5" width="260" height="58">Main KPIs</text_box>
+				<stacked_container uid="177" x="4483.5" y="688.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Emissions.Total_CO2_Emissions[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="178" x="5313.5" y="178.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="179" x="5313.5" y="688.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Employment.realised_productivity[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<text_box font_size="36pt" uid="180" x="4484.5" y="1270" width="260" height="58">Auxiliary KPIs</text_box>
+				<stacked_container uid="181" x="5332.5" y="1341" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Inflation.Inflation_Rate[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="182" x="4482.5" y="1879" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Circular_Flow.income_inequality[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="183" x="4482.5" y="2377" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="184" x="5337.5" y="1879.33" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Finance.private_debt_to_gdp_ratio[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="185" x="5337.5" y="2377" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name='Circular_Flow."average_transfers_per_recipient_in_2021$"[1]'/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="186" x="4482.5" y="2900" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Employment.Wage_Rate[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="187" x="5348.75" y="2922.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Sea_Level.Total_global_sea_level_anomaly[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="188" x="5348.75" y="3449.25" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Employment.climate_impact_on_productivity[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="189" x="4487.5" y="3411" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Government.Central_Bank_Safe_Interest[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="190" x="4487.5" y="1338" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Employment.unemployment_rate[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="191" x="3668" y="178.5" width="775" height="481">
+					<table orientation="horizontal" isee:start_time="2025" isee:stop_time="2075" interval="1" report_balances="beginning" report_flows="instantaneous" width="775" height="481" comparative="true">
+						<item type="time"/>
+						<item>
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+						</item>
+					</table>
+				</stacked_container>
+				<stacked_container uid="192" x="3281.67" y="1121.67">
+					<graph width="350" height="250" type="time_series" comparative="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Finance.private_debt_to_gdp_ratio[1]"/>
+						</plot>
+						<isee:confidence_intervals include_mean="true">
+							<isee:confidence_interval>0.5</isee:confidence_interval>
+							<isee:confidence_interval>0.75</isee:confidence_interval>
+							<isee:confidence_interval>0.95</isee:confidence_interval>
+							<isee:confidence_interval>1</isee:confidence_interval>
+						</isee:confidence_intervals>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="193" x="3331.67" y="1171.67">
+					<graph width="350" height="250" type="time_series" comparative="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+						</plot>
+						<isee:confidence_intervals include_mean="true">
+							<isee:confidence_interval>0.5</isee:confidence_interval>
+							<isee:confidence_interval>0.75</isee:confidence_interval>
+							<isee:confidence_interval>0.95</isee:confidence_interval>
+							<isee:confidence_interval>1</isee:confidence_interval>
+						</isee:confidence_intervals>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="194" x="3381.67" y="1221.67">
+					<graph width="350" height="250" type="time_series" comparative="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+						</plot>
+						<isee:confidence_intervals include_mean="true">
+							<isee:confidence_interval>0.5</isee:confidence_interval>
+							<isee:confidence_interval>0.75</isee:confidence_interval>
+							<isee:confidence_interval>0.95</isee:confidence_interval>
+							<isee:confidence_interval>1</isee:confidence_interval>
+						</isee:confidence_intervals>
 					</graph>
 				</stacked_container>
 			</view>
