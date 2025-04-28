@@ -5,7 +5,7 @@
 		<name>Climate</name>
 		<uuid>6b3172a7-ef66-4feb-8f28-f439698b1c18</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8.1" isee:build_number="3623" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -20,7 +20,7 @@
 			<elem name="Oil"/>
 			<elem name="Coal"/>
 		</dim>
-		<dim name="Run" size="1"/>
+		<dim name="Run" size="11"/>
 	</dimensions>
 	<isee:prefs saved_runs="100" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_secure_mode="true" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rerun_on_structure_change="false" rifp="true">
 		<isee:ignored_words>
@@ -1316,7 +1316,37 @@ Forcing" url="/Users/magr099/Documents/GitHub/WorldTransFRIDA_MBG/FRIDA_Modules/
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>90</eqn>
+					<eqn>35</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>44</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>18</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>70</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>72</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>84</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>16</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>26</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>67</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>64</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1442,7 +1472,37 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>6</eqn>
+					<eqn>5</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>2</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>2</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>9</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1451,7 +1511,37 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="2">
 					<eqn>6</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>6</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>2</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>2</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1460,6 +1550,36 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>6</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>7</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="11">
 					<eqn>6</eqn>
 				</element>
 				<units>dmnl</units>
@@ -1469,7 +1589,37 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>6</eqn>
+					<eqn>5</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>2</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>11</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>7</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>11</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>5</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1478,7 +1628,37 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="6">
 					<eqn>6</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>8</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>8</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1487,6 +1667,36 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
+					<eqn>4</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>3</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>5</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>10</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>7</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>9</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="11">
 					<eqn>6</eqn>
 				</element>
 				<units>dmnl</units>
@@ -1517,7 +1727,7 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -5572,7 +5782,7 @@ N = -k1T1 + (1-epsilon)*k3*(T2-T3)</doc>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -6573,7 +6783,37 @@ Should only ever be varied with Initial Committed Soil Carbon Emissions from Lan
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.299954605</eqn>
+					<eqn>0.299967195019531</eqn>
+				</element>
+				<element subscript="2">
+					<eqn>0.299969607598648</eqn>
+				</element>
+				<element subscript="3">
+					<eqn>0.29998972212204</eqn>
+				</element>
+				<element subscript="4">
+					<eqn>0.299966449703674</eqn>
+				</element>
+				<element subscript="5">
+					<eqn>0.299919767717743</eqn>
+				</element>
+				<element subscript="6">
+					<eqn>0.299969404645538</eqn>
+				</element>
+				<element subscript="7">
+					<eqn>0.299973059879532</eqn>
+				</element>
+				<element subscript="8">
+					<eqn>0.299924786131668</eqn>
+				</element>
+				<element subscript="9">
+					<eqn>0.299942009439087</eqn>
+				</element>
+				<element subscript="10">
+					<eqn>0.299958888488159</eqn>
+				</element>
+				<element subscript="11">
+					<eqn>0.299963595892029</eqn>
 				</element>
 				<range min="0.1" max="0.3"/>
 				<units>GtC/year</units>
@@ -6611,7 +6851,7 @@ Should only ever be varied with Initial Committed Soil Carbon Emissions from Lan
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -7276,7 +7516,7 @@ FUTURE: peatland carbon sink should maybe depend on global mean temperature and 
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -7615,7 +7855,7 @@ FUTURE: peatland carbon sink should maybe depend on global mean temperature and 
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -7938,7 +8178,7 @@ FUTURE: peatland carbon sink should maybe depend on global mean temperature and 
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
