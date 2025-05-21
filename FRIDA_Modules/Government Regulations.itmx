@@ -3,9 +3,9 @@
 	<header>
 		<smile version="1.0" namespace="std, isee" uses_arrays="1"/>
 		<name>Government Regulations</name>
-		<uuid>dddd5ef2-cd15-4db3-9806-b445be4642c5</uuid>
+		<uuid>55899206-8123-44b7-9343-ca6f5a8efb8a</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8.1" isee:build_number="3623" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -898,7 +898,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<units>dmnl</units>
 			</aux>
 			<aux name="SWITCH degrowth inflation indexed\ninvestment growth" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
+				<eqn>0</eqn>
 				<format precision="1"/>
 				<range min="0" max="1"/>
 				<units>dmnl</units>
@@ -998,6 +998,133 @@ ELSE 0</eqn>
 				<eqn>0</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="CB funding of UBI percentage" access="output" isee:autocreated="true">
+				<eqn>0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="UBI adjusted transfers fraction" access="output" isee:autocreated="true">
+				<eqn>0.33</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="adjustment time for UBI\nimplementation and adjustment" access="output" isee:autocreated="true">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="UBI fraction of\nwages policy" access="output" isee:autocreated="true">
+				<eqn>0.175</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="bank profit tax rate" access="output" isee:autocreated="true">
+				<eqn>.75</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="percentage UBI funded by financial profit tax" access="output" isee:autocreated="true">
+				<eqn>.1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="percentage of UBI funded\nby wealth tax" access="output" isee:autocreated="true">
+				<eqn>2</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="SWITCH INCOME/UBI based funding" access="output" isee:autocreated="true">
+				<eqn>1</eqn>
+				<format precision="1"/>
+				<range min="0" max="1"/>
+				<units>dmnl</units>
+			</aux>
+			<aux name="percentage of UBI funded by CB" access="output" isee:autocreated="true">
+				<eqn>0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="Real GDP in 2021c$" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>bc$/year</units>
+			</aux>
+			<aux name="debt to\nGDP ratio" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>year</units>
+			</aux>
+			<aux name="Surface Temperature Anomaly" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>deg C</units>
+			</aux>
+			<stock name="Inflation Rate" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>1/year</units>
+			</stock>
+			<aux name="Labour share of GDP" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="owner to worker savings ratio" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="absolute financial profit\ntax covering UBI" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="bank profits" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>B$/year</units>
+			</aux>
+			<aux name="effective financial tax rate">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>absolute_financial_profit_tax_covering_UBI/bank_profits</eqn>
+			</aux>
+			<aux name="effective wealth tax">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>wealth_tax/owner_savings</eqn>
+			</aux>
+			<aux name="wealth tax" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<stock name="owner\nsavings" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$</units>
+			</stock>
+			<stock name="Government\nDebt" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>B$</units>
+			</stock>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1047,7 +1174,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="4" isee:scroll_x="791.25" isee:scroll_y="1181.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="2" isee:page_rows="7" isee:scroll_y="2284" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1144,7 +1271,7 @@ Negative taxes are subsidies</text_box>
 				<aux x="105.833" y="919.14" name="switch wage tax policy"/>
 				<aux x="284.5" y="976.81" name="profit tax policy"/>
 				<aux x="165" y="974.17" name="time to implement\nwage tax policy"/>
-				<aux x="55.9443" y="1031.25" name="wage tax policy start year"/>
+				<aux x="73.9443" y="1034.12" name="wage tax policy start year"/>
 				<aux color="black" font_color="black" x="286.834" y="93.75" name="Residential and Service\nbuildings longevity policy"/>
 				<aux color="black" font_color="black" x="282" y="161.57" name="Infrastructure\nbuildings longevity policy"/>
 				<aux x="87.1667" y="1166.43" name="wealth tax policy"/>
@@ -1224,29 +1351,29 @@ Negative taxes are subsidies</text_box>
 				<aux x="278.444" y="1047.92" name="profit tax policy start year"/>
 				<aux x="175.5" y="1171.14" name="time to implement\nwealth tax policy"/>
 				<aux x="78.1107" y="1219.75" name="wealth tax policy start year"/>
-				<text_box text_align="center" vertical_text_align="center" uid="46" x="1042.56" y="1582.59" width="129" height="26.4757">Degrowth scenarios</text_box>
-				<aux label_side="right" x="1038.93" y="1652.5" name="degrowth policy start time"/>
+				<text_box text_align="center" vertical_text_align="center" uid="46" x="1020.75" y="1577.47" width="129" height="26.4757">Degrowth scenarios</text_box>
+				<aux label_side="left" x="207.516" y="2560.39" name="degrowth policy start time"/>
 				<aux label_side="right" x="1041.43" y="1889.38" name="degrowth worker dividend\nshare of profits"/>
 				<aux label_side="right" x="1038.93" y="1717.5" name="degrowth government bailout assets\nto liabilities threshold"/>
 				<aux label_side="right" x="1041.81" y="2053.13" name="degrowth work day reduction"/>
-				<aux label_side="right" x="1041.43" y="1986.25" name="SWITCH degrowth inflation indexed\ninvestment growth"/>
+				<aux label_side="left" x="207.516" y="2686.29" name="SWITCH degrowth inflation indexed\ninvestment growth"/>
 				<aux label_side="right" x="1038.93" y="1750.63" name="SWITCH degrowth bailout"/>
 				<aux label_side="right" x="1041.43" y="1921.88" name="SWITCH degrowth worker dividend"/>
-				<aux label_side="right" x="1313" y="2071.13" name="SWITCH degrowth work day"/>
+				<aux label_side="right" x="1331.51" y="2245.08" name="SWITCH degrowth work day"/>
 				<aux label_side="right" x="1038.93" y="1821.25" name="SWITCH degrowth government risk premium"/>
 				<aux label_side="right" x="1041.81" y="2198.33" name="SWITCH degrowth no austerity measure"/>
 				<aux label_side="right" x="1041.81" y="2151.33" name="degrowth government no austerity minimum percentage of revenue spent"/>
-				<aux label_side="right" x="1313" y="1717.5" name="degrowth CB interest rate"/>
-				<aux label_side="right" x="1313" y="1782.3" name="SWITCH degrowth CB interest"/>
-				<aux label_side="right" x="1313" y="1750.63" name="time to implement degrowth CB interest"/>
-				<aux label_side="right" x="1313" y="1889.38" name="SWITCH degrowth no bank profits"/>
-				<aux label_side="right" x="1436.21" y="1979.51" name="working hours reduction"/>
-				<aux label_side="left" x="1363.75" y="1984.5" name="slope"/>
+				<aux label_side="right" x="1331.51" y="1891.45" name="degrowth CB interest rate"/>
+				<aux label_side="right" x="1331.51" y="1956.25" name="SWITCH degrowth CB interest"/>
+				<aux label_side="right" x="1331.51" y="1924.58" name="time to implement degrowth CB interest"/>
+				<aux label_side="right" x="1331.51" y="2063.33" name="SWITCH degrowth no bank profits"/>
+				<aux label_side="right" x="1454.72" y="2153.46" name="working hours reduction"/>
+				<aux label_side="left" x="1382.26" y="2158.45" name="slope"/>
 				<connector uid="53" angle="3.94229">
 					<from>slope</from>
 					<to>working_hours_reduction</to>
 				</connector>
-				<aux label_side="left" x="1363.75" y="1956.13" name="time to implement"/>
+				<aux label_side="left" x="1382.26" y="2130.08" name="time to implement"/>
 				<connector uid="54" angle="342.119">
 					<from>time_to_implement</from>
 					<to>working_hours_reduction</to>
@@ -1257,16 +1384,130 @@ Negative taxes are subsidies</text_box>
 					</from>
 					<to>working_hours_reduction</to>
 				</connector>
-				<aux label_side="right" x="1313" y="1856.25" name="degrowth duration for reducing bank profits to zero"/>
-				<aux label_side="right" x="1313" y="1612.5" name="SWITCH degrowth bank exploration fraction"/>
-				<aux label_side="right" x="1313" y="1563.75" name="Degrowth bank exploration fraction"/>
-				<aux label_side="right" x="1313" y="1516.25" name="degrowth bank exploration adjustment time"/>
-				<aux label_side="right" x="1313" y="2137.5" name="SWITCH degrowth UBI"/>
+				<aux label_side="right" x="1331.51" y="2030.2" name="degrowth duration for reducing bank profits to zero"/>
+				<aux label_side="right" x="1331.51" y="1786.45" name="SWITCH degrowth bank exploration fraction"/>
+				<aux label_side="right" x="1331.51" y="1737.7" name="Degrowth bank exploration fraction"/>
+				<aux label_side="right" x="1331.51" y="1690.2" name="degrowth bank exploration adjustment time"/>
+				<aux label_side="top" x="214.377" y="2345.54" width="42.3164" height="42.3164" name="SWITCH degrowth UBI"/>
 				<connector uid="57" angle="346.082">
 					<from>SWITCH_degrowth_work_day</from>
 					<to>working_hours_reduction</to>
 				</connector>
-				<aux label_side="right" x="1313" y="1451.67" name="SWITCH differentiated bank profit tax rate"/>
+				<aux label_side="right" x="281.817" y="2857.16" name="SWITCH differentiated bank profit tax rate"/>
+				<text_box text_decoration="underline" text_align="center" vertical_text_align="center" font_size="36pt" appearance="transparent" uid="60" x="58.1871" y="2396.66" width="354.696" height="58.0498">UBI Dashboard</text_box>
+				<aux label_side="right" x="281.817" y="2752.04" name="CB funding of UBI percentage"/>
+				<aux label_side="right" x="496.375" y="2600.3" name="UBI adjusted transfers fraction"/>
+				<aux label_side="left" x="207.516" y="2644.09" name="adjustment time for UBI\nimplementation and adjustment"/>
+				<aux label_side="left" x="207.516" y="2600.31" name="UBI fraction of\nwages policy"/>
+				<text_box font_weight="bold" font_size="18pt" uid="61" x="268.821" y="2486.61" width="85.6339" height="30.5642">Funding</text_box>
+				<text_box font_weight="bold" text_align="right" font_size="18pt" uid="62" x="61.4343" y="2486.61" width="160.329" height="30.5642">Policy</text_box>
+				<graphics_frame border_width="thin" border_style="solid" fill="none" uid="63" x="230.535" y="2471.36" width="10" height="407.07">
+					<image width="0" height="0" size_to_parent="false" isee:transparency="0"/>
+				</graphics_frame>
+				<aux label_side="right" x="281.817" y="2819.96" name="bank profit tax rate"/>
+				<aux label_side="right" x="280.673" y="2600.3" name="percentage UBI funded by financial profit tax"/>
+				<aux label_side="right" x="280.673" y="2646.63" name="percentage of UBI funded\nby wealth tax"/>
+				<text_box vertical_text_align="center" uid="64" x="270.129" y="2520.6" width="73.7852" height="16.9883">UBI based</text_box>
+				<text_box vertical_text_align="center" uid="65" x="270.129" y="2715.14" width="83.0179" height="16.9883">Income based</text_box>
+				<aux label_side="right" x="261.673" y="2472.13" name="SWITCH INCOME/UBI based funding"/>
+				<aux label_side="right" x="280.673" y="2560.39" name="percentage of UBI funded by CB"/>
+				<text_box vertical_text_align="center" uid="67" x="483.875" y="2520.6" width="176.773" height="16.9883">Compensatory instruments</text_box>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1335.96" y="2453.88" name="Real GDP in 2021c$"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1335.96" y="2496.89" name="debt to\nGDP ratio"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1334.42" y="2988.02" name="Surface Temperature Anomaly"/>
+				<stacked_container uid="70" x="701.453" y="2370.99" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="71" x="1004.61" y="2370.99" width="293.894" height="240">
+					<graph width="293.894" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.debt_to_GDP_ratio[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="72" x="702.832" y="2626.4" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="73" x="1007.66" y="2626.4" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="74" x="702.832" y="2888.53" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="75" x="1007.66" y="2888.53" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Inflation.Inflation_Rate[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stock font_style="italic" font_weight="bold" label_side="right" x="1328.87" y="3029.58" width="11.1055" height="13.1484" name="Inflation Rate"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1332.26" y="2701.14" name="Labour share of GDP"/>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1332.26" y="2754.32" name="owner to worker savings ratio"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="114.596" y="3180.58" name="absolute financial profit\ntax covering UBI"/>
+				<aux font_style="italic" font_weight="bold" x="114.596" y="3220.54" name="bank profits"/>
+				<aux x="256.663" y="3202.54" name="effective financial tax rate"/>
+				<connector uid="76" angle="351.213">
+					<from>absolute_financial_profit_tax_covering_UBI</from>
+					<to>effective_financial_tax_rate</to>
+				</connector>
+				<connector uid="77" angle="7.22094">
+					<from>bank_profits</from>
+					<to>effective_financial_tax_rate</to>
+				</connector>
+				<text_box font_weight="bold" text_decoration="underline" text_align="right" font_size="18pt" uid="78" x="88.4343" y="3087.61" width="160.329" height="30.5642">Diagnostic Tools</text_box>
+				<stacked_container uid="79" x="48.4147" y="3282.47" width="290.55" height="240">
+					<graph width="290.55" height="240" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.absolute_financial_profit_tax_covering_UBI[1]"/>
+						</plot>
+						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Circular_Flow.bank_profits[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stacked_container uid="80" x="356.372" y="3282.47" width="290.55" height="240">
+					<graph width="290.55" height="240" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="effective_wealth_tax[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<aux x="594.167" y="3198.58" name="effective wealth tax"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="434.018" y="3162.58" name="wealth tax"/>
+				<stock font_style="italic" font_weight="bold" label_side="bottom" x="434.018" y="3214.95" name="owner\nsavings"/>
+				<connector uid="81" angle="347.331">
+					<from>wealth_tax</from>
+					<to>effective_wealth_tax</to>
+				</connector>
+				<connector uid="82" angle="5.83581">
+					<from>owner_savings</from>
+					<to>effective_wealth_tax</to>
+				</connector>
+				<stacked_container uid="83" x="667.069" y="3282.47" width="290.55" height="240">
+					<graph width="290.55" height="240" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="Government.Government_Debt[1]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stock font_style="italic" font_weight="bold" x="725.202" y="3220.54" name="Government\nDebt"/>
 				<alias font_style="italic" label_side="right" uid="47" x="349" y="1767.67" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
 				</alias>
@@ -1276,14 +1517,14 @@ Negative taxes are subsidies</text_box>
 				<alias font_style="italic" label_side="right" uid="52" x="338.5" y="1841" width="18" height="18">
 					<of>degrowth_government_no_austerity_minimum_percentage_of_revenue_spent</of>
 				</alias>
-				<alias font_style="italic" uid="56" x="1354.75" y="2004.76" width="18" height="18">
+				<alias font_style="italic" uid="56" x="1373.26" y="2178.71" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
 				</alias>
-				<alias uid="58" x="254" y="1978.67" width="18" height="18">
-					<of>SWITCH_degrowth_UBI</of>
+				<alias font_style="italic" label_side="right" uid="66" x="272.817" y="2777.62" width="18" height="18">
+					<of>wealth_tax_policy</of>
 				</alias>
-				<alias uid="59" x="145.917" y="1898.38" width="18" height="18">
-					<of>SWITCH_degrowth_UBI</of>
+				<alias font_style="italic" label_side="right" uid="68" x="487.375" y="2551.39" width="18" height="18">
+					<of>minimum_percentage_of_taxes_spent_by_government</of>
 				</alias>
 			</view>
 		</views>

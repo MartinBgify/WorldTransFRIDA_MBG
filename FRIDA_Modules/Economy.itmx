@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8.1" isee:build_number="3623" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -267,6 +267,8 @@
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="GDP.Government_Spending_1" from="Government.government_consumption"/>
@@ -292,12 +294,20 @@
 			</module>
 			<module name="Government" isee:label="">
 				<format scale_by="auto"/>
+				<connect to="Circular_Flow.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect2 to="Circular_Flow.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect2 to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect to="Circular_Flow.absolute_wealth_tax_covering_UBI" from="Government.absolute_wealth_tax_covering_UBI"/>
+				<connect2 to="Circular_Flow.absolute_wealth_tax_covering_UBI" from="Government.absolute_wealth_tax_covering_UBI"/>
 				<connect to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect2 to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect to="Inflation.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect2 to="Inflation.annual_UBI_rate" from="Government.annual_UBI_rate"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
+				<connect to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect2 to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -330,6 +340,8 @@
 				<connect2 to="Finance.Government_Debt" from="Government.Government_Debt"/>
 				<connect to="Finance.Government_Debt_1" from="Government.Government_Debt"/>
 				<connect2 to="Finance.Government_Debt_1" from="Government.Government_Debt"/>
+				<connect to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
+				<connect2 to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
 				<connect to="Finance.government_interest_payments" from="Government.government_interest_payments"/>
 				<connect2 to="Finance.government_interest_payments" from="Government.government_interest_payments"/>
 				<connect to="Circular_Flow.government_transfers_1" from="Government.government_transfers"/>
@@ -354,8 +366,6 @@
 				<connect2 to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
 				<connect to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
 				<connect2 to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
-				<connect to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
-				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
@@ -382,10 +392,12 @@
 				<connect2 to="Employment.time_to_implement_UBI" from="Government.time_to_implement_UBI"/>
 				<connect to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
 				<connect2 to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
-				<connect to="Employment.UBI_fraction_of_wages_policy" from="Government.UBI_fraction_of_wages_policy"/>
-				<connect2 to="Employment.UBI_fraction_of_wages_policy" from="Government.UBI_fraction_of_wages_policy"/>
 				<connect to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
 				<connect2 to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
+				<connect to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
+				<connect2 to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
+				<connect to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
+				<connect2 to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
 				<connect to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
 				<connect2 to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Energy_Capital"/>
@@ -454,6 +466,12 @@
 				<connect2 to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
 				<connect2 to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
+				<connect to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
+				<connect2 to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
 				<connect to="Government.Population" from="Demographics.Population"/>
 				<connect2 to="Government.Population" from="Demographics.Population"/>
 				<connect to="Government.profit_tax_1" from="Circular_Flow.profit_tax"/>
@@ -478,6 +496,8 @@
 				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
+				<connect to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
 				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
 				<connect2 to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
 				<connect to="Government.tax_rate_2" from="bio_fuel_energy.tax_rate"/>
@@ -496,6 +516,10 @@
 				<connect2 to="Government.today_1" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.Total_nominal_SLR_protection_cost" from="Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost"/>
 				<connect2 to="Government.Total_nominal_SLR_protection_cost" from="Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost"/>
+				<connect to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect2 to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
 				<connect to="Government.Unemployed" from="Employment.Unemployed"/>
 				<connect2 to="Government.Unemployed" from="Employment.Unemployed"/>
 				<connect to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
@@ -515,6 +539,8 @@
 			</module>
 			<module name="Circular Flow" isee:label="">
 				<format scale_by="auto"/>
+				<connect to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect2 to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
 				<connect to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
 				<connect2 to="Inflation.bank_profits" from="Circular_Flow.bank_profits"/>
 				<connect to="Inflation.degrowth_worker_dividend" from="Circular_Flow.degrowth_worker_dividend"/>
@@ -525,14 +551,20 @@
 				<connect2 to="Innovation.Firms_Checking_Accounts_1" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
 				<connect2 to="Finance.firms_paying_interest" from="Circular_Flow.firms_paying_interest"/>
+				<connect to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect2 to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
 				<connect to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect2 to="Employment.non_bank_profits_1" from="Circular_Flow.non_bank_profits"/>
 				<connect to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
 				<connect2 to="Inflation.non_bank_profits" from="Circular_Flow.non_bank_profits"/>
 				<connect to="Finance.owner_savings_1" from="Circular_Flow.owner_savings"/>
 				<connect2 to="Finance.owner_savings_1" from="Circular_Flow.owner_savings"/>
+				<connect to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
+				<connect2 to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
 				<connect to="GDP.owner_consumption" from="Circular_Flow.owner_consumption"/>
 				<connect2 to="GDP.owner_consumption" from="Circular_Flow.owner_consumption"/>
+				<connect to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
+				<connect2 to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
 				<connect to="Finance.private_consumption_1" from="Circular_Flow.private_consumption"/>
 				<connect2 to="Finance.private_consumption_1" from="Circular_Flow.private_consumption"/>
 				<connect to="GDP.private_consumption_1" from="Circular_Flow.private_consumption"/>
@@ -553,6 +585,8 @@
 				<connect2 to="Government.wage_tax_1" from="Circular_Flow.wage_tax"/>
 				<connect to="Inflation.wages_1" from="Circular_Flow.wages"/>
 				<connect2 to="Inflation.wages_1" from="Circular_Flow.wages"/>
+				<connect to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
+				<connect2 to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
 				<connect to="Government.wealth_tax" from="Circular_Flow.wealth_tax"/>
 				<connect2 to="Government.wealth_tax" from="Circular_Flow.wealth_tax"/>
 				<connect to="Finance.Worker_Savings_1" from="Circular_Flow.Worker_Savings"/>
@@ -561,6 +595,10 @@
 				<connect2 to="GDP.worker_consumption" from="Circular_Flow.worker_consumption"/>
 				<connect to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
 				<connect2 to="Government.worker_dividend_tax" from="Circular_Flow.worker_dividend_tax"/>
+				<connect to="Circular_Flow.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect2 to="Circular_Flow.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect to="Circular_Flow.absolute_wealth_tax_covering_UBI" from="Government.absolute_wealth_tax_covering_UBI"/>
+				<connect2 to="Circular_Flow.absolute_wealth_tax_covering_UBI" from="Government.absolute_wealth_tax_covering_UBI"/>
 				<connect to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect2 to="Circular_Flow.annual_aggregate_wages" from="Employment.annual_aggregate_wages"/>
 				<connect to="Circular_Flow.annual_UBI_rate" from="Government.annual_UBI_rate"/>
@@ -571,6 +609,8 @@
 				<connect2 to="Circular_Flow.average_private_debt_interest" from="Finance.average_private_debt_safe_interest"/>
 				<connect to="Circular_Flow.bank_profit_payment_1" from="Finance.annual_bank_profit_payment"/>
 				<connect2 to="Circular_Flow.bank_profit_payment_1" from="Finance.annual_bank_profit_payment"/>
+				<connect to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
+				<connect2 to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
 				<connect to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect2 to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
@@ -629,6 +669,8 @@
 				<connect2 to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
 				<connect2 to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
+				<connect to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
 				<connect to="Circular_Flow.time_to_implement_profit_tax_policy" from="Government_Regulations.time_to_implement_profit_tax_policy"/>
 				<connect2 to="Circular_Flow.time_to_implement_profit_tax_policy" from="Government_Regulations.time_to_implement_profit_tax_policy"/>
 				<connect to="Circular_Flow.time_to_implement_wage_tax_policy" from="Government_Regulations.time_to_implement_wage_tax_policy"/>
@@ -867,8 +909,8 @@
 				<connect2 to="Employment.safe_loans_financing_innovation" from="Finance.safe_loans_affected_innovation"/>
 				<connect to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
-				<connect to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
-				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government.SWITCH_degrowth_UBI"/>
+				<connect to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
+				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect2 to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect to="Employment.time_to_implement_UBI" from="Government.time_to_implement_UBI"/>
@@ -879,8 +921,8 @@
 				<connect2 to="Employment.total_investment_1" from="Finance.total_investment"/>
 				<connect to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect2 to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
-				<connect to="Employment.UBI_fraction_of_wages_policy" from="Government.UBI_fraction_of_wages_policy"/>
-				<connect2 to="Employment.UBI_fraction_of_wages_policy" from="Government.UBI_fraction_of_wages_policy"/>
+				<connect to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
 				<connect to="Employment.UNIT_percent_1" from="Inflation.UNIT_Percent"/>
 				<connect2 to="Employment.UNIT_percent_1" from="Inflation.UNIT_Percent"/>
 				<connect to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
@@ -918,6 +960,8 @@
 				<connect2 to="Finance.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Finance.Inflation_Rate_1" from="Inflation.Inflation_Rate"/>
+				<connect to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect to="Circular_Flow.UNIT_Percent" from="Inflation.UNIT_Percent"/>
@@ -1119,7 +1163,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="81" isee:scroll_y="36" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_y="84" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1592,14 +1636,23 @@ SMTH1((net_worker_income*desired_savings_as_multiple_of_wages), time_to_consider
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME &gt; degrowth_policy_start_time
+				<eqn>IF &quot;SWITCH_UBI/INCOME_based_funding&quot; = 0 THEN
+
+
+(IF TIME &gt; degrowth_policy_start_time
 
 AND SWITCH_differentiated_bank_profit_tax_rate=1
 
 THEN MAX(0, (non_bank_profits))*actual_profit_tax_rate
 + MAX(0, (bank_profits))*bank_profit_tax_rate
 
-ELSE MAX(0, (non_bank_profits+bank_profits))*actual_profit_tax_rate</eqn>
+ELSE MAX(0, (non_bank_profits+bank_profits))*actual_profit_tax_rate)
+
+
+ELSE
+
+(MAX(0, (non_bank_profits+bank_profits))*actual_profit_tax_rate)
++ MIN(absolute_financial_profit_tax_covering_UBI,  bank_profits)</eqn>
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
@@ -2050,7 +2103,11 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>owner_savings*actual_wealth_tax_rate</eqn>
+				<eqn>IF &quot;SWITCH_UBI/INCOME_based_funding&quot; = 0 THEN
+
+owner_savings*actual_wealth_tax_rate
+
+ELSE absolute_wealth_tax_covering_UBI</eqn>
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
@@ -2304,7 +2361,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="Labour share of GDP">
+			<aux name="Labour share of GDP" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -2579,10 +2636,6 @@ ELSE 0</eqn>
 				<eqn>annual_UBI_rate</eqn>
 				<units>b$/year</units>
 			</flow>
-			<aux name="bank profit tax rate">
-				<eqn>.75</eqn>
-				<units>dmnl</units>
-			</aux>
 			<aux name="SWITCH differentiated bank profit tax rate" access="input">
 				<eqn>0</eqn>
 				<units>dmnl</units>
@@ -2601,11 +2654,33 @@ ELSE 0</eqn>
 				<eqn>public_expenditure/Nominal_GDP</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="owner to worker savings ratio">
+			<aux name="owner to worker savings ratio" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>owner_savings/Worker_Savings</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="bank profit tax rate" access="input">
+				<eqn>.75</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="absolute financial profit\ntax covering UBI" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="absolute wealth tax covering UBI" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="SWITCH UBI/INCOME based funding" access="input">
+				<eqn>1</eqn>
 				<units>dmnl</units>
 			</aux>
 		</variables>
@@ -2634,7 +2709,7 @@ ELSE 0</eqn>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -2657,7 +2732,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1441" isee:scroll_y="980" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_y="812" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2808,7 +2883,7 @@ ELSE 0</eqn>
 						<pt x="848.667" y="1344"/>
 					</pts>
 				</flow>
-				<connector uid="14" angle="304.692">
+				<connector uid="14" angle="311.021">
 					<from>owner_savings</from>
 					<to>owner_savings_interest</to>
 				</connector>
@@ -3293,7 +3368,7 @@ ELSE 0</eqn>
 					<from>profit_tax_rate</from>
 					<to>actual_profit_tax_rate</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="465.75" y="1655.35" name="wealth taxation rate"/>
+				<aux font_style="italic" font_weight="bold" x="404.328" y="1768.96" name="wealth taxation rate"/>
 				<flow x="681.459" y="1277.25" name="wealth tax">
 					<pts>
 						<pt x="746.167" y="1277.25"/>
@@ -3305,7 +3380,7 @@ ELSE 0</eqn>
 					<to>wealth_tax</to>
 				</connector>
 				<aux x="568.75" y="1317" name="actual wealth tax rate"/>
-				<connector uid="155" angle="73.0688">
+				<connector uid="155" angle="70.0087">
 					<from>wealth_taxation_rate</from>
 					<to>actual_wealth_tax_rate</to>
 				</connector>
@@ -3869,13 +3944,13 @@ ELSE 0</eqn>
 					<from>profit_tax_policy_start_year</from>
 					<to>actual_profit_tax_rate</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="558" y="1601" name="time to implement\nwealth tax policy"/>
-				<connector uid="405" angle="95.7106">
+				<aux font_style="italic" font_weight="bold" x="528.605" y="1720.26" name="time to implement\nwealth tax policy"/>
+				<connector uid="405" angle="84.3149">
 					<from>time_to_implement_wealth_tax_policy</from>
 					<to>actual_wealth_tax_rate</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="617" y="1545" name="wealth tax policy start year"/>
-				<connector uid="406" angle="102.875">
+				<aux font_style="italic" font_weight="bold" x="587.605" y="1664.26" name="wealth tax policy start year"/>
+				<connector uid="406" angle="93.108">
 					<from>wealth_tax_policy_start_year</from>
 					<to>actual_wealth_tax_rate</to>
 				</connector>
@@ -3970,19 +4045,14 @@ ELSE 0</eqn>
 					</from>
 					<to>Labour_share_of_GDP</to>
 				</connector>
-				<connector uid="432" angle="282.339">
+				<connector uid="432" angle="8.89976">
 					<from>
 						<alias uid="433"/>
 					</from>
 					<to>profit_tax</to>
 				</connector>
-				<aux label_side="top" x="590" y="1040" name="bank profit tax rate"/>
-				<connector uid="434" angle="262.875">
-					<from>bank_profit_tax_rate</from>
-					<to>profit_tax</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" label_side="left" x="321.834" y="1071" name="SWITCH differentiated bank profit tax rate"/>
-				<connector uid="435" angle="356.849">
+				<aux font_style="italic" font_weight="bold" label_side="left" x="196.785" y="1074.94" name="SWITCH differentiated bank profit tax rate"/>
+				<connector uid="435" angle="2.61639">
 					<from>SWITCH_differentiated_bank_profit_tax_rate</from>
 					<to>profit_tax</to>
 				</connector>
@@ -4004,6 +4074,30 @@ ELSE 0</eqn>
 				<connector uid="439" angle="86.3544">
 					<from>Worker_Savings</from>
 					<to>owner_to_worker_savings_ratio</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="196.785" y="1170.5" name="bank profit tax rate"/>
+				<connector uid="440" angle="13.3832">
+					<from>bank_profit_tax_rate</from>
+					<to>profit_tax</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="172.113" y="1614.58" name="absolute financial profit\ntax covering UBI"/>
+				<aux font_style="italic" font_weight="bold" x="172.113" y="1699.15" name="absolute wealth tax covering UBI"/>
+				<connector uid="441" angle="37.5691">
+					<from>absolute_financial_profit_tax_covering_UBI</from>
+					<to>profit_tax</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="172.113" y="1547.21" name="SWITCH UBI/INCOME based funding"/>
+				<connector uid="442" angle="33.7117">
+					<from>&quot;SWITCH_UBI/INCOME_based_funding&quot;</from>
+					<to>profit_tax</to>
+				</connector>
+				<connector uid="443" angle="39.6357">
+					<from>absolute_wealth_tax_covering_UBI</from>
+					<to>wealth_tax</to>
+				</connector>
+				<connector uid="444" angle="27.9239">
+					<from>&quot;SWITCH_UBI/INCOME_based_funding&quot;</from>
+					<to>wealth_tax</to>
 				</connector>
 				<alias label_side="top" uid="8" x="2047.5" y="1330.87" width="18" height="18">
 					<of>time_to_reach_savings_goal</of>
@@ -4194,7 +4288,7 @@ ELSE 0</eqn>
 				<alias font_style="italic" uid="431" x="2621" y="1113" width="18" height="18">
 					<of>UBI</of>
 				</alias>
-				<alias font_style="italic" font_weight="bold" label_side="left" label_angle="225" uid="433" x="522" y="1037" width="18" height="18">
+				<alias font_style="italic" font_weight="bold" label_side="left" label_angle="225" uid="433" x="187.785" y="1109.79" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
 				</alias>
 			</view>
@@ -5698,19 +5792,15 @@ Interface explosion stopper</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="SWITCH degrowth UBI" access="input">
-				<eqn>1</eqn>
-				<units>dmnl</units>
-			</aux>
 			<aux name="labour force participation rate under UBI">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>labour_force_participation_rate-(labour_force_participation_rate*&quot;actual_percentage_of_active_who_become_inactive_at_.5_UBI&quot;)</eqn>
+				<eqn>labour_force_participation_rate-(labour_force_participation_rate*percentage_of_active_who_become_inactive_from_UBI)</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="actual percentage of active who\nbecome inactive at .5 UBI">
-				<eqn>RAMP((UBI_fraction_of_wages_policy)/time_to_implement_UBI, degrowth_policy_start_time, degrowth_policy_start_time+ time_to_implement_UBI)</eqn>
+			<aux name="percentage of active who\nbecome inactive from UBI">
+				<eqn>RAMP(UBI_fraction_of_wages_policy_1/time_to_implement_UBI, degrowth_policy_start_time, degrowth_policy_start_time+ time_to_implement_UBI)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="degrowth policy start time" access="input">
@@ -5732,8 +5822,12 @@ Interface explosion stopper</doc>
 				<eqn>30</eqn>
 				<units>years</units>
 			</aux>
-			<aux name="UBI fraction of wages policy" access="input">
-				<eqn>0.2</eqn>
+			<aux name="UBI fraction of\nwages policy 1" access="input">
+				<eqn>0.175</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="SWITCH degrowth UBI" access="input">
+				<eqn>1</eqn>
 				<units>dmnl</units>
 			</aux>
 		</variables>
@@ -5762,7 +5856,7 @@ Interface explosion stopper</doc>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -5785,7 +5879,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="1241" isee:scroll_y="335" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="931.25" isee:scroll_y="291.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -7137,11 +7231,10 @@ furthermore. The structure that was previously decided on had the productivity g
 					<from>safe_loan_defaults_1</from>
 					<to>total_defaults</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" label_side="right" x="1674" y="910" name="SWITCH degrowth UBI"/>
 				<aux x="1773.5" y="692.836" name="labour force participation rate under UBI"/>
-				<aux x="1928.18" y="649.836" name="actual percentage of active who\nbecome inactive at .5 UBI"/>
+				<aux x="1928.18" y="649.836" name="percentage of active who\nbecome inactive from UBI"/>
 				<connector uid="304" angle="180.722">
-					<from>&quot;actual_percentage_of_active_who_become_inactive_at_.5_UBI&quot;</from>
+					<from>percentage_of_active_who_become_inactive_from_UBI</from>
 					<to>labour_force_participation_rate_under_UBI</to>
 				</connector>
 				<connector uid="305" angle="36.0586">
@@ -7164,10 +7257,6 @@ furthermore. The structure that was previously decided on had the productivity g
 					<from>degrowth_policy_start_time</from>
 					<to>indicated_participation</to>
 				</connector>
-				<connector uid="315" angle="170.903">
-					<from>SWITCH_degrowth_UBI</from>
-					<to>indicated_participation</to>
-				</connector>
 				<connector uid="316" angle="235.778">
 					<from>labour_force_participation_rate_under_UBI</from>
 					<to>indicated_participation</to>
@@ -7176,16 +7265,21 @@ furthermore. The structure that was previously decided on had the productivity g
 				<aux font_style="italic" font_weight="bold" x="2093" y="612" name="time to implement UBI"/>
 				<connector uid="318" angle="178.264">
 					<from>time_to_implement_UBI</from>
-					<to>&quot;actual_percentage_of_active_who_become_inactive_at_.5_UBI&quot;</to>
+					<to>percentage_of_active_who_become_inactive_from_UBI</to>
 				</connector>
 				<connector uid="319" angle="21.8014">
 					<from>degrowth_policy_start_time</from>
-					<to>&quot;actual_percentage_of_active_who_become_inactive_at_.5_UBI&quot;</to>
+					<to>percentage_of_active_who_become_inactive_from_UBI</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1912" y="493" name="UBI fraction of wages policy"/>
-				<connector uid="320" angle="265.914">
-					<from>UBI_fraction_of_wages_policy</from>
-					<to>&quot;actual_percentage_of_active_who_become_inactive_at_.5_UBI&quot;</to>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1885.75" y="543.11" name="UBI fraction of\nwages policy 1"/>
+				<connector uid="321" angle="291.681">
+					<from>UBI_fraction_of_wages_policy_1</from>
+					<to>percentage_of_active_who_become_inactive_from_UBI</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1688.54" y="918.115" name="SWITCH degrowth UBI"/>
+				<connector uid="322" angle="197.461">
+					<from>SWITCH_degrowth_UBI</from>
+					<to>indicated_participation</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" label_side="left" uid="12" x="655.25" y="1050.17" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -9093,7 +9187,7 @@ ELSE 0</eqn>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -9116,7 +9210,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="2994" isee:scroll_y="1696" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="565" isee:scroll_y="1566.67" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -11160,7 +11254,7 @@ ELSE
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -11615,7 +11709,7 @@ ELSE
 				<eqn>Government_Debt*average_government_debt_interest_rate</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="debt to\nGDP ratio">
+			<aux name="debt to\nGDP ratio" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -11682,7 +11776,7 @@ ELSE
 				</dimensions>
 				<eqn>IF TIME &gt; degrowth_policy_start_time_1
 AND SWITCH_degrowth_UBI=1
-THEN MAX(MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_transfer_payments, (transfer_payments_for_children+transfer_payments_for_retirees+transfer_payments_for_unemployed)/&quot;UNIT_$_per_B$&quot;), 0)*UBI_transfers_fraction
+THEN MAX(MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_transfer_payments, (transfer_payments_for_children+transfer_payments_for_retirees+transfer_payments_for_unemployed)/&quot;UNIT_$_per_B$&quot;), 0)*UBI_adjusted_transfers_fraction
 ELSE MAX(MIN(public_expenditure_before_subsidies_and_interest_payments*maximum_percentage_of_government_budget_to_transfer_payments, (transfer_payments_for_children+transfer_payments_for_retirees+transfer_payments_for_unemployed)/&quot;UNIT_$_per_B$&quot;), 0)</eqn>
 				<units>b$/year</units>
 			</aux>
@@ -12399,12 +12493,23 @@ ELSE historical_minimum_effect_of_deb_to_GDP_ratio_on_government_spending</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>public_expenditure_before_subsidies_and_interest_payments
+				<eqn>IF &quot;SWITCH_UBI/INCOME_based_funding&quot; = 0 THEN 
+
+public_expenditure_before_subsidies_and_interest_payments
 + sum_of_subsidies_spent
 + government_interest_payments 
 + STA_driven_government_consumption 
 + Paid_Total_Nominal_SLR_protection_cost
-{+ annual_UBI_rate</eqn>
++ (annual_UBI_rate*(1-CB_funding_of_UBI))
+
+ELSE
+
+public_expenditure_before_subsidies_and_interest_payments
++ sum_of_subsidies_spent
++ government_interest_payments 
++ STA_driven_government_consumption 
++ Paid_Total_Nominal_SLR_protection_cost
+- Absolute_CB_funding_of_UBI</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="additional transfers policy" access="input">
@@ -12964,47 +13069,85 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<eqn>.8</eqn>
 				<units>dmnl</units>
 			</aux>
+			<aux name="Nominal GDP" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="SWITCH degrowth no austerity measure" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="CB funding of UBI" access="input">
+				<eqn>0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="UBI adjusted\ntransfers fraction" access="input">
+				<eqn>0.33</eqn>
+				<units>dmnl</units>
+			</aux>
 			<aux name="universal basic income rate">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(IF TIME &gt; degrowth_policy_start_time_1
 AND SWITCH_degrowth_UBI = 1
-THEN Wage_Rate*actual_fraction_of_wages_as_UBI ELSE 0, adjustment_time_for_UBI)</eqn>
+THEN Wage_Rate*fraction_of_wages_as_UBI_to_be_implemented ELSE 0, adjustment_time_for_UBI_implementation_and_adjustment)</eqn>
 				<isee:delay_aux/>
 				<units>$/p</units>
 			</aux>
-			<aux name="actual fraction of wages as UBI">
-				<eqn>RAMP((UBI_fraction_of_wages_policy)/time_to_implement_UBI, degrowth_policy_start_time_1, degrowth_policy_start_time_1+ time_to_implement_UBI)
-
-{0.15</eqn>
+			<aux name="adjustment time for UBI\nimplementation and adjustment" access="input">
+				<eqn>5</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="actual ratio of UBI to Wages">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>universal_basic_income_rate/Wage_Rate</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="working\nage population" access="input">
+			<aux name="time to\nimplement\nUBI" access="output" isee:autocreated="true">
+				<eqn>1</eqn>
+				<units>years</units>
+			</aux>
+			<aux name="nominal UBI">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF TIME &gt; degrowth_policy_start_time_1
+AND SWITCH_degrowth_UBI = 1
+THEN UBI_fixed_rate_in_real_2021_USD*&quot;inflation_adjustment_b$_per_bc$_3&quot;
+ELSE 0</eqn>
+				<units>$/p</units>
+			</aux>
+			<aux name="inflation adjustment b$ per bc$ 3" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>$/c$</units>
+			</aux>
+			<aux name="UBI fixed rate\nin real 2021 USD">
+				<eqn>10000</eqn>
+				<units>c$/p</units>
+			</aux>
+			<aux name="old age\ndependents 1" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>Mp</units>
 			</aux>
-			<aux name="UNIT persons per\nmillion people">
-				<doc>${Unit}
-</doc>
-				<eqn>1000000</eqn>
-				<units>p/Mp</units>
+			<aux name="SWITCH degrowth UBI" access="output" throughput="true" isee:autocreated="true">
+				<eqn>1</eqn>
+				<units>dmnl</units>
 			</aux>
-			<aux name="UBI rate in billions\nper million people">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>universal_basic_income_rate/UNIT_dollars_per_billion*UNIT_persons_per_million_people</eqn>
-				<units>B$/Mp</units>
-			</aux>
-			<aux name="UNIT dollars per billion">
-				<doc>${Unit}
-</doc>
-				<eqn>1000000000</eqn>
-				<units>$/B$</units>
+			<aux name="degrowth policy start time 1" access="input">
+				<eqn>2025</eqn>
+				<units>year</units>
 			</aux>
 			<aux name="UNIT one year">
 				<doc>${Unit}
@@ -13019,73 +13162,77 @@ THEN Wage_Rate*actual_fraction_of_wages_as_UBI ELSE 0, adjustment_time_for_UBI)<
 				<eqn>UBI_rate_in_billions_per_million_people*(working_age_population+old_age_dependents_1)/UNIT_one_year</eqn>
 				<units>b$/year</units>
 			</aux>
-			<aux name="Nominal GDP" access="input">
+			<aux name="UNIT dollars per billion">
+				<doc>${Unit}
+</doc>
+				<eqn>1000000000</eqn>
+				<units>$/B$</units>
+			</aux>
+			<aux name="UBI rate in billions\nper million people">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>b$/year</units>
+				<eqn>universal_basic_income_rate/UNIT_dollars_per_billion*UNIT_persons_per_million_people</eqn>
+				<units>B$/Mp</units>
 			</aux>
-			<aux name="degrowth policy start time 1" access="input">
-				<eqn>2025</eqn>
-				<units>year</units>
+			<aux name="UNIT persons per\nmillion people">
+				<doc>${Unit}
+</doc>
+				<eqn>1000000</eqn>
+				<units>p/Mp</units>
 			</aux>
-			<aux name="SWITCH degrowth UBI" access="output" throughput="true" isee:autocreated="true">
-				<eqn>1</eqn>
-				<units>dmnl</units>
-			</aux>
-			<aux name="old age\ndependents 1" access="input">
+			<aux name="working\nage population" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>Mp</units>
 			</aux>
-			<aux name="UBI fixed rate in real 2021 USD">
-				<eqn>10000</eqn>
-				<units>c$/p</units>
-			</aux>
-			<aux name="inflation adjustment b$ per bc$ 3" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>$/c$</units>
-			</aux>
-			<aux name="nominal UBI">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>IF TIME &gt; degrowth_policy_start_time_1
-AND SWITCH_degrowth_UBI = 1
-THEN UBI_fixed_rate_in_real_2021_USD*&quot;inflation_adjustment_b$_per_bc$_3&quot;
-ELSE 0</eqn>
-				<units>$/p</units>
-			</aux>
-			<aux name="SWITCH degrowth no austerity measure" access="input">
-				<eqn>1</eqn>
+			<aux name="fraction\nof wages as UBI\nto be implemented">
+				<eqn>RAMP((UBI_fraction_of_wages_policy)/time_to_implement_UBI, degrowth_policy_start_time_1, degrowth_policy_start_time_1+ time_to_implement_UBI)
+
+{0.15</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="time to implement UBI" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
-				<units>years</units>
-			</aux>
-			<aux name="UBI fraction of wages policy" access="output" isee:autocreated="true">
+			<aux name="UBI fraction of\nwages policy" access="input">
 				<eqn>0.175</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="adjustment time for UBI">
-				<eqn>5</eqn>
-				<units>years</units>
+			<aux name="percentage UBI funded by financial profit tax" access="input">
+				<eqn>.25</eqn>
+				<units>dmnl</units>
 			</aux>
-			<aux name="Converter 1">
+			<aux name="percentage of UBI funded\nby wealth tax" access="input">
+				<eqn>.75</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="absolute financial profit\ntax covering UBI" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>universal_basic_income_rate/Wage_Rate</eqn>
+				<eqn>annual_UBI_rate * percentage_UBI_funded_by_financial_profit_tax</eqn>
+				<units>b$/year</units>
 			</aux>
-			<aux name="UBI transfers fraction">
-				<eqn>0.33</eqn>
+			<aux name="absolute wealth tax covering UBI" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>annual_UBI_rate * percentage_of_UBI_funded_by_wealth_tax</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="Absolute CB funding of UBI">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>annual_UBI_rate * percentage_of_UBI_funded_by_CB</eqn>
+				<units>b$/year</units>
+			</aux>
+			<aux name="percentage of UBI funded by CB" access="input">
+				<eqn>0</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="SWITCH UBI/INCOME based funding" access="input">
+				<eqn>1</eqn>
 				<units>dmnl</units>
 			</aux>
 		</variables>
@@ -13114,7 +13261,7 @@ ELSE 0</eqn>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -13137,7 +13284,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1298.33" isee:scroll_y="690" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_y="527" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14291,126 +14438,178 @@ ELSE 0</eqn>
 					</from>
 					<to>change_in_safe_interest</to>
 				</connector>
+				<aux font_style="italic" font_weight="bold" x="273" y="133.167" name="Nominal GDP"/>
+				<aux font_style="italic" font_weight="bold" x="1810" y="1402.5" name="SWITCH degrowth no austerity measure"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="1294.05" y="622.834" name="CB funding of UBI"/>
+				<connector uid="477" angle="320.773">
+					<from>CB_funding_of_UBI</from>
+					<to>public_expenditure</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="928.239" y="1038.37" name="UBI adjusted\ntransfers fraction"/>
+				<connector uid="478" angle="355.259">
+					<from>UBI_adjusted_transfers_fraction</from>
+					<to>government_transfers</to>
+				</connector>
 				<aux label_side="right" label_angle="45" x="438.347" y="489.461" name="universal basic income rate"/>
 				<connector uid="414" angle="130.344">
 					<from>Wage_Rate</from>
 					<to>universal_basic_income_rate</to>
 				</connector>
-				<aux label_side="left" x="442.167" y="539.794" name="actual fraction of wages as UBI"/>
-				<connector uid="415" angle="94.3401">
-					<from>actual_fraction_of_wages_as_UBI</from>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="373.68" y="339.83" name="adjustment time for UBI\nimplementation and adjustment"/>
+				<connector uid="479" angle="293.373">
+					<from>adjustment_time_for_UBI_implementation_and_adjustment</from>
 					<to>universal_basic_income_rate</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" label_side="left" x="386.18" y="920.221" name="working\nage population"/>
-				<aux label_side="left" label_angle="225" x="391.68" y="808.077" name="UNIT persons per\nmillion people"/>
-				<aux label_side="top" x="433.881" y="763" name="UBI rate in billions\nper million people"/>
-				<connector uid="419" angle="46.8871">
-					<from>UNIT_persons_per_million_people</from>
-					<to>UBI_rate_in_billions_per_million_people</to>
+				<aux label_side="right" x="553.926" y="200.01" name="actual ratio of UBI to Wages"/>
+				<connector uid="472" angle="26.7731">
+					<from>universal_basic_income_rate</from>
+					<to>actual_ratio_of_UBI_to_Wages</to>
 				</connector>
-				<aux label_side="left" x="373.68" y="761.687" name="UNIT dollars per billion"/>
-				<connector uid="420" angle="358.75">
-					<from>UNIT_dollars_per_billion</from>
-					<to>UBI_rate_in_billions_per_million_people</to>
+				<connector uid="473" angle="174.746">
+					<from>Wage_Rate</from>
+					<to>actual_ratio_of_UBI_to_Wages</to>
 				</connector>
-				<aux label_side="right" label_angle="315" x="494.22" y="912.717" name="annual\nUBI rate"/>
-				<connector uid="421" angle="37.7028">
-					<from>UNIT_one_year</from>
-					<to>annual_UBI_rate</to>
-				</connector>
-				<aux x="409.18" y="978.45" name="UNIT one year"/>
-				<connector uid="422" angle="329.138">
-					<from>UBI_rate_in_billions_per_million_people</from>
-					<to>annual_UBI_rate</to>
-				</connector>
-				<connector uid="423" angle="3.97314">
-					<from>working_age_population</from>
-					<to>annual_UBI_rate</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="273" y="133.167" name="Nominal GDP"/>
-				<aux font_style="italic" font_weight="bold" x="124.166" y="423.334" name="degrowth policy start time 1"/>
-				<connector uid="442" angle="348.114">
-					<from>degrowth_policy_start_time_1</from>
-					<to>universal_basic_income_rate</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" label_side="top" x="198.333" y="379.58" name="SWITCH degrowth UBI"/>
-				<connector uid="443" angle="335.401">
-					<from>SWITCH_degrowth_UBI</from>
-					<to>universal_basic_income_rate</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="303.333" y="978.45" name="old age\ndependents 1"/>
-				<connector uid="444" angle="19.0015">
-					<from>old_age_dependents_1</from>
-					<to>annual_UBI_rate</to>
-				</connector>
-				<aux label_side="right" x="451.881" y="612.66" name="UBI fixed rate in real 2021 USD"/>
-				<aux font_style="italic" font_weight="bold" x="248.333" y="648.66" name="inflation adjustment b$ per bc$ 3"/>
-				<aux label_side="right" x="386.18" y="666.66" name="nominal UBI"/>
-				<connector uid="446" angle="43.5111">
+				<aux label_side="right" label_angle="315" x="476.22" y="596.96" name="time to\nimplement\nUBI"/>
+				<aux label_side="right" x="202.131" y="648.66" name="nominal UBI"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="87.34" y="629.859" name="inflation adjustment b$ per bc$ 3"/>
+				<connector uid="446" angle="350.698">
 					<from>&quot;inflation_adjustment_b$_per_bc$_3&quot;</from>
 					<to>nominal_UBI</to>
 				</connector>
-				<connector uid="448" angle="328.198">
-					<from>SWITCH_degrowth_UBI</from>
+				<aux label_side="top" x="87.34" y="688.75" name="UBI fixed rate\nin real 2021 USD"/>
+				<connector uid="445" angle="19.2517">
+					<from>UBI_fixed_rate_in_real_2021_USD</from>
 					<to>nominal_UBI</to>
 				</connector>
-				<connector uid="449" angle="283.051">
-					<from>degrowth_policy_start_time_1</from>
-					<to>nominal_UBI</to>
-				</connector>
-				<connector uid="461" angle="21.0375">
+				<aux font_style="italic" font_weight="bold" label_side="left" label_angle="225" x="226.407" y="977.127" name="old age\ndependents 1"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="197.78" y="361.58" name="SWITCH degrowth UBI"/>
+				<connector uid="461" angle="36.14">
 					<from>
 						<alias uid="462"/>
 					</from>
 					<to>government_transfers</to>
 				</connector>
+				<connector uid="443" angle="332.006">
+					<from>SWITCH_degrowth_UBI</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<connector uid="448" angle="270.868">
+					<from>SWITCH_degrowth_UBI</from>
+					<to>nominal_UBI</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="285.333" y="532.12" name="degrowth policy start time 1"/>
 				<connector uid="463" angle="144.462">
 					<from>
 						<alias uid="464"/>
 					</from>
 					<to>government_transfers</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1810" y="1402.5" name="SWITCH degrowth no austerity measure"/>
-				<connector uid="445" angle="205.115">
-					<from>UBI_fixed_rate_in_real_2021_USD</from>
+				<connector uid="442" angle="15.5781">
+					<from>degrowth_policy_start_time_1</from>
+					<to>universal_basic_income_rate</to>
+				</connector>
+				<connector uid="449" angle="234.475">
+					<from>degrowth_policy_start_time_1</from>
 					<to>nominal_UBI</to>
+				</connector>
+				<aux x="267.407" y="990.63" name="UNIT one year"/>
+				<aux label_side="right" label_angle="315" x="352.447" y="924.897" name="annual\nUBI rate"/>
+				<connector uid="475" angle="301.535">
+					<from>
+						<alias uid="459"/>
+					</from>
+					<to>public_expenditure</to>
+				</connector>
+				<connector uid="421" angle="37.7028">
+					<from>UNIT_one_year</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<connector uid="444" angle="22.5089">
+					<from>old_age_dependents_1</from>
+					<to>annual_UBI_rate</to>
+				</connector>
+				<aux label_side="left" x="373.68" y="761.687" name="UNIT dollars per billion"/>
+				<aux label_side="top" x="433.881" y="763" name="UBI rate in billions\nper million people"/>
+				<connector uid="420" angle="358.75">
+					<from>UNIT_dollars_per_billion</from>
+					<to>UBI_rate_in_billions_per_million_people</to>
+				</connector>
+				<connector uid="422" angle="280.485">
+					<from>UBI_rate_in_billions_per_million_people</from>
+					<to>annual_UBI_rate</to>
 				</connector>
 				<connector uid="466" angle="3.84825">
 					<from>universal_basic_income_rate</from>
 					<to>UBI_rate_in_billions_per_million_people</to>
 				</connector>
-				<aux label_side="top" x="322.513" y="278.833" name="time to implement UBI"/>
-				<aux label_side="left" label_angle="135" x="276.18" y="306.667" name="UBI fraction of wages policy"/>
-				<connector uid="468" angle="305.451">
-					<from>UBI_fraction_of_wages_policy</from>
-					<to>actual_fraction_of_wages_as_UBI</to>
+				<aux label_side="left" label_angle="225" x="391.68" y="808.077" name="UNIT persons per\nmillion people"/>
+				<connector uid="419" angle="46.8871">
+					<from>UNIT_persons_per_million_people</from>
+					<to>UBI_rate_in_billions_per_million_people</to>
 				</connector>
-				<connector uid="469" angle="293.615">
-					<from>time_to_implement_UBI</from>
-					<to>actual_fraction_of_wages_as_UBI</to>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="244.407" y="932.401" name="working\nage population"/>
+				<connector uid="423" angle="3.97314">
+					<from>working_age_population</from>
+					<to>annual_UBI_rate</to>
 				</connector>
-				<connector uid="470" angle="4.88592">
-					<from>degrowth_policy_start_time_1</from>
-					<to>actual_fraction_of_wages_as_UBI</to>
-				</connector>
-				<aux label_side="top" x="446.667" y="310" name="adjustment time for UBI"/>
-				<connector uid="471" angle="284.036">
-					<from>adjustment_time_for_UBI</from>
+				<aux label_side="right" x="442.167" y="539.794" name="fraction\nof wages as UBI\nto be implemented"/>
+				<connector uid="415" angle="94.3401">
+					<from>fraction_of_wages_as_UBI_to_be_implemented</from>
 					<to>universal_basic_income_rate</to>
 				</connector>
-				<aux x="581.667" y="237.5" name="Converter 1"/>
-				<connector uid="472" angle="18.9081">
-					<from>universal_basic_income_rate</from>
-					<to>Converter_1</to>
+				<connector uid="469" angle="120.782">
+					<from>time_to_implement_UBI</from>
+					<to>fraction_of_wages_as_UBI_to_be_implemented</to>
 				</connector>
-				<connector uid="473" angle="178.361">
-					<from>Wage_Rate</from>
-					<to>Converter_1</to>
+				<connector uid="470" angle="357.199">
+					<from>degrowth_policy_start_time_1</from>
+					<to>fraction_of_wages_as_UBI_to_be_implemented</to>
 				</connector>
-				<aux x="950.547" y="1040.45" name="UBI transfers fraction"/>
-				<connector uid="474" angle="356.422">
-					<from>UBI_transfers_fraction</from>
-					<to>government_transfers</to>
+				<aux font_style="italic" font_weight="bold" x="400.264" y="596.602" name="UBI fraction of\nwages policy"/>
+				<connector uid="480" angle="50.6861">
+					<from>UBI_fraction_of_wages_policy</from>
+					<to>fraction_of_wages_as_UBI_to_be_implemented</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="259.423" y="1127.5" name="percentage UBI funded by financial profit tax"/>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="259.423" y="1174.96" name="percentage of UBI funded\nby wealth tax"/>
+				<aux label_side="right" x="365.969" y="1127.5" name="absolute financial profit\ntax covering UBI"/>
+				<aux label_side="right" x="365.969" y="1174.96" name="absolute wealth tax covering UBI"/>
+				<aux label_side="right" x="365.969" y="1230.85" name="Absolute CB funding of UBI"/>
+				<connector uid="483" angle="354.963">
+					<from>percentage_of_UBI_funded_by_wealth_tax</from>
+					<to>absolute_wealth_tax_covering_UBI</to>
+				</connector>
+				<connector uid="484" angle="358.191">
+					<from>percentage_UBI_funded_by_financial_profit_tax</from>
+					<to>absolute_financial_profit_tax_covering_UBI</to>
+				</connector>
+				<connector uid="485" angle="255.113">
+					<from>annual_UBI_rate</from>
+					<to>absolute_financial_profit_tax_covering_UBI</to>
+				</connector>
+				<connector uid="486" angle="250.586">
+					<from>annual_UBI_rate</from>
+					<to>absolute_wealth_tax_covering_UBI</to>
+				</connector>
+				<connector uid="487" angle="250.174">
+					<from>annual_UBI_rate</from>
+					<to>Absolute_CB_funding_of_UBI</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="left" x="259.423" y="1230.85" name="percentage of UBI funded by CB"/>
+				<connector uid="488" angle="2.69921">
+					<from>percentage_of_UBI_funded_by_CB</from>
+					<to>Absolute_CB_funding_of_UBI</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1248.86" y="817.587" name="SWITCH UBI/INCOME based funding"/>
+				<connector uid="489" angle="7.80965">
+					<from>&quot;SWITCH_UBI/INCOME_based_funding&quot;</from>
+					<to>public_expenditure</to>
+				</connector>
+				<connector uid="490" angle="357.038">
+					<from>
+						<alias uid="491"/>
+					</from>
+					<to>public_expenditure</to>
 				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
 					<of>baseline_interest</of>
@@ -14467,17 +14666,20 @@ ELSE 0</eqn>
 				<alias font_style="italic" font_weight="bold" label_side="right" label_angle="315" uid="413" x="1582.38" y="1997.5" width="18" height="18">
 					<of>degrowth_policy_start_time</of>
 				</alias>
-				<alias font_style="italic" uid="452" x="486.833" y="1061.83" width="18" height="18">
+				<alias font_style="italic" uid="452" x="714.817" y="1113.17" width="18" height="18">
 					<of>public_expenditure_before_subsidies_and_interest_payments</of>
 				</alias>
-				<alias font_style="italic" label_side="left" uid="459" x="1319.33" y="578.5" width="18" height="18">
-					<of>annual_UBI_rate</of>
-				</alias>
-				<alias font_style="italic" font_weight="bold" label_side="bottom" uid="462" x="946" y="1081" width="18" height="18">
+				<alias font_style="italic" font_weight="bold" label_side="bottom" uid="462" x="989.774" y="1095.17" width="18" height="18">
 					<of>SWITCH_degrowth_UBI</of>
 				</alias>
 				<alias font_style="italic" font_weight="bold" uid="464" x="1159.33" y="1095.17" width="18" height="18">
 					<of>degrowth_policy_start_time_1</of>
+				</alias>
+				<alias font_style="italic" label_side="left" uid="459" x="1319.33" y="578.5" width="18" height="18">
+					<of>annual_UBI_rate</of>
+				</alias>
+				<alias font_style="italic" label_side="right" uid="491" x="1239.86" y="894.246" width="18" height="18">
+					<of>Absolute_CB_funding_of_UBI</of>
 				</alias>
 			</view>
 		</views>
@@ -15293,7 +15495,7 @@ ELSE
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -15979,7 +16181,7 @@ ELSE
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>

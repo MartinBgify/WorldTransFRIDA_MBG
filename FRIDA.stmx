@@ -5,7 +5,7 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.8" isee:build_number="3578" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.8.1" isee:build_number="3623" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -2140,6 +2140,8 @@
 				<connect2 to="Forest.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Freshwater.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Freshwater.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Government_Regulations.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Government_Regulations.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Grass.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
@@ -2751,12 +2753,18 @@
 				<connect2 to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
 				<connect2 to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
+				<connect to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
+				<connect2 to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
 				<connect to="Animal_Products.animal_product_efficiency_policy" from="Government_Regulations.animal_product_efficiency_policy"/>
 				<connect2 to="Animal_Products.animal_product_efficiency_policy" from="Government_Regulations.animal_product_efficiency_policy"/>
+				<connect to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
+				<connect2 to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
 				<connect to="bio_fuel_energy.biofuels_CO2e_emissions_tax_reduction_share" from="Government_Regulations.biofuels_CO2e_emissions_tax_reduction_share"/>
 				<connect2 to="bio_fuel_energy.biofuels_CO2e_emissions_tax_reduction_share" from="Government_Regulations.biofuels_CO2e_emissions_tax_reduction_share"/>
 				<connect to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
 				<connect2 to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
+				<connect to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
+				<connect2 to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
 				<connect to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect2 to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect to="Concrete.infrastructure_maintenance_policy" from="Government_Regulations.concrete_infrastructure_maintenance_policy"/>
@@ -2803,6 +2811,12 @@
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect to="Freshwater.on_agricultural_water_use_policy" from="Government_Regulations.non_agricultural_water_use_policy"/>
 				<connect2 to="Freshwater.on_agricultural_water_use_policy" from="Government_Regulations.non_agricultural_water_use_policy"/>
+				<connect to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
+				<connect2 to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
 				<connect to="Circular_Flow.profit_tax_rate_policy" from="Government_Regulations.profit_tax_policy"/>
 				<connect2 to="Circular_Flow.profit_tax_rate_policy" from="Government_Regulations.profit_tax_policy"/>
 				<connect to="Circular_Flow.profit_tax_policy_start_year" from="Government_Regulations.profit_tax_policy_start_year"/>
@@ -2891,12 +2905,18 @@
 				<connect2 to="Government.SWITCH_degrowth_no_austerity_measure" from="Government_Regulations.SWITCH_degrowth_no_austerity_measure"/>
 				<connect to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
 				<connect2 to="Finance.SWITCH_degrowth_no_bank_profits" from="Government_Regulations.SWITCH_degrowth_no_bank_profits"/>
+				<connect to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
+				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect2 to="Circular_Flow.SWITCH_degrowth_worker_dividend" from="Government_Regulations.SWITCH_degrowth_worker_dividend"/>
 				<connect to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
 				<connect2 to="Circular_Flow.SWITCH_differentiated_bank_profit_tax_rate" from="Government_Regulations.SWITCH_differentiated_bank_profit_tax_rate"/>
+				<connect to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
 				<connect to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect2 to="Freshwater.switch_irrigation_fraction_policy" from="Government_Regulations.switch_irrigation_fraction_policy"/>
 				<connect to="Freshwater.switch_non_agricultural_water_use_policy" from="Government_Regulations.switch_non_agricultural_water_use_policy"/>
@@ -2951,6 +2971,12 @@
 				<connect2 to="Circular_Flow.time_to_implement_wealth_tax_policy" from="Government_Regulations.time_to_implement_wealth_tax_policy"/>
 				<connect to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
 				<connect2 to="Government.time_to_implement_degrowth_CB_interest" from="Government_Regulations.time_to_implement_degrowth_CB_interest"/>
+				<connect to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect2 to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
 				<connect to="Circular_Flow.wage_tax_policy" from="Government_Regulations.wage_tax_policy"/>
 				<connect2 to="Circular_Flow.wage_tax_policy" from="Government_Regulations.wage_tax_policy"/>
 				<connect to="Circular_Flow.start_year" from="Government_Regulations.wage_tax_policy_start_year"/>
@@ -2961,6 +2987,28 @@
 				<connect2 to="Circular_Flow.wealth_tax_policy_start_year" from="Government_Regulations.wealth_tax_policy_start_year"/>
 				<connect to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
 				<connect2 to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
+				<connect to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect2 to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect2 to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect2 to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
+				<connect2 to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
+				<connect to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect2 to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
+				<connect2 to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
+				<connect to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
+				<connect2 to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
+				<connect to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to="Government_Regulations.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Government_Regulations.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
+				<connect2 to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
 			</module>
 			<module name="Behavioral\nChange" isee:label="" url="r../FRIDA_Modules/Behavioral Change.itmx">
 				<format scale_by="auto"/>
@@ -3066,6 +3114,18 @@
 			</module>
 			<module name="Economy" isee:label="" url="r../FRIDA_Modules/Economy.itmx">
 				<format scale_by="auto"/>
+				<connect to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect2 to="Government_Regulations.bank_profits" from="Circular_Flow.bank_profits"/>
+				<connect to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect2 to="Government_Regulations.Labour_share_of_GDP" from="Circular_Flow.Labour_share_of_GDP"/>
+				<connect to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
+				<connect2 to="Government_Regulations.owner_savings" from="Circular_Flow.owner_savings"/>
+				<connect to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
+				<connect2 to="Government_Regulations.owner_to_worker_savings_ratio" from="Circular_Flow.owner_to_worker_savings_ratio"/>
+				<connect to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
+				<connect2 to="Government_Regulations.wealth_tax" from="Circular_Flow.wealth_tax"/>
+				<connect to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
+				<connect2 to="Circular_Flow.bank_profit_tax_rate" from="Government_Regulations.bank_profit_tax_rate"/>
 				<connect to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect2 to="Circular_Flow.degrowth_policy_start_time" from="Government_Regulations.degrowth_policy_start_time"/>
 				<connect to="Circular_Flow.degrowth_policy_start_time_1" from="Government_Regulations.degrowth_policy_start_time"/>
@@ -3088,6 +3148,8 @@
 				<connect2 to="Circular_Flow.switch_profit_tax_policy" from="Government_Regulations.switch_profit_tax_policy"/>
 				<connect to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
 				<connect2 to="Circular_Flow.switch_tax_policy" from="Government_Regulations.switch_wage_tax_policy"/>
+				<connect to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Circular_Flow."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
 				<connect to="Circular_Flow.time_to_implement_profit_tax_policy" from="Government_Regulations.time_to_implement_profit_tax_policy"/>
 				<connect2 to="Circular_Flow.time_to_implement_profit_tax_policy" from="Government_Regulations.time_to_implement_profit_tax_policy"/>
 				<connect to="Circular_Flow.time_to_implement_wage_tax_policy" from="Government_Regulations.time_to_implement_wage_tax_policy"/>
@@ -3128,10 +3190,14 @@
 				<connect2 to="Employment.real_GDP_per_person" from="Demographics.real_GDP_per_person"/>
 				<connect to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Employment.Surface_Temperature_Anomaly_1" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
+				<connect2 to="Employment.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect2 to="Employment.switch_labor_damage" from="Climate.switch_labor_damage"/>
 				<connect to="Employment.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Employment.today" from="Climate.climate_impact_stoptime"/>
+				<connect to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Employment.UBI_fraction_of_wages_policy_1" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
 				<connect to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
 				<connect2 to="Employment.working_age_population_2" from="Demographics.working_age_population"/>
 				<connect to="Employment.working_hours_reduction_1" from="Government_Regulations.working_hours_reduction"/>
@@ -3172,8 +3238,14 @@
 				<connect2 to='Demographics."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Government_Regulations."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="GDP.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="GDP.start_year" from="Government_Regulations.start_year"/>
+				<connect to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect2 to="Government_Regulations.absolute_financial_profit_tax_covering_UBI" from="Government.absolute_financial_profit_tax_covering_UBI"/>
+				<connect to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
+				<connect2 to="Government_Regulations.debt_to_GDP_ratio" from="Government.debt_to_GDP_ratio"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -3196,6 +3268,8 @@
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_Solar_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_solar_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
+				<connect to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
+				<connect2 to="Government_Regulations.Government_Debt" from="Government.Government_Debt"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
@@ -3220,6 +3294,10 @@
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
 				<connect to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
 				<connect2 to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
+				<connect to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
+				<connect2 to="Government.adjustment_time_for_UBI_implementation_and_adjustment" from="Government_Regulations.adjustment_time_for_UBI_implementation_and_adjustment"/>
+				<connect to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
+				<connect2 to="Government.CB_funding_of_UBI" from="Government_Regulations.CB_funding_of_UBI_percentage"/>
 				<connect to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
 				<connect2 to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Energy_Capital"/>
@@ -3272,6 +3350,12 @@
 				<connect2 to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
 				<connect2 to="Government.old_age_dependents_1" from="Demographics.old_age_dependents"/>
+				<connect to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_wealth_tax" from="Government_Regulations.percentage_of_UBI_funded_by_wealth_tax"/>
+				<connect to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect2 to="Government.percentage_of_UBI_funded_by_CB" from="Government_Regulations.percentage_of_UBI_funded_by_CB"/>
+				<connect to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
+				<connect2 to="Government.percentage_UBI_funded_by_financial_profit_tax" from="Government_Regulations.percentage_UBI_funded_by_financial_profit_tax"/>
 				<connect to="Government.Population" from="Demographics.Population"/>
 				<connect2 to="Government.Population" from="Demographics.Population"/>
 				<connect to="Government.start_year" from="Government_Regulations.start_year"/>
@@ -3288,6 +3372,8 @@
 				<connect2 to="Government.SWITCH_degrowth_UBI" from="Government_Regulations.SWITCH_degrowth_UBI"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
+				<connect to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
+				<connect2 to='Government."SWITCH_UBI/INCOME_based_funding"' from='Government_Regulations."SWITCH_INCOME/UBI_based_funding"'/>
 				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
 				<connect2 to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
 				<connect to="Government.tax_rate_2" from="bio_fuel_energy.tax_rate"/>
@@ -3304,8 +3390,14 @@
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today_1" from="Climate.climate_impact_stoptime"/>
+				<connect to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect2 to="Government.UBI_adjusted_transfers_fraction" from="Government_Regulations.UBI_adjusted_transfers_fraction"/>
+				<connect to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
+				<connect2 to="Government.UBI_fraction_of_wages_policy" from="Government_Regulations.UBI_fraction_of_wages_policy"/>
 				<connect to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect2 to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
+				<connect to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
+				<connect2 to="Government_Regulations.Inflation_Rate" from="Inflation.Inflation_Rate"/>
 				<connect to="Inflation.animal_products_demand" from="Food_Demand.animal_products_demand"/>
 				<connect2 to="Inflation.animal_products_demand" from="Food_Demand.animal_products_demand"/>
 				<connect to="Inflation.animal_products_production" from="Animal_Products.animal_products_production"/>
@@ -3468,7 +3560,7 @@ This is what determines when the model stops calculating</doc>
 				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
 				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
-				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<slider color="#0075FF" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
 				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
 				<isee:sim_speed_slider color="black" background="white"/>
@@ -3491,7 +3583,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="10" isee:scroll_x="92.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="10" isee:scroll_x="407.143" isee:scroll_y="16.4286" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4355,7 +4447,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4379,7 +4470,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
@@ -4403,7 +4493,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="MIN UBI: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4427,7 +4516,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4451,7 +4539,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4475,7 +4562,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
@@ -4499,7 +4585,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
@@ -4525,7 +4610,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4537,7 +4621,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
@@ -4549,7 +4632,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="MIN UBI: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4561,7 +4643,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4573,7 +4654,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4585,7 +4665,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
@@ -4597,7 +4676,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="6" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
@@ -4609,7 +4687,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Bank Profits" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.bank_profits[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="red" title="Min UBI: Bank Profits" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.bank_profits[1]"/>
@@ -4622,7 +4699,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4634,7 +4710,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
@@ -4646,7 +4721,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4658,7 +4732,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4670,7 +4743,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="6" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4682,7 +4754,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
@@ -4694,7 +4765,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#008F44" title="UBI Bank Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
@@ -4707,7 +4777,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4719,7 +4788,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
@@ -4731,7 +4799,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4743,7 +4810,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4755,7 +4821,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4767,7 +4832,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI bank &amp; Wealth Tax: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
@@ -4779,7 +4843,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#FF7F00" title="UBI Bank &amp; Wealth Tax: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
@@ -4792,7 +4855,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI: Unemployment Rate" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Employment.unemployment_rate[1]"/>
@@ -4804,7 +4866,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Inflation Rate" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Inflation.Inflation_Rate[1]"/>
@@ -4816,7 +4877,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="5" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Surface Temperature Anomaly" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[1]"/>
@@ -4828,7 +4888,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_title="dmnl" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Debt to GDP ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Government.debt_to_GDP_ratio[1]"/>
@@ -4840,7 +4899,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="8" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI: Labour Share of GDP" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.Labour_share_of_GDP[1]"/>
@@ -4852,7 +4910,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI: Owner to Worker Savings Ratio" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name="Circular_Flow.owner_to_worker_savings_ratio[1]"/>
@@ -4864,7 +4921,6 @@ This is what determines when the model stops calculating</doc>
 					<graph width="400" height="285" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="7" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" title="BAU: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
-							<isee:data name="BAU"/>
 						</plot>
 						<plot color="#7F00FF" title="Max UBI: GDP in 2021c$" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
 							<entity name='GDP."Real_GDP_in_2021c$"[1]'/>
@@ -4872,6 +4928,14 @@ This is what determines when the model stops calculating</doc>
 						</plot>
 					</graph>
 				</stacked_container>
+				<connector uid="214" isee:thickness="2" angle="51.7961" isee:autocreated="true">
+					<from>Economy</from>
+					<to>Government_Regulations</to>
+				</connector>
+				<connector uid="215" isee:thickness="2" angle="28.1841" isee:autocreated="true">
+					<from>Climate</from>
+					<to>Government_Regulations</to>
+				</connector>
 			</view>
 			<view isee:template_view="template:1" isee:name="Landing Page without image" isee:original_design="Deluxe Prev-Next Blue Green Pastel" background="white" page_width="1066" page_height="600" home_view="true" type="interface">
 				<style>
